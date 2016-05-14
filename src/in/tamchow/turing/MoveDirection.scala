@@ -1,5 +1,4 @@
 package in.tamchow.turing
-
 /**
   * Indicates the directions in which the tape head can move
   */
@@ -25,13 +24,17 @@ class MoveDirection extends Enumeration {
       case _ => false
     }
 
+  /**
+    * @throws IllegalArgumentException if object is not a valid enum type as regards [[MoveDirection.MoveDirection]]
+    * @return the hash code of this [[MoveDirection.MoveDirection]] object
+    */
   override def hashCode(): Int = {
     import MoveDirection._
     this match {
       case LEFT => -1
       case RIGHT => +1
       case NONE => 0
-      case _ => throw new IllegalArgumentException("Illegal data in enum of type " + getClass)
+      case _ => throw new IllegalArgumentException("Illegal data in enum of type " + this.getClass)
     }
   }
 }

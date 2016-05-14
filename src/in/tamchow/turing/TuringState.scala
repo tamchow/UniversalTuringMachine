@@ -7,6 +7,15 @@ object TuringState {
   val MATCH_ANYTHING_CODE = "*"
   val NULL_CODE = "!"
 
+  def fromString(data: String): TuringState = {
+    var elements = (data split("\\s+", 5)).toList
+    elements = elements map {
+      case NULL_CODE => null
+      case others => others
+    }
+    new TuringState(elements(0), elements(1), elements(2), elements(3), directionFromString(elements(4)))
+  }
+
   /**
     * Allowed wildcards:
     *
@@ -23,31 +32,22 @@ object TuringState {
       case numberFormatException: NumberFormatException => try MoveDirection.withName(data) catch {
         case exception: Exception => exception.printStackTrace(); null
       }
-      case _ => null
+      case _: Exception => null
     }
-  }
-
-  def fromString(data: String): TuringState = {
-    var elements = (data split("\\s+", 5)).toList
-    elements = elements map {
-      case NULL_CODE => null
-      case others => others
-    }
-    new TuringState(elements(0), elements(1), elements(2), elements(3), directionFromString(elements(4)))
   }
 }
 
 class TuringState(currentStateP: String, nextStateP: String, currentValueP: String, nextValueP: String,
                   directionP: MoveDirection.MoveDirection) {
-  def valueMatchesEverything(): Boolean = currentValue == TuringState.MATCH_ANYTHING_CODE
-
-  def stateMatchesEveryThing(): Boolean = currentState == TuringState.MATCH_ANYTHING_CODE
-
   val currentState = currentStateP
   val nextState = nextStateP
   val currentValue = currentValueP
   val nextValue = nextValueP
   val direction = directionP
+
+  def valueMatchesEverything(): Boolean = currentValue == TuringState.MATCH_ANYTHING_CODE
+
+  def stateMatchesEveryThing(): Boolean = currentState == TuringState.MATCH_ANYTHING_CODE
 
   override def toString = {
     this.getClass.getName + currentState + currentValue + nextState + nextValue + direction

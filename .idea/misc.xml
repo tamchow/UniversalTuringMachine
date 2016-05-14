@@ -22,6 +22,14 @@
   <component name="ProjectRootManager" version="2" languageLevel="JDK_1_8" default="true" assert-keyword="true" jdk-15="true" project-jdk-name="1.8" project-jdk-type="JavaSDK">
     <output url="file://$PROJECT_DIR$/out" />
   </component>
+  <component name="ScaladocSettings">
+    <option name="outputDir" value="D:\Programming\Projects\Universal Turing Machine\doc" />
+    <option name="additionalFlags" value="-feature" />
+    <option name="maxHeapSize" value="" />
+    <option name="docTitle" value="Universal Universal Turing Machine documentation" />
+    <option name="verbose" value="false" />
+    <option name="openInBrowser" value="false" />
+  </component>
   <component name="Scrappy">
     <scrapTab name="Scrap" />
     <imports />

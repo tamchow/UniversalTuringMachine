@@ -1,5 +1,7 @@
 package in.tamchow.turing
 
+import scala.language.postfixOps
+
 /**
   * The Launcher for the Universal Turing Machine simulator
   *
@@ -17,6 +19,15 @@ package in.tamchow.turing
 object TuringMain {
 
   val pausedMessage = "Execution Paused - Press any key to continue."
+
+  def main(args: Array[String]) {
+    if (args.length <= 0) throw new IllegalArgumentException("No parameters specified")
+    val filePath = args(0)
+    val tapeSize = args(1).toInt
+    val steps = args(2).toInt
+    val pauseTime = args(3).toInt
+    doRun(filePath, tapeSize, steps, pauseTime)
+  }
 
   def doRun(filePath: String, tapeSize: Int, steps: Int, pauseTime: Int): Unit = {
     val data = io.Source fromFile filePath getLines() toList
@@ -38,14 +49,5 @@ object TuringMain {
         }
       }
     }
-  }
-
-  def main(args: Array[String]) {
-    if (args.length <= 0) throw new IllegalArgumentException("No parameters specified")
-    val filePath = args(0)
-    val tapeSize = args(1).toInt
-    val steps = args(2).toInt
-    val pauseTime = args(3).toInt
-    doRun(filePath, tapeSize, steps, pauseTime)
   }
 }

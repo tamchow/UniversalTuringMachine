@@ -2,6 +2,8 @@ package in.tamchow.turing
 
 import in.tamchow.turing.MoveDirection._
 
+import scala.language.postfixOps
+
 /**
   * Represents a universal Turing Machine
   */
@@ -13,27 +15,28 @@ class UniversalTuringMachine(states: List[TuringState], initialState: String, te
   var state = initialState
 
   /**
-    * Implements [[Array]] wraparound
+    * Runs the program for the specified number of steps
+    * or till the program halts (if the specified number of steps is negative)
     *
-    * @return [[head]], after bounds correction
+    * @param steps the number of steps for which the program is run.
+    *              Supply negative values to run till halt
+    * @return the history of the tape in each step as a [[List]] of [[Array]]s of [[String]]s
     */
-  def bounded(): Int = {
-    if (head < 0) Math.abs(tapeSize + head) % tapeSize
-    else if (head >= tapeSize) head % tapeSize
-    else head
-  }
-
-  /**
-    * Helper function for filtering available commands by applicability
-    *
-    * @param state The state to check for applicability with the current execution environment
-    * @return true if the state is applicable, false if it isn't
-    */
-  //Stupid Idea - Even does this for Java sometimes
-  //noinspection ComparingUnrelatedTypes
-  def isApplicable(state: TuringState): Boolean = {
-    (state.currentValue == tape(bounded()) || (state valueMatchesEverything())) &&
-      (state.currentState == this.state || (state stateMatchesEveryThing()))
+  def runForStepsOrTillHalt(steps: Int): List[Array[String]] = {
+    var currentSteps = 0
+    var halt = initialState == null
+    val useStepping = steps >= 0
+    var tapeHistory: List[Array[String]] = Nil
+    import util.control.Breaks._
+    breakable {
+      while (!halt) {
+        if (useStepping && currentSteps >= steps) break
+        tapeHistory = tapeHistory :+ tape
+        halt = runStep()
+        currentSteps += 1
+      }
+    }
+    tapeHistory
   }
 
   /**
@@ -58,28 +61,27 @@ class UniversalTuringMachine(states: List[TuringState], initialState: String, te
   }
 
   /**
-    * Runs the program for the specified number of steps
-    * or till the program halts (if the specified number of steps is negative)
+    * Implements [[Array]] wraparound
     *
-    * @param steps the number of steps for which the program is run.
-    *              Supply negative values to run till halt
-    * @return the history of the tape in each step as a [[List]] of [[Array]]s of [[String]]s
+    * @return [[head]], after bounds correction
     */
-  def runForStepsOrTillHalt(steps: Int): List[Array[String]] = {
-    var currentSteps = 0
-    var halt = initialState == null
-    val useStepping = steps >= 0
-    var tapeHistory: List[Array[String]] = Nil
-    import util.control.Breaks._
-    breakable {
-      while (!halt) {
-        if (useStepping && currentSteps >= steps) break
-          tapeHistory = tapeHistory :+ tape
-        halt = runStep()
-        currentSteps += 1
-      }
-    }
-    tapeHistory
+  def bounded(): Int = {
+    if (head < 0) Math.abs(tapeSize + head) % tapeSize
+    else if (head >= tapeSize) head % tapeSize
+    else head
+  }
+
+  /**
+    * Helper function for filtering available commands by applicability
+    *
+    * @param state The state to check for applicability with the current execution environment
+    * @return true if the state is applicable, false if it isn't
+    */
+  //Stupid Idea - Even does this for Java sometimes
+  //noinspection ComparingUnrelatedTypes
+  def isApplicable(state: TuringState): Boolean = {
+    (state.currentValue == tape(bounded()) || (state valueMatchesEverything())) &&
+      (state.currentState == this.state || (state stateMatchesEveryThing()))
   }
 }
 

@@ -1,23 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="e679f7b0-be56-4434-bcbb-514e695efdbe" name="Default" comment="Code style updates">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/UTM/UTM.jar" afterPath="$PROJECT_DIR$/out/artifacts/UTM/UTM.jar" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Universal Turing Machine/in/tamchow/turing/MoveDirection$.class" afterPath="$PROJECT_DIR$/out/production/Universal Turing Machine/in/tamchow/turing/MoveDirection$.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Universal Turing Machine/in/tamchow/turing/MoveDirection.class" afterPath="$PROJECT_DIR$/out/production/Universal Turing Machine/in/tamchow/turing/MoveDirection.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Universal Turing Machine/in/tamchow/turing/TuringCommand.class" afterPath="$PROJECT_DIR$/out/production/Universal Turing Machine/in/tamchow/turing/TuringCommand.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Universal Turing Machine/in/tamchow/turing/TuringMain$.class" afterPath="$PROJECT_DIR$/out/production/Universal Turing Machine/in/tamchow/turing/TuringMain$.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Universal Turing Machine/in/tamchow/turing/TuringMain.class" afterPath="$PROJECT_DIR$/out/production/Universal Turing Machine/in/tamchow/turing/TuringMain.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Universal Turing Machine/in/tamchow/turing/UniversalTuringMachine$$anon$1.class" afterPath="$PROJECT_DIR$/out/production/Universal Turing Machine/in/tamchow/turing/UniversalTuringMachine$$anon$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Universal Turing Machine/in/tamchow/turing/UniversalTuringMachine$$anon$2.class" afterPath="$PROJECT_DIR$/out/production/Universal Turing Machine/in/tamchow/turing/UniversalTuringMachine$$anon$2.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Universal Turing Machine/in/tamchow/turing/UniversalTuringMachine$$anonfun$1.class" afterPath="$PROJECT_DIR$/out/production/Universal Turing Machine/in/tamchow/turing/UniversalTuringMachine$$anonfun$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Universal Turing Machine/in/tamchow/turing/UniversalTuringMachine$$anonfun$2.class" afterPath="$PROJECT_DIR$/out/production/Universal Turing Machine/in/tamchow/turing/UniversalTuringMachine$$anonfun$2.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Universal Turing Machine/in/tamchow/turing/UniversalTuringMachine$$anonfun$3.class" afterPath="$PROJECT_DIR$/out/production/Universal Turing Machine/in/tamchow/turing/UniversalTuringMachine$$anonfun$3.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Universal Turing Machine/in/tamchow/turing/UniversalTuringMachine$$anonfun$4.class" afterPath="$PROJECT_DIR$/out/production/Universal Turing Machine/in/tamchow/turing/UniversalTuringMachine$$anonfun$4.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Universal Turing Machine/in/tamchow/turing/UniversalTuringMachine$.class" afterPath="$PROJECT_DIR$/out/production/Universal Turing Machine/in/tamchow/turing/UniversalTuringMachine$.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Universal Turing Machine/in/tamchow/turing/UniversalTuringMachine.class" afterPath="$PROJECT_DIR$/out/production/Universal Turing Machine/in/tamchow/turing/UniversalTuringMachine.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-    </list>
+    <list default="true" id="e679f7b0-be56-4434-bcbb-514e695efdbe" name="Default" comment="Code style updates" />
     <ignored path="Uinversal Turing Machine.iws" />
     <ignored path=".idea/workspace.xml" />
     <ignored path="$PROJECT_DIR$/out/" />
@@ -38,7 +22,18 @@
     <favorites_list name="Uinversal Turing Machine" />
   </component>
   <component name="FileEditorManager">
-    <leaf />
+    <leaf>
+      <file leaf-file-name="TuringMain.scala" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/in/tamchow/turing/TuringMain.scala">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="235">
+              <caret line="25" column="26" selection-start-line="25" selection-start-column="26" selection-end-line="25" selection-end-column="26" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="Git.Settings">
     <option name="PUSH_AUTO_UPDATE" value="true" />
@@ -1102,7 +1097,7 @@
       <workItem from="1463240834101" duration="13000" />
       <workItem from="1463241057572" duration="193000" />
       <workItem from="1463289017152" duration="5875000" />
-      <workItem from="1463297246805" duration="642000" />
+      <workItem from="1463297246805" duration="799000" />
     </task>
     <task id="LOCAL-00001" summary="Initial Commit - Simplified Launcher">
       <created>1463236476083</created>
@@ -1150,7 +1145,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="26771000" />
+    <option name="totallyTimeSpent" value="26928000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />

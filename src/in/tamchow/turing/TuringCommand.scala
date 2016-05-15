@@ -6,87 +6,63 @@ import scala.language.postfixOps
   * Encapsulates a single possible operation of a Turing Machine, but here I call it the "Command"
   */
 object TuringCommand {
-  val MATCH_ANYTHING_CODE = "*"
-  val NULL_CODE = "!"
-
-  def apply(currentStateP: String, nextStateP: String, currentValueP: String, nextValueP: String,
-            directionP: MoveDirection.MoveDirection) =
-    new TuringCommand(currentStateP, nextStateP, currentValueP, nextValueP, directionP) {}
-
-  def apply(data: (String, String, String, String, MoveDirection.MoveDirection)) = new TuringCommand(data) {}
-
-  def apply(data: String) = fromString(data)
+  val (matchAnythingCode, nullCode, commandArity, whitespaceRegex) = ("*", "!", 5, "\\s+")
 
   /**
     * Allowed wildcards:
-    *
-    * 1. '!' - indicates a null value or the halting state, internally represented as `null`
+    * <br>
+    * 1. '!' - indicates a null value or the halting command, internally represented as `null`
     * 2. '*' - indicates a match-all wildcard character, no separate internal representation
-    *
+    * <br>
     * Separator used is whitespace - 5 terms are required after tokenization
     *
     * @param data [[String]] indicating a defined transitional operation
     * @return a [[TuringCommand]] object derived from the argument
-    * @see [[TuringCommand.MATCH_ANYTHING_CODE]]
-    * @see [[TuringCommand.NULL_CODE]]
+    * @see [[TuringCommand.matchAnythingCode]]
+    * @see [[TuringCommand.nullCode]]
+    * @see [[TuringCommand.commandArity]]
+    * @see [[TuringCommand.whitespaceRegex]]
     */
-  def fromString(data: String) = {
-    var elements = (data split("\\s+", 5)).toList
+  def apply(data: String): TuringCommand = {
+    var elements = (data split(whitespaceRegex, commandArity)).toList
     elements = elements map {
-      case NULL_CODE => null
+      case this.nullCode => null
       case others => others
     }
-    new TuringCommand((elements.head, elements(1), elements(2), elements(3), directionFromString(elements.last))) {}
+    TuringCommand((elements.head, elements(1), elements(2), elements(3), MoveDirection parse elements.last))
   }
 
-  private[this] def directionFromString(data: String): MoveDirection.MoveDirection = {
-    try MoveDirection.fromInt(data.toInt) catch {
-      case numberFormatException: NumberFormatException => try MoveDirection.withName(data) catch {
-        case exception: Exception => exception.printStackTrace(); null
-      }
-      case _: Exception => null
-    }
-  }
+  def apply(data: (String, String, String, String, MoveDirection)): TuringCommand =
+    new TuringCommand(data._1, data._2, data._3, data._4, data._5)
 }
 
-abstract class TuringCommand(currentStateP: String, nextStateP: String, currentValueP: String, nextValueP: String,
-                             directionP: MoveDirection.MoveDirection) {
-  private[this] val _currentState = currentStateP
-  private[this] val _nextState = nextStateP
-  private[this] val _currentValue = currentValueP
-  private[this] val _nextValue = nextValueP
-  private[this] val _direction = directionP
+class TuringCommand(_currentState: String, _nextState: String, _currentValue: String, _nextValue: String, _direction: MoveDirection) {
 
-  def this(data: (String, String, String, String, MoveDirection.MoveDirection)) {
-    this(data._1, data._2, data._3, data._4, data._5)
+  import TuringCommand._
+
+  def valueMatchesEverything = currentValue == matchAnythingCode
+
+  def stateMatchesEveryThing = currentState == matchAnythingCode
+
+  override def equals(that: Any) = that match {
+    case that: TuringCommand => that.isInstanceOf[TuringCommand] && this.## == that.##
+    case _ => false
   }
 
-  def valueMatchesEverything() = currentValue == TuringCommand.MATCH_ANYTHING_CODE
+  override def hashCode = toString ##
 
-  def stateMatchesEveryThing() = currentState == TuringCommand.MATCH_ANYTHING_CODE
+  /**
+    * The output format is deliberately similar to the input format,
+    * so the result of one can be reflexively used with the other.
+    *
+    * @return a [[String]] representing this [[TuringCommand]] object
+    */
+  override def toString = List(currentState, nextState, currentValue, nextValue, direction.name) map {
+    case nullItem if nullItem == null => nullCode
+    case notNullItem => notNullItem
+  } mkString " "
 
   def currentState = _currentState
-
-  override def toString = {
-    this.getClass.getName + currentState + currentValue + nextState + nextValue + direction
-  }
-
-  override def equals(that: Any) =
-    that match {
-      case that: TuringCommand => that.isInstanceOf[TuringCommand] && this.## == that.##
-      case _ => false
-    }
-
-  override def hashCode() = {
-    val prime = 31
-    var result: Int = 1
-    result = prime * result + (if (currentState == null) 0 else currentState.##)
-    result = prime * result + (if (nextState == null) 0 else nextState.##)
-    result = prime * result + (if (currentValue == null) 0 else currentValue.##)
-    result = prime * result + (if (nextValue == null) 0 else nextValue.##)
-    result = prime * result + (if (direction == null) 0 else direction.##)
-    result
-  }
 
   def currentValue = _currentValue
 

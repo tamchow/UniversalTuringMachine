@@ -5,10 +5,9 @@ import scala.language.postfixOps
 /**
   * Represents a universal Turing Machine
   */
-abstract class UniversalTuringMachine(commands: List[TuringCommand], initialState: String, terminalStates: List[String], tapeSize: Int) {
-  private[this] val _tape = new Array[String](tapeSize)
-  private[this] var head = 0
-  private[this] var state = initialState
+class UniversalTuringMachine(commands: List[TuringCommand], initialState: String, terminalStates: List[String], tapeSize: Int) {
+  private val _tape = new Array[String](tapeSize)
+  private var (head, state) = (0, initialState)
 
   /**
     * Runs the program for the specified number of steps
@@ -24,11 +23,11 @@ abstract class UniversalTuringMachine(commands: List[TuringCommand], initialStat
     val useStepping = steps >= 0
     var tapeHistory: List[Array[String]] = Nil
     while (!(halt || (useStepping && currentSteps >= steps))) {
-      tapeHistory = tape :: tapeHistory
+      tapeHistory = tapeHistory :+ tape
       halt = runStep()
       currentSteps += 1
     }
-    tapeHistory reverse
+    tapeHistory
   }
 
   /**
@@ -48,7 +47,7 @@ abstract class UniversalTuringMachine(commands: List[TuringCommand], initialStat
         case LEFT => head - 1
         case RIGHT => head + 1
         case NONE => head
-        case other => throw new IllegalArgumentException(illegalInstanceMessage + other.getClass)
+        case other => throw new IllegalArgumentException(illegalTypeMessage format (other getClass).getName)
       }
       true
     }
@@ -57,12 +56,12 @@ abstract class UniversalTuringMachine(commands: List[TuringCommand], initialStat
   /**
     * Helper function for filtering available commands by applicability
     *
-    * @param state The state to check for applicability with the current execution environment
-    * @return true if the state is applicable, false if it isn't
+    * @param command The command to check for applicability with the current execution environment
+    * @return true if the command is applicable, false if it isn't
     */
-  def isApplicable(state: TuringCommand) = {
-    (state.currentValue == tape(bounded()) || (state valueMatchesEverything())) &&
-      ((state currentState) == this.state || (state stateMatchesEveryThing()))
+  def isApplicable(command: TuringCommand) = {
+    (command.currentValue == tape(bounded()) || (command valueMatchesEverything)) &&
+      ((command currentState) == this.state || (command stateMatchesEveryThing))
   }
 
   /**
@@ -70,58 +69,48 @@ abstract class UniversalTuringMachine(commands: List[TuringCommand], initialStat
     *
     * @return [[head]], after bounds correction
     */
-  def bounded() = {
-    if (head < 0) Math.abs(tapeSize + head) % tapeSize
-    else if (head >= tapeSize) head % tapeSize
-    else head
-  }
+  def bounded() = if (head < 0) Math.abs(tapeSize + head) % tapeSize else if (head >= tapeSize) head % tapeSize else head
 
   def tape = _tape
 }
 
 object UniversalTuringMachine {
-  val COMMENT_CHAR = ";"
-  val DIRECTIVE_CHAR = "#"
-  val INITIAL_STATE_CHAR = "~"
-
-  def apply(commands: List[TuringCommand], initialState: String, terminalStates: List[String], tapeSize: Int) = new UniversalTuringMachine(commands, initialState, terminalStates, tapeSize) {}
-
-  def apply(data: List[String], tapeSize: Int) = fromStrings(data, tapeSize)
+  val (commentChar, directiveChar, initialStateChar) = (";", "#", "~")
 
   /**
     * Allowed characters with special meaning:
     *
-    * 1. Lines starting with '#' - Directives indicating acceptable halting commands, other than the default halt state
+    * 1. Lines starting with '#' - Directives indicating acceptable halting commands, other than the default halt command
     * 2. Lines starting with ';' - Discarded as comments.
     * Well, it is a Turing Machine Code program after all, so the assembler style is employed
     * 3. Lines having a ';' in the middle - Only the part to the left is processed, rest is discarded as an inline comment
-    * 4. Lines starting with '~' - The initial state indicator
-    * 5. Empty Lines - Ignored
+    * 4. Lines starting with '~' - The initial command indicator
+    * 5. Empty Lines - Ignored and discarded
     *
     * @param data     Raw [[List]] of [[String]]s of a Turing Machine Code program
     * @param tapeSize the (fixed) size of the tape. Wraparound is enabled
     * @return An [[UniversalTuringMachine]] object for evaluation of the argument program
-    * @see [[UniversalTuringMachine.DIRECTIVE_CHAR]]
-    * @see [[UniversalTuringMachine.INITIAL_STATE_CHAR]]
-    * @see [[UniversalTuringMachine.COMMENT_CHAR]]
+    * @see [[UniversalTuringMachine.directiveChar]]
+    * @see [[UniversalTuringMachine.initialStateChar]]
+    * @see [[UniversalTuringMachine.commentChar]]
     */
-  def fromStrings(data: List[String], tapeSize: Int) = {
+  def apply(data: List[String], tapeSize: Int) = {
     val commandsData = data map {
       case normal if !(normal.isEmpty ||
-        (normal startsWith COMMENT_CHAR) ||
-        (normal startsWith DIRECTIVE_CHAR) ||
-        (normal startsWith INITIAL_STATE_CHAR)) => TuringCommand(normal)
-      case withInlineComment if (withInlineComment indexOf COMMENT_CHAR) > 0 =>
-        TuringCommand(withInlineComment substring(0, withInlineComment indexOf COMMENT_CHAR))
+        (normal startsWith commentChar) ||
+        (normal startsWith directiveChar) ||
+        (normal startsWith initialStateChar)) => TuringCommand(normal)
+      case withInlineComment if (withInlineComment indexOf commentChar) > 0 =>
+        TuringCommand(withInlineComment substring(0, withInlineComment indexOf commentChar))
     }
     var initialState = (data filter {
-      _ startsWith INITIAL_STATE_CHAR
+      _ startsWith initialStateChar
     }).head
-    initialState = initialState substring(initialState indexOf INITIAL_STATE_CHAR, initialState length)
+    initialState = initialState substring(initialState indexOf initialStateChar, initialState length)
     val terminationData = data map {
-      case terminationDirective if terminationDirective startsWith DIRECTIVE_CHAR =>
-        terminationDirective substring(terminationDirective indexOf DIRECTIVE_CHAR, terminationDirective length)
+      case terminationDirective if terminationDirective startsWith directiveChar =>
+        terminationDirective substring(terminationDirective indexOf directiveChar, terminationDirective length)
     }
-    new UniversalTuringMachine(commandsData, initialState, terminationData, tapeSize) {}
+    new UniversalTuringMachine(commandsData, initialState, terminationData, tapeSize)
   }
 }

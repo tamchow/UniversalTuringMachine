@@ -1,9 +1,9 @@
 <!DOCTYPE html >
 <html>
         <head>
-          <title>turing - Universal Turing Machine - in.tamchow.turing</title>
-          <meta name="description" content="turing - Universal Turing Machine - in.tamchow.turing" />
-          <meta name="keywords" content="turing Universal Turing Machine in.tamchow.turing" />
+            <title>turing - Universal Turing Machine in Scala - in.tamchow.turing</title>
+            <meta name="description" content="turing - Universal Turing Machine in Scala - in.tamchow.turing"/>
+            <meta name="keywords" content="turing Universal Turing Machine in Scala in.tamchow.turing"/>
           <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
           
       <link href="../../../lib/template.css" media="screen" type="text/css" rel="stylesheet" />
@@ -67,28 +67,35 @@
         <div id="types" class="types members">
               <h3>Type Members</h3>
               <ol><li name="in.tamchow.turing.MoveDirection" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="MoveDirectionextendsEnumeration"></a>
+                  <a id="MoveDirectionextendsProductwithSerializable"></a>
       <a id="MoveDirection:MoveDirection"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
-        <span class="kind">class</span>
+        <span class="kind">case class</span>
       </span>
       <span class="symbol">
-        <a href="MoveDirection.html"><span class="name">MoveDirection</span></a><span class="result"> extends <span class="extype" name="scala.Enumeration">Enumeration</span></span>
+        <a href="MoveDirection.html"><span class="name">MoveDirection</span></a><span class="params">(<span
+              name="value">value: <span class="extype" name="scala.Int">Int</span></span>, <span
+              name="_name">_name: <span class="extype" name="scala.Predef.String">String</span></span>)</span><span
+              class="result"> extends <span class="extype" name="scala.Product">Product</span> with <span class="extype"
+                                                                                                          name="scala.Serializable">Serializable</span></span>
       </span>
       </h4><span class="permalink">
-      <a href="../../../index.html#in.tamchow.turing.package@MoveDirectionextendsEnumeration" title="Permalink" target="_top">
+      <a href="../../../index.html#in.tamchow.turing.package@MoveDirectionextendsProductwithSerializable"
+         title="Permalink" target="_top">
         <img src="../../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
-      
-    </li><li name="in.tamchow.turing.TuringCommand" visbl="pub" data-isabs="true" fullComment="no" group="Ungrouped">
+
+              </li>
+                  <li name="in.tamchow.turing.TuringCommand" visbl="pub" data-isabs="false" fullComment="no"
+                      group="Ungrouped">
       <a id="TuringCommandextendsAnyRef"></a>
       <a id="TuringCommand:TuringCommand"></a>
       <h4 class="signature">
       <span class="modifier_kind">
-        <span class="modifier">abstract </span>
+        <span class="modifier"></span>
         <span class="kind">class</span>
       </span>
       <span class="symbol">
@@ -99,13 +106,15 @@
         <img src="../../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
-      
-    </li><li name="in.tamchow.turing.UniversalTuringMachine" visbl="pub" data-isabs="true" fullComment="no" group="Ungrouped">
+
+                  </li>
+                  <li name="in.tamchow.turing.UniversalTuringMachine" visbl="pub" data-isabs="false" fullComment="no"
+                      group="Ungrouped">
       <a id="UniversalTuringMachineextendsAnyRef"></a>
       <a id="UniversalTuringMachine:UniversalTuringMachine"></a>
       <h4 class="signature">
       <span class="modifier_kind">
-        <span class="modifier">abstract </span>
+        <span class="modifier"></span>
         <span class="kind">class</span>
       </span>
       <span class="symbol">
@@ -134,7 +143,8 @@
         <span class="kind">object</span>
       </span>
       <span class="symbol">
-        <a href="MoveDirection$.html"><span class="name">MoveDirection</span></a><span class="result"> extends <span class="extype" name="scala.Enumeration">Enumeration</span></span>
+        <a href="MoveDirection$.html"><span class="name">MoveDirection</span></a><span class="result"> extends <span
+              class="extype" name="scala.Serializable">Serializable</span></span>
       </span>
       </h4><span class="permalink">
       <a href="../../../index.html#in.tamchow.turing.package@MoveDirection" title="Permalink" target="_top">
@@ -177,10 +187,25 @@
         <img src="../../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
-      <p class="shortcomment cmt">The Launcher for the Universal Turing Machine simulator</p><div class="fullcomment"><div class="comment cmt"><p>The Launcher for the Universal Turing Machine simulator</p><p>The parameters are, in order:</p><p>1. The input file path
+                  <p class="shortcomment cmt">The Launcher for the Universal Turing Machine simulator
+                      <br>
+                      The parameters are, in order:
+                      <br>
+                      1.</p>
+                  <div class="fullcomment">
+                      <div class="comment cmt"><p>The Launcher for the Universal Turing Machine simulator
+                          <br>
+                          The parameters are, in order:
+                          <br>
+                          1. The input file path
 2. The tape size
 3. The number of steps for which to run the program. Leave it negative to run it till it halts.
-4. The number of milliseconds to pause before starting the next step. Leave this negative to pause for user input before every step.</p><p>All these parameters are required.</p><p>Only supports input as files.
+                          4. The number of milliseconds to pause before starting the next step. Leave this negative to
+                          pause for user input before every step.
+                          <br>
+                          All these parameters are required.
+                          <br>
+                          Only supports input as files.
 </p></div></div>
     </li><li name="in.tamchow.turing.UniversalTuringMachine" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
       <a id="UniversalTuringMachine"></a>

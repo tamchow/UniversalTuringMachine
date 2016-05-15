@@ -1,9 +1,11 @@
 <!DOCTYPE html >
 <html>
         <head>
-          <title>TuringCommand - Universal Turing Machine - in.tamchow.turing.TuringCommand</title>
-          <meta name="description" content="TuringCommand - Universal Turing Machine - in.tamchow.turing.TuringCommand" />
-          <meta name="keywords" content="TuringCommand Universal Turing Machine in.tamchow.turing.TuringCommand" />
+            <title>TuringCommand - Universal Turing Machine in Scala - in.tamchow.turing.TuringCommand</title>
+            <meta name="description"
+                  content="TuringCommand - Universal Turing Machine in Scala - in.tamchow.turing.TuringCommand"/>
+            <meta name="keywords"
+                  content="TuringCommand Universal Turing Machine in Scala in.tamchow.turing.TuringCommand"/>
           <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
           
       <link href="../../../lib/template.css" media="screen" type="text/css" rel="stylesheet" />
@@ -148,41 +150,9 @@
       </a>
     </span>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
-    </li><li name="in.tamchow.turing.TuringCommand#MATCH_ANYTHING_CODE" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="MATCH_ANYTHING_CODE:String"></a>
-      <a id="MATCH_ANYTHING_CODE:String"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">val</span>
-      </span>
-      <span class="symbol">
-        <span class="name">MATCH_ANYTHING_CODE</span><span class="result">: <span class="extype" name="java.lang.String">String</span></span>
-      </span>
-      </h4><span class="permalink">
-      <a href="../../../index.html#in.tamchow.turing.TuringCommand$@MATCH_ANYTHING_CODE:String" title="Permalink" target="_top">
-        <img src="../../../lib/permalink.png" alt="Permalink" />
-      </a>
-    </span>
-      
-    </li><li name="in.tamchow.turing.TuringCommand#NULL_CODE" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="NULL_CODE:String"></a>
-      <a id="NULL_CODE:String"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">val</span>
-      </span>
-      <span class="symbol">
-        <span class="name">NULL_CODE</span><span class="result">: <span class="extype" name="java.lang.String">String</span></span>
-      </span>
-      </h4><span class="permalink">
-      <a href="../../../index.html#in.tamchow.turing.TuringCommand$@NULL_CODE:String" title="Permalink" target="_top">
-        <img src="../../../lib/permalink.png" alt="Permalink" />
-      </a>
-    </span>
-      
-    </li><li name="in.tamchow.turing.TuringCommand#apply" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+              </li>
+                  <li name="in.tamchow.turing.TuringCommand#apply" visbl="pub" data-isabs="false" fullComment="yes"
+                      group="Ungrouped">
       <a id="apply(data:String):in.tamchow.turing.TuringCommand"></a>
       <a id="apply(String):TuringCommand"></a>
       <h4 class="signature">
@@ -198,37 +168,58 @@
         <img src="../../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
-      
+                      <p class="shortcomment cmt">Allowed wildcards:
+                          <br>
+                          1.</p>
+                      <div class="fullcomment">
+                          <div class="comment cmt"><p>Allowed wildcards:
+                              <br>
+                              1. '!' - indicates a null value or the halting command, internally represented as <code>null</code>
+                              2. '*' - indicates a match-all wildcard character, no separate internal representation
+                              <br>
+                              Separator used is whitespace - 5 terms are required after tokenization
+                          </p></div>
+                          <dl class="paramcmts block">
+                              <dt class="param">data</dt>
+                              <dd class="cmt"><p><span class="extype" name="String">String</span> indicating a defined
+                                  transitional operation</p></dd>
+                              <dt>returns</dt>
+                              <dd class="cmt"><p>a <a href="TuringCommand.html" class="extype"
+                                                      name="in.tamchow.turing.TuringCommand">TuringCommand</a> object
+                                  derived from the argument</p></dd>
+                          </dl>
+                          <dl class="attributes block">
+                              <dt>See also</dt>
+                              <dd><span class="cmt"><p><a href="#whitespaceRegex:String" class="extmbr"
+                                                          name="in.tamchow.turing.TuringCommand#whitespaceRegex">TuringCommand.whitespaceRegex</a></p></span><span
+                                      class="cmt"><p><a href="#commandArity:Int" class="extmbr"
+                                                        name="in.tamchow.turing.TuringCommand#commandArity">TuringCommand.commandArity</a></p></span><span
+                                      class="cmt"><p><a href="#nullCode:String" class="extmbr"
+                                                        name="in.tamchow.turing.TuringCommand#nullCode">TuringCommand.nullCode</a></p></span><span
+                                      class="cmt"><p><a href="#matchAnythingCode:String" class="extmbr"
+                                                        name="in.tamchow.turing.TuringCommand#matchAnythingCode">TuringCommand.matchAnythingCode</a></p></span>
+                              </dd>
+                          </dl>
+                      </div>
     </li><li name="in.tamchow.turing.TuringCommand#apply" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="apply(data:(String,String,String,String,in.tamchow.turing.MoveDirection.MoveDirection)):in.tamchow.turing.TuringCommand"></a>
-      <a id="apply((String,String,String,String,MoveDirection.MoveDirection)):TuringCommand"></a>
+                      <a id="apply(data:(String,String,String,String,in.tamchow.turing.MoveDirection)):in.tamchow.turing.TuringCommand"></a>
+                      <a id="apply((String,String,String,String,MoveDirection)):TuringCommand"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">apply</span><span class="params">(<span name="data">data: (<span class="extype" name="scala.Predef.String">String</span>, <span class="extype" name="scala.Predef.String">String</span>, <span class="extype" name="scala.Predef.String">String</span>, <span class="extype" name="scala.Predef.String">String</span>, <a href="MoveDirection$.html#MoveDirection=in.tamchow.turing.MoveDirection.Value" class="extmbr" name="in.tamchow.turing.MoveDirection.MoveDirection">MoveDirection.MoveDirection</a>)</span>)</span><span class="result">: <a href="TuringCommand.html" class="extype" name="in.tamchow.turing.TuringCommand">TuringCommand</a></span>
+        <span class="name">apply</span><span class="params">(<span name="data">data: (<span class="extype"
+                                                                                            name="scala.Predef.String">String</span>, <span
+              class="extype" name="scala.Predef.String">String</span>, <span class="extype" name="scala.Predef.String">String</span>, <span
+              class="extype" name="scala.Predef.String">String</span>, <a href="MoveDirection.html" class="extype"
+                                                                          name="in.tamchow.turing.MoveDirection">MoveDirection</a>)</span>)</span><span
+              class="result">: <a href="TuringCommand.html" class="extype" name="in.tamchow.turing.TuringCommand">TuringCommand</a></span>
       </span>
       </h4><span class="permalink">
-      <a href="../../../index.html#in.tamchow.turing.TuringCommand$@apply(data:(String,String,String,String,in.tamchow.turing.MoveDirection.MoveDirection)):in.tamchow.turing.TuringCommand" title="Permalink" target="_top">
-        <img src="../../../lib/permalink.png" alt="Permalink" />
-      </a>
-    </span>
-      
-    </li><li name="in.tamchow.turing.TuringCommand#apply" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="apply(currentStateP:String,nextStateP:String,currentValueP:String,nextValueP:String,directionP:in.tamchow.turing.MoveDirection.MoveDirection):in.tamchow.turing.TuringCommand"></a>
-      <a id="apply(String,String,String,String,MoveDirection.MoveDirection):TuringCommand"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="name">apply</span><span class="params">(<span name="currentStateP">currentStateP: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="nextStateP">nextStateP: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="currentValueP">currentValueP: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="nextValueP">nextValueP: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="directionP">directionP: <a href="MoveDirection$.html#MoveDirection=in.tamchow.turing.MoveDirection.Value" class="extmbr" name="in.tamchow.turing.MoveDirection.MoveDirection">MoveDirection.MoveDirection</a></span>)</span><span class="result">: <a href="TuringCommand.html" class="extype" name="in.tamchow.turing.TuringCommand">TuringCommand</a></span>
-      </span>
-      </h4><span class="permalink">
-      <a href="../../../index.html#in.tamchow.turing.TuringCommand$@apply(currentStateP:String,nextStateP:String,currentValueP:String,nextValueP:String,directionP:in.tamchow.turing.MoveDirection.MoveDirection):in.tamchow.turing.TuringCommand" title="Permalink" target="_top">
+      <a href="../../../index.html#in.tamchow.turing.TuringCommand$@apply(data:(String,String,String,String,in.tamchow.turing.MoveDirection)):in.tamchow.turing.TuringCommand"
+         title="Permalink" target="_top">
         <img src="../../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
@@ -273,7 +264,27 @@
     </span>)</span>
               
         </dd></dl></div>
-    </li><li name="scala.AnyRef#eq" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+                  </li>
+                  <li name="in.tamchow.turing.TuringCommand#commandArity" visbl="pub" data-isabs="false"
+                      fullComment="no" group="Ungrouped">
+                      <a id="commandArity:Int"></a>
+                      <a id="commandArity:Int"></a>
+                      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">commandArity</span><span class="result">: <span class="extype"
+                                                                           name="scala.Int">Int</span></span>
+      </span>
+                      </h4><span class="permalink">
+      <a href="../../../index.html#in.tamchow.turing.TuringCommand$@commandArity:Int" title="Permalink" target="_top">
+        <img src="../../../lib/permalink.png" alt="Permalink"/>
+      </a>
+    </span>
+
+                  </li><li name="scala.AnyRef#eq" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="eq(x$1:AnyRef):Boolean"></a>
       <a id="eq(AnyRef):Boolean"></a>
       <h4 class="signature">
@@ -330,25 +341,6 @@
     </span>)</span>
               
         </dd></dl></div>
-    </li><li name="in.tamchow.turing.TuringCommand#fromString" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="fromString(data:String):in.tamchow.turing.TuringCommand"></a>
-      <a id="fromString(String):TuringCommand"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="name">fromString</span><span class="params">(<span name="data">data: <span class="extype" name="scala.Predef.String">String</span></span>)</span><span class="result">: <a href="TuringCommand.html" class="extype" name="in.tamchow.turing.TuringCommand">TuringCommand</a></span>
-      </span>
-      </h4><span class="permalink">
-      <a href="../../../index.html#in.tamchow.turing.TuringCommand$@fromString(data:String):in.tamchow.turing.TuringCommand" title="Permalink" target="_top">
-        <img src="../../../lib/permalink.png" alt="Permalink" />
-      </a>
-    </span>
-      <p class="shortcomment cmt">Allowed wildcards:</p><div class="fullcomment"><div class="comment cmt"><p>Allowed wildcards:</p><p>1. '!' - indicates a null value or the halting state, internally represented as <code>null</code>
-2. '*' - indicates a match-all wildcard character, no separate internal representation</p><p>Separator used is whitespace - 5 terms are required after tokenization
-</p></div><dl class="paramcmts block"><dt class="param">data</dt><dd class="cmt"><p><span class="extype" name="String">String</span> indicating a defined transitional operation</p></dd><dt>returns</dt><dd class="cmt"><p>a <a href="TuringCommand.html" class="extype" name="in.tamchow.turing.TuringCommand">TuringCommand</a> object derived from the argument</p></dd></dl><dl class="attributes block"> <dt>See also</dt><dd><span class="cmt"><p><a href="#NULL_CODE:String" class="extmbr" name="in.tamchow.turing.TuringCommand#NULL_CODE">TuringCommand.NULL_CODE</a></p></span><span class="cmt"><p><a href="#MATCH_ANYTHING_CODE:String" class="extmbr" name="in.tamchow.turing.TuringCommand#MATCH_ANYTHING_CODE">TuringCommand.MATCH_ANYTHING_CODE</a></p></span></dd></dl></div>
     </li><li name="scala.AnyRef#getClass" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="getClass():Class[_]"></a>
       <a id="getClass():Class[_]"></a>
@@ -400,7 +392,27 @@
       </a>
     </span>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Any</dd></dl></div>
-    </li><li name="scala.AnyRef#ne" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+                  </li>
+                  <li name="in.tamchow.turing.TuringCommand#matchAnythingCode" visbl="pub" data-isabs="false"
+                      fullComment="no" group="Ungrouped">
+                      <a id="matchAnythingCode:String"></a>
+                      <a id="matchAnythingCode:String"></a>
+                      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">matchAnythingCode</span><span class="result">: <span class="extype" name="java.lang.String">String</span></span>
+      </span>
+                      </h4><span class="permalink">
+      <a href="../../../index.html#in.tamchow.turing.TuringCommand$@matchAnythingCode:String" title="Permalink"
+         target="_top">
+        <img src="../../../lib/permalink.png" alt="Permalink"/>
+      </a>
+    </span>
+
+                  </li><li name="scala.AnyRef#ne" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="ne(x$1:AnyRef):Boolean"></a>
       <a id="ne(AnyRef):Boolean"></a>
       <h4 class="signature">
@@ -451,7 +463,27 @@
       </a>
     </span>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
-    </li><li name="scala.AnyRef#synchronized" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+                  </li>
+                  <li name="in.tamchow.turing.TuringCommand#nullCode" visbl="pub" data-isabs="false" fullComment="no"
+                      group="Ungrouped">
+                      <a id="nullCode:String"></a>
+                      <a id="nullCode:String"></a>
+                      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">nullCode</span><span class="result">: <span class="extype"
+                                                                       name="java.lang.String">String</span></span>
+      </span>
+                      </h4><span class="permalink">
+      <a href="../../../index.html#in.tamchow.turing.TuringCommand$@nullCode:String" title="Permalink" target="_top">
+        <img src="../../../lib/permalink.png" alt="Permalink"/>
+      </a>
+    </span>
+
+                  </li><li name="scala.AnyRef#synchronized" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="synchronized[T0](x$1:=&gt;T0):T0"></a>
       <a id="synchronized[T0](⇒T0):T0"></a>
       <h4 class="signature">
@@ -554,7 +586,27 @@
     </span>)</span>
               
         </dd></dl></div>
-    </li></ol>
+                  </li>
+                  <li name="in.tamchow.turing.TuringCommand#whitespaceRegex" visbl="pub" data-isabs="false"
+                      fullComment="no" group="Ungrouped">
+                      <a id="whitespaceRegex:String"></a>
+                      <a id="whitespaceRegex:String"></a>
+                      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">whitespaceRegex</span><span class="result">: <span class="extype" name="java.lang.String">String</span></span>
+      </span>
+                      </h4><span class="permalink">
+      <a href="../../../index.html#in.tamchow.turing.TuringCommand$@whitespaceRegex:String" title="Permalink"
+         target="_top">
+        <img src="../../../lib/permalink.png" alt="Permalink"/>
+      </a>
+    </span>
+
+                  </li></ol>
             </div>
 
         

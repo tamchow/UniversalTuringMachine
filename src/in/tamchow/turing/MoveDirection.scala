@@ -3,42 +3,39 @@ package in.tamchow.turing
 /**
   * Indicates the directions in which the tape head can move
   */
-object MoveDirection extends Enumeration {
-  type MoveDirection = Value
-  val LEFT, RIGHT, NONE = Value
+object MoveDirection {
+  val illegalTypeMessage = s"Unrecognized enum identifier : %s for type $getClass"
+  val LEFT = MoveDirection(-1, "LEFT")
+  val RIGHT = MoveDirection(+1, "RIGHT")
+  val NONE = MoveDirection(0, "NONE")
 
-  val illegalInstanceMessage = "Illegal instance of enum of type : "
+  def parse(data: String) = {
+    try MoveDirection(data.toInt) catch {
+      case numberFormatException: NumberFormatException => try MoveDirection(data) catch {
+        case exception: Exception => exception.printStackTrace(); null
+      }
+      case _: Exception => null
+    }
+  }
 
-  def fromInt(value: Int) = {
-    if (value < 0) {
-      LEFT
-    } else if (value > 0) {
-      RIGHT
-    } else {
-      NONE
+  def apply(value: Int): MoveDirection = {
+    value match {
+      case positive if value > 0 => RIGHT
+      case negative if value < 0 => LEFT
+      case zero => NONE
+    }
+  }
+
+  def apply(name: String): MoveDirection = {
+    name match {
+      case left if name equalsIgnoreCase LEFT.name => LEFT
+      case right if name equalsIgnoreCase RIGHT.name => RIGHT
+      case none if name equalsIgnoreCase NONE.name => NONE
+      case other => throw new IllegalArgumentException(illegalTypeMessage format other)
     }
   }
 }
 
-class MoveDirection extends Enumeration {
-
-  override def equals(that: Any) =
-    that match {
-      case that: MoveDirection.MoveDirection => that.isInstanceOf[MoveDirection.MoveDirection] && this.## == that.##
-      case _ => false
-    }
-
-  /**
-    * @throws IllegalArgumentException if object is not a valid enum type as regards [[MoveDirection.MoveDirection]]
-    * @return the hash code of this [[MoveDirection.MoveDirection]] object
-    */
-  override def hashCode() = {
-    import MoveDirection._
-    this match {
-      case LEFT => -1
-      case RIGHT => +1
-      case NONE => 0
-      case other => throw new IllegalArgumentException(illegalInstanceMessage + other.getClass)
-    }
-  }
+case class MoveDirection(value: Int, _name: String) {
+  def name = _name
 }

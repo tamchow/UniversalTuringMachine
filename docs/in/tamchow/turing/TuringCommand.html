@@ -1,9 +1,11 @@
 <!DOCTYPE html >
 <html>
         <head>
-          <title>TuringCommand - Universal Turing Machine - in.tamchow.turing.TuringCommand</title>
-          <meta name="description" content="TuringCommand - Universal Turing Machine - in.tamchow.turing.TuringCommand" />
-          <meta name="keywords" content="TuringCommand Universal Turing Machine in.tamchow.turing.TuringCommand" />
+            <title>TuringCommand - Universal Turing Machine in Scala - in.tamchow.turing.TuringCommand</title>
+            <meta name="description"
+                  content="TuringCommand - Universal Turing Machine in Scala - in.tamchow.turing.TuringCommand"/>
+            <meta name="keywords"
+                  content="TuringCommand Universal Turing Machine in Scala in.tamchow.turing.TuringCommand"/>
           <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
           
       <link href="../../../lib/template.css" media="screen" type="text/css" rel="stylesheet" />
@@ -43,7 +45,7 @@
 
       <h4 id="signature" class="signature">
       <span class="modifier_kind">
-        <span class="modifier">abstract </span>
+        <span class="modifier"></span>
         <span class="kind">class</span>
       </span>
       <span class="symbol">
@@ -96,7 +98,7 @@
         <div id="constructors" class="members">
               <h3>Instance Constructors</h3>
               <ol><li name="in.tamchow.turing.TuringCommand#&lt;init&gt;" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="&lt;init&gt;(data:(String,String,String,String,in.tamchow.turing.MoveDirection.MoveDirection)):in.tamchow.turing.TuringCommand"></a>
+                  <a id="&lt;init&gt;(_currentState:String,_nextState:String,_currentValue:String,_nextValue:String,_direction:in.tamchow.turing.MoveDirection):in.tamchow.turing.TuringCommand"></a>
       <a id="&lt;init&gt;:TuringCommand"></a>
       <h4 class="signature">
       <span class="modifier_kind">
@@ -104,27 +106,16 @@
         <span class="kind">new</span>
       </span>
       <span class="symbol">
-        <span class="name">TuringCommand</span><span class="params">(<span name="data">data: (<span class="extype" name="scala.Predef.String">String</span>, <span class="extype" name="scala.Predef.String">String</span>, <span class="extype" name="scala.Predef.String">String</span>, <span class="extype" name="scala.Predef.String">String</span>, <a href="MoveDirection$.html#MoveDirection=in.tamchow.turing.MoveDirection.Value" class="extmbr" name="in.tamchow.turing.MoveDirection.MoveDirection">MoveDirection.MoveDirection</a>)</span>)</span>
+        <span class="name">TuringCommand</span><span class="params">(<span name="_currentState">_currentState: <span
+              class="extype" name="scala.Predef.String">String</span></span>, <span name="_nextState">_nextState: <span
+              class="extype" name="scala.Predef.String">String</span></span>, <span name="_currentValue">_currentValue: <span
+              class="extype" name="scala.Predef.String">String</span></span>, <span name="_nextValue">_nextValue: <span
+              class="extype" name="scala.Predef.String">String</span></span>, <span name="_direction">_direction: <a
+              href="MoveDirection.html" class="extype" name="in.tamchow.turing.MoveDirection">MoveDirection</a></span>)</span>
       </span>
       </h4><span class="permalink">
-      <a href="../../../index.html#in.tamchow.turing.TuringCommand@&lt;init&gt;(data:(String,String,String,String,in.tamchow.turing.MoveDirection.MoveDirection)):in.tamchow.turing.TuringCommand" title="Permalink" target="_top">
-        <img src="../../../lib/permalink.png" alt="Permalink" />
-      </a>
-    </span>
-      
-    </li><li name="in.tamchow.turing.TuringCommand#&lt;init&gt;" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="&lt;init&gt;(currentStateP:String,nextStateP:String,currentValueP:String,nextValueP:String,directionP:in.tamchow.turing.MoveDirection.MoveDirection):in.tamchow.turing.TuringCommand"></a>
-      <a id="&lt;init&gt;:TuringCommand"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">new</span>
-      </span>
-      <span class="symbol">
-        <span class="name">TuringCommand</span><span class="params">(<span name="currentStateP">currentStateP: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="nextStateP">nextStateP: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="currentValueP">currentValueP: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="nextValueP">nextValueP: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="directionP">directionP: <a href="MoveDirection$.html#MoveDirection=in.tamchow.turing.MoveDirection.Value" class="extmbr" name="in.tamchow.turing.MoveDirection.MoveDirection">MoveDirection.MoveDirection</a></span>)</span>
-      </span>
-      </h4><span class="permalink">
-      <a href="../../../index.html#in.tamchow.turing.TuringCommand@&lt;init&gt;(currentStateP:String,nextStateP:String,currentValueP:String,nextValueP:String,directionP:in.tamchow.turing.MoveDirection.MoveDirection):in.tamchow.turing.TuringCommand" title="Permalink" target="_top">
+      <a href="../../../index.html#in.tamchow.turing.TuringCommand@&lt;init&gt;(_currentState:String,_nextState:String,_currentValue:String,_nextValue:String,_direction:in.tamchow.turing.MoveDirection):in.tamchow.turing.TuringCommand"
+         title="Permalink" target="_top">
         <img src="../../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
@@ -309,18 +300,20 @@
     </span>
       
     </li><li name="in.tamchow.turing.TuringCommand#direction" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="direction:in.tamchow.turing.MoveDirection.MoveDirection"></a>
-      <a id="direction:MoveDirection.MoveDirection"></a>
+                  <a id="direction:in.tamchow.turing.MoveDirection"></a>
+                  <a id="direction:MoveDirection"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">direction</span><span class="result">: <a href="MoveDirection$.html#MoveDirection=in.tamchow.turing.MoveDirection.Value" class="extmbr" name="in.tamchow.turing.MoveDirection.MoveDirection">MoveDirection.MoveDirection</a></span>
+        <span class="name">direction</span><span class="result">: <a href="MoveDirection.html" class="extype"
+                                                                     name="in.tamchow.turing.MoveDirection">MoveDirection</a></span>
       </span>
       </h4><span class="permalink">
-      <a href="../../../index.html#in.tamchow.turing.TuringCommand@direction:in.tamchow.turing.MoveDirection.MoveDirection" title="Permalink" target="_top">
+      <a href="../../../index.html#in.tamchow.turing.TuringCommand@direction:in.tamchow.turing.MoveDirection"
+         title="Permalink" target="_top">
         <img src="../../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
@@ -627,18 +620,20 @@
     </span>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
     </li><li name="in.tamchow.turing.TuringCommand#stateMatchesEveryThing" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="stateMatchesEveryThing():Boolean"></a>
-      <a id="stateMatchesEveryThing():Boolean"></a>
+                  <a id="stateMatchesEveryThing:Boolean"></a>
+                  <a id="stateMatchesEveryThing:Boolean"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">stateMatchesEveryThing</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
+        <span class="name">stateMatchesEveryThing</span><span class="result">: <span class="extype"
+                                                                                     name="scala.Boolean">Boolean</span></span>
       </span>
       </h4><span class="permalink">
-      <a href="../../../index.html#in.tamchow.turing.TuringCommand@stateMatchesEveryThing():Boolean" title="Permalink" target="_top">
+      <a href="../../../index.html#in.tamchow.turing.TuringCommand@stateMatchesEveryThing:Boolean" title="Permalink"
+         target="_top">
         <img src="../../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
@@ -669,27 +664,48 @@
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">toString</span><span class="params">()</span><span class="result">: <span class="extype" name="java.lang.String">String</span></span>
+        <span class="name">toString</span><span class="params">()</span><span class="result">: <span class="extype"
+                                                                                                     name="scala.Predef.String">String</span></span>
       </span>
       </h4><span class="permalink">
       <a href="../../../index.html#in.tamchow.turing.TuringCommand@toString():String" title="Permalink" target="_top">
         <img src="../../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="in.tamchow.turing.TuringCommand">TuringCommand</a> → AnyRef → Any</dd></dl></div>
+                  <p class="shortcomment cmt">The output format is deliberately similar to the input format,
+                      so the result of one can be reflexively used with the other.</p>
+                  <div class="fullcomment">
+                      <div class="comment cmt"><p>The output format is deliberately similar to the input format,
+                          so the result of one can be reflexively used with the other.
+                      </p></div>
+                      <dl class="paramcmts block">
+                          <dt>returns</dt>
+                          <dd class="cmt"><p>a <span class="extype" name="String">String</span> representing this <a
+                                  href="" class="extype" name="in.tamchow.turing.TuringCommand">TuringCommand</a> object
+                          </p></dd>
+                      </dl>
+                      <dl class="attributes block">
+                          <dt>Definition Classes</dt>
+                          <dd><a href="" class="extype" name="in.tamchow.turing.TuringCommand">TuringCommand</a> →
+                              AnyRef → Any
+                          </dd>
+                      </dl>
+                  </div>
     </li><li name="in.tamchow.turing.TuringCommand#valueMatchesEverything" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="valueMatchesEverything():Boolean"></a>
-      <a id="valueMatchesEverything():Boolean"></a>
+                  <a id="valueMatchesEverything:Boolean"></a>
+                  <a id="valueMatchesEverything:Boolean"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">valueMatchesEverything</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
+        <span class="name">valueMatchesEverything</span><span class="result">: <span class="extype"
+                                                                                     name="scala.Boolean">Boolean</span></span>
       </span>
       </h4><span class="permalink">
-      <a href="../../../index.html#in.tamchow.turing.TuringCommand@valueMatchesEverything():Boolean" title="Permalink" target="_top">
+      <a href="../../../index.html#in.tamchow.turing.TuringCommand@valueMatchesEverything:Boolean" title="Permalink"
+         target="_top">
         <img src="../../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>

@@ -5,9 +5,29 @@ import scala.language.postfixOps
 /**
   * Represents a universal Turing Machine
   */
-class UniversalTuringMachine(commands: List[TuringCommand], initialState: String, terminalStates: List[String], tapeSize: Int) {
-  private val _tape = new Array[String](tapeSize)
+class UniversalTuringMachine(commands: Vector[TuringCommand], initialState: String, terminalStates: Vector[String], tapeFiller: Vector[String], tapeSize: Int) {
+
+  private val _tape = initTape
+
   private var (head, state) = (0, initialState)
+
+  /**
+    * @note This is the best partially functional method of filling up a list repeatedly using the elements of another
+    *       I could come up with. Please suggest a more idiomatic way if possible
+    * @return a properly initialized tape
+    */
+  def initTape = {
+    var fillerListIdx = 0
+    def getFiller = {
+      if (fillerListIdx > tapeFiller.size) fillerListIdx = 0
+      fillerListIdx += 1
+      tapeFiller(fillerListIdx)
+    }
+    def handleNullFill = if (terminalStates == null) null else getFiller
+    Array.fill(tapeSize) {
+      handleNullFill
+    }
+  }
 
   /**
     * Runs the program for the specified number of steps
@@ -15,15 +35,15 @@ class UniversalTuringMachine(commands: List[TuringCommand], initialState: String
     *
     * @param steps the number of steps for which the program is run.
     *              Supply negative values to run till halt
-    * @return the history of the tape in each step as a [[List]] of [[Array]]s of [[String]]s
+    * @return the history of the tape in each step as a [[Vector]] of [[Array]]s of [[String]]s
     */
   def runForStepsOrTillHalt(steps: Int) = {
     var currentSteps = 0
     var halt = initialState == null
     val useStepping = steps >= 0
-    var tapeHistory: List[Array[String]] = Nil
+    var tapeHistory: Vector[Array[String]] = Vector()
     while (!(halt || (useStepping && currentSteps >= steps))) {
-      tapeHistory = tapeHistory :+ tape
+      tapeHistory = tapeHistory :+ (tape clone())
       halt = runStep()
       currentSteps += 1
     }
@@ -44,9 +64,9 @@ class UniversalTuringMachine(commands: List[TuringCommand], initialState: String
       tape(bounded()) = applicableState.nextValue
       state = applicableState.nextState
       head = applicableState.direction match {
-        case LEFT => head - 1
-        case RIGHT => head + 1
-        case NONE => head
+        case `left` => head - 1
+        case `right` => head + 1
+        case `none` => head
         case other => throw new IllegalArgumentException(illegalTypeMessage format (other getClass).getName)
       }
       true
@@ -75,42 +95,58 @@ class UniversalTuringMachine(commands: List[TuringCommand], initialState: String
 }
 
 object UniversalTuringMachine {
-  val (commentChar, directiveChar, initialStateChar) = (";", "#", "~")
+  val (commentChar, directiveChar, initialStateChar, fillerChar) = (";", "#", "~", "@")
 
   /**
     * Allowed characters with special meaning:
     *
-    * 1. Lines starting with '#' - Directives indicating acceptable halting commands, other than the default halt command
-    * 2. Lines starting with ';' - Discarded as comments.
+    * 1. Lines starting with '[[directiveChar]]' - Directives indicating acceptable halting commands,
+    * other than the default halt command
+    * 2. Lines starting with '[[commentChar]]' - Discarded as comments.
     * Well, it is a Turing Machine Code program after all, so the assembler style is employed
-    * 3. Lines having a ';' in the middle - Only the part to the left is processed, rest is discarded as an inline comment
-    * 4. Lines starting with '~' - The initial command indicator
-    * 5. Empty Lines - Ignored and discarded
+    * 3. Lines having a '[[commentChar]]' in the middle - Only the part to the left is processed,
+    * rest is discarded as an inline comment
+    * 4. Line starting with '[[initialStateChar]]' - The initial command indicator
+    * 5. Line starting with '[[fillerChar]]' - The tape initializer
     *
-    * @param data     Raw [[List]] of [[String]]s of a Turing Machine Code program
+    * This [[String]] is split by whitespace after trimming indicator to get filler [[String]]s,
+    * which are repeated in order to fill up the tape
+    *
+    * Without such a line, the tape is initialized to logical blanks, represented by `null`
+    * 6. Empty Lines - Ignored and discarded
+    *
+    * @param data     Raw [[Vector]] of [[String]]s of a Turing Machine Code program
     * @param tapeSize the (fixed) size of the tape. Wraparound is enabled
     * @return An [[UniversalTuringMachine]] object for evaluation of the argument program
-    * @see [[UniversalTuringMachine.directiveChar]]
-    * @see [[UniversalTuringMachine.initialStateChar]]
-    * @see [[UniversalTuringMachine.commentChar]]
+    * @see [[directiveChar]]
+    * @see [[initialStateChar]]
+    * @see [[commentChar]]
+    * @see [[fillerChar]]
+    * @see [[TuringCommand.whitespaceRegex]]
     */
-  def apply(data: List[String], tapeSize: Int) = {
+  def apply(data: Vector[String], tapeSize: Int) = {
+    def doStartFilter(filterChar: String) = (data filter {
+      _ startsWith filterChar
+    }).head
+    def trim(string: String, trimFrom: String) = string drop (string indexOf trimFrom)
+    def process(filterChar: String) = trim(doStartFilter(filterChar), filterChar)
+    import TuringCommand._
     val commandsData = data map {
       case normal if !(normal.isEmpty ||
         (normal startsWith commentChar) ||
         (normal startsWith directiveChar) ||
         (normal startsWith initialStateChar)) => TuringCommand(normal)
       case withInlineComment if (withInlineComment indexOf commentChar) > 0 =>
-        TuringCommand(withInlineComment substring(0, withInlineComment indexOf commentChar))
+        TuringCommand(trim(withInlineComment, commentChar))
     }
-    var initialState = (data filter {
-      _ startsWith initialStateChar
-    }).head
-    initialState = initialState substring(initialState indexOf initialStateChar, initialState length)
+    val initialState = process(initialStateChar)
+    val tapeFiller = if (data exists {
+      _ startsWith fillerChar
+    }) escapeNull(process(fillerChar) split whitespaceRegex toVector)
+    else null
     val terminationData = data map {
-      case terminationDirective if terminationDirective startsWith directiveChar =>
-        terminationDirective substring(terminationDirective indexOf directiveChar, terminationDirective length)
+      case terminationDirective if terminationDirective startsWith directiveChar => trim(terminationDirective, directiveChar)
     }
-    new UniversalTuringMachine(commandsData, initialState, terminationData, tapeSize)
+    new UniversalTuringMachine(commandsData, initialState, terminationData, tapeFiller, tapeSize)
   }
 }

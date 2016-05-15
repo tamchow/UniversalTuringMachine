@@ -5,32 +5,44 @@ package in.tamchow.turing
   */
 object MoveDirection {
   val illegalTypeMessage = s"Unrecognized enum identifier : %s for type $getClass"
-  val LEFT = MoveDirection(-1, "LEFT")
-  val RIGHT = MoveDirection(+1, "RIGHT")
-  val NONE = MoveDirection(0, "NONE")
+  val (left, right, none) = (MoveDirection(-1, "left"), MoveDirection(+1, "right"), MoveDirection(0, "none"))
 
+  /**
+    * Results:
+    * <br>
+    * 1. Any negative [[Int]] value or case-insensitive match to [[left.name]]-> [[left]]
+    * 2. Any positive [[Int]] value or case-insensitive match to [[right.name]]-> [[right]]
+    * 2. A Zero (`0`) [[Int]] value or case-insensitive match to [[none.name]]-> [[none]]
+    *
+    * @param data the [[String]] to parse into a [[MoveDirection]]
+    * @return a [[MoveDirection]] object based on the parameters
+    */
   def parse(data: String) = {
+    def handleOtherExceptions(exception: Exception) = {
+      exception printStackTrace()
+      null
+    }
     try MoveDirection(data.toInt) catch {
       case numberFormatException: NumberFormatException => try MoveDirection(data) catch {
-        case exception: Exception => exception.printStackTrace(); null
+        case exception: Exception => handleOtherExceptions(exception)
       }
-      case _: Exception => null
+      case exception: Exception => handleOtherExceptions(exception)
     }
   }
 
   def apply(value: Int): MoveDirection = {
     value match {
-      case positive if value > 0 => RIGHT
-      case negative if value < 0 => LEFT
-      case zero => NONE
+      case positive if value > 0 => right
+      case negative if value < 0 => left
+      case zero => none
     }
   }
 
   def apply(name: String): MoveDirection = {
     name match {
-      case left if name equalsIgnoreCase LEFT.name => LEFT
-      case right if name equalsIgnoreCase RIGHT.name => RIGHT
-      case none if name equalsIgnoreCase NONE.name => NONE
+      case isLeft if name equalsIgnoreCase left.name => left
+      case isRight if name equalsIgnoreCase right.name => right
+      case isNone if name equalsIgnoreCase none.name => none
       case other => throw new IllegalArgumentException(illegalTypeMessage format other)
     }
   }

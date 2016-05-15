@@ -18,18 +18,19 @@ object TuringCommand {
     *
     * @param data [[String]] indicating a defined transitional operation
     * @return a [[TuringCommand]] object derived from the argument
-    * @see [[TuringCommand.matchAnythingCode]]
-    * @see [[TuringCommand.nullCode]]
-    * @see [[TuringCommand.commandArity]]
-    * @see [[TuringCommand.whitespaceRegex]]
+    * @see [[matchAnythingCode]]
+    * @see [[nullCode]]
+    * @see [[commandArity]]
+    * @see [[whitespaceRegex]]
     */
   def apply(data: String): TuringCommand = {
-    var elements = (data split(whitespaceRegex, commandArity)).toList
-    elements = elements map {
-      case this.nullCode => null
-      case others => others
-    }
+    val elements = escapeNull((data split(whitespaceRegex, commandArity)).toVector)
     TuringCommand((elements.head, elements(1), elements(2), elements(3), MoveDirection parse elements.last))
+  }
+
+  def escapeNull(elements: Vector[String]) = elements map {
+    case `nullCode` => null
+    case others => others
   }
 
   def apply(data: (String, String, String, String, MoveDirection)): TuringCommand =
@@ -57,7 +58,7 @@ class TuringCommand(_currentState: String, _nextState: String, _currentValue: St
     *
     * @return a [[String]] representing this [[TuringCommand]] object
     */
-  override def toString = List(currentState, nextState, currentValue, nextValue, direction.name) map {
+  override def toString = Vector(currentState, nextState, currentValue, nextValue, direction.name) map {
     case nullItem if nullItem == null => nullCode
     case notNullItem => notNullItem
   } mkString " "

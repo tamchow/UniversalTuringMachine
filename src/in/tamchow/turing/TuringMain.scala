@@ -27,13 +27,13 @@ object TuringMain {
   }
 
   def doRun(filePath: String, tapeSize: Int, steps: Int, pauseTime: Int) {
-    val data = io.Source fromFile filePath getLines() toList
+    val data = io.Source fromFile filePath getLines() toVector
     val turingMachine = UniversalTuringMachine(data, tapeSize)
     val useStepping = steps >= 0
     var currentSteps = 0
     var halt = false
     while (!(halt || (useStepping && currentSteps >= steps))) {
-      println(turingMachine tape)
+      println(formatArgs(turingMachine tape))
       halt = turingMachine runStep()
       currentSteps += 1
       if (pauseTime >= 0) Thread sleep pauseTime
@@ -43,4 +43,9 @@ object TuringMain {
       }
     }
   }
+
+  def formatArgs(args: Array[String]) = args.toList map {
+    case null => ""
+    case others => others
+  } mkString " "
 }

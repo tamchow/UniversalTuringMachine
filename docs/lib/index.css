@@ -2,7 +2,7 @@
   color: inherit;
   font-size: 10pt;
   text-decoration: none;
-  font-family: Arial, sans-serif;
+        font-family: Arial, sans-serif;
   border-width: 0px;
   padding: 0px;
   margin: 0px;
@@ -53,18 +53,18 @@ h1 {
 #filter {
   position: absolute;
   display: block;
-  /*  padding: 5px;*/
+/*  padding: 5px;*/
   right: 0;
   left: 0;
   top: 0;
-  background-image: url('filterbg.gif');
-  background-repeat: repeat-x;
+  background-image:url('filterbg.gif');
+  background-repeat:repeat-x;
   background-color: #ededee; /* light gray */
   /*background-color: #DADADA;*/
-  border: 1px solid #bbbbbb;
-  border-top: 0;
-  border-left: 0;
-  border-right: 0;
+  border:1px solid #bbbbbb;
+  border-top:0;
+  border-left:0;
+  border-right:0;
 }
 
 #textfilter {
@@ -179,19 +179,19 @@ h1 {
   position: relative;
   display: block;
   padding: 5px;
-  /*  background-color: #999;*/
+/*  background-color: #999;*/
   text-align: center;
 }
 
 #kindfilter > a {
-  color: black;
-  /* text-decoration: underline;*/
-  text-shadow: #ffffff 0 1px 0;
+ color: black; 
+/* text-decoration: underline;*/
+ text-shadow: #ffffff 0 1px 0;
 
 }
 
 #kindfilter > a:hover {
-  color: #4C4C4C;
+  color: #4C4C4C; 
   text-decoration: none;
   text-shadow: #ffffff 0 1px 0;
 }
@@ -200,14 +200,14 @@ h1 {
   position: relative;
   text-align: center;
   padding-bottom: 5px;
-  border: 1px solid #bbbbbb;
-  border-top: 0;
-  border-left: 0;
-  border-right: 0;
+  border:1px solid #bbbbbb;
+  border-top:0;
+  border-left:0;
+  border-right:0;
 }
 
 #letters > a, #letters > span {
-  /*  font-family: monospace;*/
+/*  font-family: monospace;*/
   color: #858484;
   font-weight: bold;
   font-size: 8pt;
@@ -218,7 +218,7 @@ h1 {
 #letters > span {
   color: #bbb;
 }
-
+  
 #tpl {
   display: block;
   position: fixed;
@@ -269,7 +269,7 @@ h1 {
 #tpl ol > li.pack {
   padding: 3px 5px;
   background: url("packagesbg.gif");
-  background-repeat: repeat-x;
+  background-repeat:repeat-x;
   min-height: 14px;
   background-color: #6e808e;
 }
@@ -325,12 +325,12 @@ h1 {
 }
 
 .ui-layout-resizer {
-  background-image: url('filterbg.gif');
-  background-repeat: repeat-x;
+  background-image:url('filterbg.gif');
+  background-repeat:repeat-x;
   background-color: #ededee; /* light gray */
-  border: 1px solid #bbbbbb;
-  border-top: 0;
-  border-bottom: 0;
+  border:1px solid #bbbbbb;
+  border-top:0;
+  border-bottom:0;
   border-left: 0;
 }
 

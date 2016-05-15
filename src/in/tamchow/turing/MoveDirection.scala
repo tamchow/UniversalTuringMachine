@@ -6,7 +6,7 @@ object MoveDirection extends Enumeration {
   type MoveDirection = Value
   val LEFT, RIGHT, NONE = Value
 
-  def fromInt(value: Int): MoveDirection = {
+  def fromInt(value: Int) = {
     if (value < 0) {
       LEFT
     } else if (value > 0) {
@@ -18,7 +18,7 @@ object MoveDirection extends Enumeration {
 }
 
 class MoveDirection extends Enumeration {
-  override def equals(that: Any): Boolean =
+  override def equals(that: Any) =
     that match {
       case that: MoveDirection.MoveDirection => that.isInstanceOf[MoveDirection.MoveDirection] && this.## == that.##
       case _ => false
@@ -28,13 +28,13 @@ class MoveDirection extends Enumeration {
     * @throws IllegalArgumentException if object is not a valid enum type as regards [[MoveDirection.MoveDirection]]
     * @return the hash code of this [[MoveDirection.MoveDirection]] object
     */
-  override def hashCode(): Int = {
+  override def hashCode() = {
     import MoveDirection._
     this match {
       case LEFT => -1
       case RIGHT => +1
       case NONE => 0
-      case _ => throw new IllegalArgumentException("Illegal data in enum of type " + this.getClass)
+      case other => throw new IllegalArgumentException("Illegal data in enum of type " + other.getClass)
     }
   }
 }

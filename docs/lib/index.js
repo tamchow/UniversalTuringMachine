@@ -163,7 +163,6 @@ var Index = {};
             '</a></li>'
         ].join('');
     }
-
     function createListItem(template) {
         var inner = '';
 

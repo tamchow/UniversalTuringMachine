@@ -23,12 +23,12 @@
     <output url="file://$PROJECT_DIR$/out" />
   </component>
   <component name="ScaladocSettings">
-    <option name="outputDir" value="D:\Programming\Projects\Universal Turing Machine\doc" />
+    <option name="outputDir" value="D:\Programming\Projects\Universal Turing Machine\docs\" />
     <option name="additionalFlags" value="-feature" />
     <option name="maxHeapSize" value="" />
     <option name="docTitle" value="Universal Universal Turing Machine documentation" />
     <option name="verbose" value="false" />
-    <option name="openInBrowser" value="false" />
+    <option name="openInBrowser" value="true" />
   </component>
   <component name="Scrappy">
     <scrapTab name="Scrap" />

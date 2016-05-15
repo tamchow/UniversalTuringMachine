@@ -228,7 +228,6 @@ $(document).ready(function () {
             fullComment.slideDown(100);
         }
     }
-
     docAllSigs.addClass("closed");
     docAllSigs.click(function () {
         commentToggleFct($(this));
@@ -432,7 +431,7 @@ function filter() {
             if ($("> div.members", this).not(":hidden").length == 0) {
                 $(this).hide();
             } else {
-                $(this).show();
+            $(this).show();
             }
         });
     } else if (orderingInheritance) {
@@ -466,13 +465,13 @@ function filter() {
                     if (hiddenSuperclassesLinearization[i] == owner) {
                         mbr.hide();
                         return;
-                    }
+            }
                 }
                 for (var i = 0; i < hiddenSuperclassesImplicits.length; i++) {
                     if (hiddenSuperclassesImplicits[i] == owner) {
                         mbr.hide();
                         return;
-                    }
+            }
                 }
             }
             if (query && !(queryRegExp.test(name) || queryRegExp.test(this.mbrText))) {
@@ -488,7 +487,6 @@ function filter() {
         else
             members.hide();
     }
-
     return false;
 }
 function windowTitle() {

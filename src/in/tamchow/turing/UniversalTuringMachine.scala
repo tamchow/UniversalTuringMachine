@@ -7,12 +7,10 @@ import scala.language.postfixOps
 /**
   * Represents a universal Turing Machine
   */
-class UniversalTuringMachine(states: List[TuringState], initialState: String, terminalStates: List[String], tapeSize: Int) {
-  val tape: Array[String] = Array.fill(tapeSize) {
-    null
-  }
-  var head = 0
-  var state = initialState
+abstract class UniversalTuringMachine(commands: List[TuringCommand], initialState: String, terminalStates: List[String], tapeSize: Int) {
+  private[this] val _tape = new Array[String](tapeSize)
+  private[this] var head = 0
+  private[this] var state = initialState
 
   /**
     * Runs the program for the specified number of steps
@@ -22,30 +20,28 @@ class UniversalTuringMachine(states: List[TuringState], initialState: String, te
     *              Supply negative values to run till halt
     * @return the history of the tape in each step as a [[List]] of [[Array]]s of [[String]]s
     */
-  def runForStepsOrTillHalt(steps: Int): List[Array[String]] = {
+  def runForStepsOrTillHalt(steps: Int) = {
     var currentSteps = 0
     var halt = initialState == null
     val useStepping = steps >= 0
     var tapeHistory: List[Array[String]] = Nil
-    import util.control.Breaks._
-    breakable {
-      while (!halt) {
-        if (useStepping && currentSteps >= steps) break
-        tapeHistory = tapeHistory :+ tape
-        halt = runStep()
-        currentSteps += 1
-      }
+    while (!(halt || (useStepping && currentSteps >= steps))) {
+      tapeHistory = tape :: tapeHistory
+      halt = runStep()
+      currentSteps += 1
     }
-    tapeHistory
+    tapeHistory reverse
   }
+
+  def tape = _tape
 
   /**
     * Runs one step of a program
     *
     * @return true if there are more steps possible, else false
     */
-  def runStep(): Boolean = {
-    val applicableStates = states filter (isApplicable(_))
+  def runStep() = {
+    val applicableStates = commands filter (isApplicable(_))
     if (applicableStates.isEmpty || state == null || (terminalStates contains state)) false
     else {
       val applicableState = applicableStates.head
@@ -54,10 +50,22 @@ class UniversalTuringMachine(states: List[TuringState], initialState: String, te
       head = applicableState.direction match {
         case LEFT => head - 1
         case RIGHT => head + 1
-        case _ => head
+        case NONE => head
+        case other => throw new IllegalArgumentException("Unexpected type of enum :" + other.getClass)
       }
       true
     }
+  }
+
+  /**
+    * Helper function for filtering available commands by applicability
+    *
+    * @param state The state to check for applicability with the current execution environment
+    * @return true if the state is applicable, false if it isn't
+    */
+  def isApplicable(state: TuringCommand) = {
+    (state.currentValue == tape(bounded()) || (state valueMatchesEverything())) &&
+      ((state currentState) == this.state || (state stateMatchesEveryThing()))
   }
 
   /**
@@ -70,19 +78,6 @@ class UniversalTuringMachine(states: List[TuringState], initialState: String, te
     else if (head >= tapeSize) head % tapeSize
     else head
   }
-
-  /**
-    * Helper function for filtering available commands by applicability
-    *
-    * @param state The state to check for applicability with the current execution environment
-    * @return true if the state is applicable, false if it isn't
-    */
-  //Stupid Idea - Even does this for Java sometimes
-  //noinspection ComparingUnrelatedTypes
-  def isApplicable(state: TuringState): Boolean = {
-    (state.currentValue == tape(bounded()) || (state valueMatchesEverything())) &&
-      (state.currentState == this.state || (state stateMatchesEveryThing()))
-  }
 }
 
 object UniversalTuringMachine {
@@ -90,10 +85,14 @@ object UniversalTuringMachine {
   val DIRECTIVE_CHAR = "#"
   val INITIAL_STATE_CHAR = "~"
 
+  def apply(commands: List[TuringCommand], initialState: String, terminalStates: List[String], tapeSize: Int) = new UniversalTuringMachine(commands, initialState, terminalStates, tapeSize) {}
+
+  def apply(data: List[String], tapeSize: Int) = fromStrings(data, tapeSize)
+
   /**
     * Allowed characters with special meaning:
     *
-    * 1. Lines starting with '#' - Directives indicating acceptable halting states, other than the default halt state
+    * 1. Lines starting with '#' - Directives indicating acceptable halting commands, other than the default halt state
     * 2. Lines starting with ';' - Discarded as comments.
     * Well, it is a Turing Machine Code program after all, so the assembler style is employed
     * 3. Lines having a ';' in the middle - Only the part to the left is processed, rest is discarded as an inline comment
@@ -112,18 +111,18 @@ object UniversalTuringMachine {
       case normal if !(normal.isEmpty ||
         (normal startsWith COMMENT_CHAR) ||
         (normal startsWith DIRECTIVE_CHAR) ||
-        (normal startsWith INITIAL_STATE_CHAR)) => TuringState fromString normal
+        (normal startsWith INITIAL_STATE_CHAR)) => TuringCommand(normal)
       case withInlineComment if (withInlineComment indexOf COMMENT_CHAR) > 0 =>
-        TuringState fromString (withInlineComment substring(0, withInlineComment indexOf COMMENT_CHAR))
+        TuringCommand(withInlineComment substring(0, withInlineComment indexOf COMMENT_CHAR))
     }
     var initialState = (data filter {
-      _ startsWith "~"
+      _ startsWith INITIAL_STATE_CHAR
     }).head
     initialState = initialState substring(initialState indexOf INITIAL_STATE_CHAR, initialState length)
     val terminationData = data map {
       case terminationDirective if terminationDirective startsWith DIRECTIVE_CHAR =>
         terminationDirective substring(terminationDirective indexOf DIRECTIVE_CHAR, terminationDirective length)
     }
-    new UniversalTuringMachine(commandsData, initialState, terminationData, tapeSize)
+    new UniversalTuringMachine(commandsData, initialState, terminationData, tapeSize) {}
   }
 }

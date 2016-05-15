@@ -18,7 +18,7 @@ import scala.language.postfixOps
   */
 object TuringMain {
 
-  val pausedMessage = "Execution Paused - Press any key to continue."
+  private val pausedMessage = "Execution Paused - Press any key to continue."
 
   def main(args: Array[String]) {
     if (args.length <= 0) throw new IllegalArgumentException("No parameters specified")
@@ -31,22 +31,18 @@ object TuringMain {
 
   def doRun(filePath: String, tapeSize: Int, steps: Int, pauseTime: Int): Unit = {
     val data = io.Source fromFile filePath getLines() toList
-    val turingMachine = UniversalTuringMachine fromStrings(data, tapeSize)
+    val turingMachine = UniversalTuringMachine(data, tapeSize)
     val useStepping = steps >= 0
     var currentSteps = 0
     var halt = false
-    import util.control.Breaks._
-    breakable {
-      while (!halt) {
-        if (useStepping && currentSteps >= steps) break
-        println(turingMachine tape)
-        halt = turingMachine runStep()
-        currentSteps += 1
-        if (pauseTime >= 0) Thread sleep pauseTime
-        else {
-          println(pausedMessage)
-          System.in.read()
-        }
+    while (!(halt || (useStepping && currentSteps >= steps))) {
+      println(turingMachine tape)
+      halt = turingMachine runStep()
+      currentSteps += 1
+      if (pauseTime >= 0) Thread sleep pauseTime
+      else {
+        println(pausedMessage)
+        io.StdIn.readLine()
       }
     }
   }

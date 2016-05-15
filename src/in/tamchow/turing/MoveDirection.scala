@@ -1,10 +1,13 @@
 package in.tamchow.turing
+
 /**
   * Indicates the directions in which the tape head can move
   */
 object MoveDirection extends Enumeration {
   type MoveDirection = Value
   val LEFT, RIGHT, NONE = Value
+
+  val illegalInstanceMessage = "Illegal instance of enum of type : "
 
   def fromInt(value: Int) = {
     if (value < 0) {
@@ -18,6 +21,7 @@ object MoveDirection extends Enumeration {
 }
 
 class MoveDirection extends Enumeration {
+
   override def equals(that: Any) =
     that match {
       case that: MoveDirection.MoveDirection => that.isInstanceOf[MoveDirection.MoveDirection] && this.## == that.##
@@ -34,7 +38,7 @@ class MoveDirection extends Enumeration {
       case LEFT => -1
       case RIGHT => +1
       case NONE => 0
-      case other => throw new IllegalArgumentException("Illegal data in enum of type " + other.getClass)
+      case other => throw new IllegalArgumentException(illegalInstanceMessage + other.getClass)
     }
   }
 }

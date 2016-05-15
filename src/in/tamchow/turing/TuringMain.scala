@@ -19,9 +19,10 @@ import scala.language.postfixOps
 object TuringMain {
 
   private val pausedMessage = "Execution Paused - Press any key to continue."
+  private val noParametersSpecifiedMessage = "No parameters specified"
 
   def main(args: Array[String]) {
-    if (args.length <= 0) throw new IllegalArgumentException("No parameters specified")
+    require(args.length <= 0, noParametersSpecifiedMessage)
     val filePath = args(0)
     val tapeSize = args(1).toInt
     val steps = args(2).toInt

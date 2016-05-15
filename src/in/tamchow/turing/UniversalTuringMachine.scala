@@ -1,7 +1,5 @@
 package in.tamchow.turing
 
-import in.tamchow.turing.MoveDirection._
-
 import scala.language.postfixOps
 
 /**
@@ -42,6 +40,7 @@ abstract class UniversalTuringMachine(commands: List[TuringCommand], initialStat
     val applicableStates = commands filter (isApplicable(_))
     if (applicableStates.isEmpty || state == null || (terminalStates contains state)) false
     else {
+      import MoveDirection._
       val applicableState = applicableStates.head
       tape(bounded()) = applicableState.nextValue
       state = applicableState.nextState
@@ -49,7 +48,7 @@ abstract class UniversalTuringMachine(commands: List[TuringCommand], initialStat
         case LEFT => head - 1
         case RIGHT => head + 1
         case NONE => head
-        case other => throw new IllegalArgumentException("Unexpected type of enum :" + other.getClass)
+        case other => throw new IllegalArgumentException(illegalInstanceMessage + other.getClass)
       }
       true
     }
@@ -66,8 +65,6 @@ abstract class UniversalTuringMachine(commands: List[TuringCommand], initialStat
       ((state currentState) == this.state || (state stateMatchesEveryThing()))
   }
 
-  def tape = _tape
-
   /**
     * Implements [[Array]] wraparound
     *
@@ -78,6 +75,8 @@ abstract class UniversalTuringMachine(commands: List[TuringCommand], initialStat
     else if (head >= tapeSize) head % tapeSize
     else head
   }
+
+  def tape = _tape
 }
 
 object UniversalTuringMachine {

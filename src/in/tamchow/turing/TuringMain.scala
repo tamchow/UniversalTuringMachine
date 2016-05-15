@@ -29,7 +29,7 @@ object TuringMain {
     doRun(filePath, tapeSize, steps, pauseTime)
   }
 
-  def doRun(filePath: String, tapeSize: Int, steps: Int, pauseTime: Int): Unit = {
+  def doRun(filePath: String, tapeSize: Int, steps: Int, pauseTime: Int) {
     val data = io.Source fromFile filePath getLines() toList
     val turingMachine = UniversalTuringMachine(data, tapeSize)
     val useStepping = steps >= 0

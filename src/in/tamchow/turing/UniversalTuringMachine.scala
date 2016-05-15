@@ -33,8 +33,6 @@ abstract class UniversalTuringMachine(commands: List[TuringCommand], initialStat
     tapeHistory reverse
   }
 
-  def tape = _tape
-
   /**
     * Runs one step of a program
     *
@@ -68,12 +66,14 @@ abstract class UniversalTuringMachine(commands: List[TuringCommand], initialStat
       ((state currentState) == this.state || (state stateMatchesEveryThing()))
   }
 
+  def tape = _tape
+
   /**
     * Implements [[Array]] wraparound
     *
     * @return [[head]], after bounds correction
     */
-  def bounded(): Int = {
+  def bounded() = {
     if (head < 0) Math.abs(tapeSize + head) % tapeSize
     else if (head >= tapeSize) head % tapeSize
     else head
@@ -106,7 +106,7 @@ object UniversalTuringMachine {
     * @see [[UniversalTuringMachine.INITIAL_STATE_CHAR]]
     * @see [[UniversalTuringMachine.COMMENT_CHAR]]
     */
-  def fromStrings(data: List[String], tapeSize: Int): UniversalTuringMachine = {
+  def fromStrings(data: List[String], tapeSize: Int) = {
     val commandsData = data map {
       case normal if !(normal.isEmpty ||
         (normal startsWith COMMENT_CHAR) ||

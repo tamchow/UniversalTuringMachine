@@ -61,11 +61,9 @@ abstract class TuringCommand(currentStateP: String, nextStateP: String, currentV
     this(data._1, data._2, data._3, data._4, data._5)
   }
 
-  def valueMatchesEverything(): Boolean = currentValue == TuringCommand.MATCH_ANYTHING_CODE
+  def valueMatchesEverything() = currentValue == TuringCommand.MATCH_ANYTHING_CODE
 
-  def currentValue = _currentValue
-
-  def stateMatchesEveryThing(): Boolean = currentState == TuringCommand.MATCH_ANYTHING_CODE
+  def stateMatchesEveryThing() = currentState == TuringCommand.MATCH_ANYTHING_CODE
 
   def currentState = _currentState
 
@@ -73,19 +71,13 @@ abstract class TuringCommand(currentStateP: String, nextStateP: String, currentV
     this.getClass.getName + currentState + currentValue + nextState + nextValue + direction
   }
 
-  def nextState = _nextState
-
-  def nextValue = _nextValue
-
-  def direction = _direction
-
-  override def equals(that: Any): Boolean =
+  override def equals(that: Any) =
     that match {
       case that: TuringCommand => that.isInstanceOf[TuringCommand] && this.## == that.##
       case _ => false
     }
 
-  override def hashCode(): Int = {
+  override def hashCode() = {
     val prime = 31
     var result: Int = 1
     result = prime * result + (if (currentState == null) 0 else currentState.##)
@@ -95,4 +87,12 @@ abstract class TuringCommand(currentStateP: String, nextStateP: String, currentV
     result = prime * result + (if (direction == null) 0 else direction.##)
     result
   }
+
+  def currentValue = _currentValue
+
+  def nextState = _nextState
+
+  def nextValue = _nextValue
+
+  def direction = _direction
 }

@@ -100,7 +100,7 @@
         <div id="constructors" class="members">
               <h3>Instance Constructors</h3>
               <ol><li name="in.tamchow.turing.UniversalTuringMachine#&lt;init&gt;" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="&lt;init&gt;(commands:List[in.tamchow.turing.TuringCommand],initialState:String,terminalStates:List[String],tapeSize:Int):in.tamchow.turing.UniversalTuringMachine"></a>
+                  <a id="&lt;init&gt;(commands:Vector[in.tamchow.turing.TuringCommand],initialState:String,terminalStates:Vector[String],tapeFiller:Vector[String],tapeSize:Int):in.tamchow.turing.UniversalTuringMachine"></a>
       <a id="&lt;init&gt;:UniversalTuringMachine"></a>
       <h4 class="signature">
       <span class="modifier_kind">
@@ -108,10 +108,20 @@
         <span class="kind">new</span>
       </span>
       <span class="symbol">
-        <span class="name">UniversalTuringMachine</span><span class="params">(<span name="commands">commands: <span class="extype" name="scala.List">List</span>[<a href="TuringCommand.html" class="extype" name="in.tamchow.turing.TuringCommand">TuringCommand</a>]</span>, <span name="initialState">initialState: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="terminalStates">terminalStates: <span class="extype" name="scala.List">List</span>[<span class="extype" name="scala.Predef.String">String</span>]</span>, <span name="tapeSize">tapeSize: <span class="extype" name="scala.Int">Int</span></span>)</span>
+        <span class="name">UniversalTuringMachine</span><span class="params">(<span name="commands">commands: <span
+              class="extype" name="scala.Vector">Vector</span>[<a href="TuringCommand.html" class="extype"
+                                                                  name="in.tamchow.turing.TuringCommand">TuringCommand</a>]</span>, <span
+              name="initialState">initialState: <span class="extype"
+                                                      name="scala.Predef.String">String</span></span>, <span
+              name="terminalStates">terminalStates: <span class="extype" name="scala.Vector">Vector</span>[<span
+              class="extype" name="scala.Predef.String">String</span>]</span>, <span name="tapeFiller">tapeFiller: <span
+              class="extype" name="scala.Vector">Vector</span>[<span class="extype"
+                                                                     name="scala.Predef.String">String</span>]</span>, <span
+              name="tapeSize">tapeSize: <span class="extype" name="scala.Int">Int</span></span>)</span>
       </span>
       </h4><span class="permalink">
-      <a href="../../../index.html#in.tamchow.turing.UniversalTuringMachine@&lt;init&gt;(commands:List[in.tamchow.turing.TuringCommand],initialState:String,terminalStates:List[String],tapeSize:Int):in.tamchow.turing.UniversalTuringMachine" title="Permalink" target="_top">
+      <a href="../../../index.html#in.tamchow.turing.UniversalTuringMachine@&lt;init&gt;(commands:Vector[in.tamchow.turing.TuringCommand],initialState:String,terminalStates:Vector[String],tapeFiller:Vector[String],tapeSize:Int):in.tamchow.turing.UniversalTuringMachine"
+         title="Permalink" target="_top">
         <img src="../../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
@@ -479,8 +489,42 @@
       </a>
     </span>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
+              </li>
+                  <li name="in.tamchow.turing.UniversalTuringMachine#initTape" visbl="pub" data-isabs="false"
+                      fullComment="yes" group="Ungrouped">
+                      <a id="initTape:Array[String]"></a>
+                      <a id="initTape:Array[String]"></a>
+                      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">initTape</span><span class="result">: <span class="extype"
+                                                                       name="scala.Array">Array</span>[<span
+              class="extype" name="scala.Predef.String">String</span>]</span>
+      </span>
+                      </h4><span class="permalink">
+      <a href="../../../index.html#in.tamchow.turing.UniversalTuringMachine@initTape:Array[String]" title="Permalink"
+         target="_top">
+        <img src="../../../lib/permalink.png" alt="Permalink"/>
+      </a>
+    </span>
+                      <p class="shortcomment cmt"></p>
+                      <div class="fullcomment">
+                          <div class="comment cmt"></div>
+                          <dl class="paramcmts block">
+                              <dt>returns</dt>
+                              <dd class="cmt"><p>a properly initialized tape</p></dd>
+                          </dl>
+                          <dl class="attributes block">
+                              <dt>Note</dt>
+                              <dd><span class="cmt"><p>This is the best partially functional method of filling up a list repeatedly using the elements of another
+      I could come up with. Please suggest a more idiomatic way if possible</p></span></dd>
+                          </dl>
+                      </div>
     </li><li name="in.tamchow.turing.UniversalTuringMachine#isApplicable" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
-                  <a id="isApplicable(command:in.tamchow.turing.TuringCommand):Boolean"></a>
+                      <a id="isApplicable(command:in.tamchow.turing.TuringCommand):Boolean"></a>
       <a id="isApplicable(TuringCommand):Boolean"></a>
       <h4 class="signature">
       <span class="modifier_kind">
@@ -500,15 +544,15 @@
     </span>
       <p class="shortcomment cmt">Helper function for filtering available commands by applicability
 </p><div class="fullcomment"><div class="comment cmt"><p>Helper function for filtering available commands by applicability
-              </p></div>
-                  <dl class="paramcmts block">
-                      <dt class="param">command</dt>
-                      <dd class="cmt"><p>The command to check for applicability with the current execution
-                          environment</p></dd>
-                      <dt>returns</dt>
-                      <dd class="cmt"><p>true if the command is applicable, false if it isn't</p></dd>
-                  </dl>
-              </div>
+                  </p></div>
+                      <dl class="paramcmts block">
+                          <dt class="param">command</dt>
+                          <dd class="cmt"><p>The command to check for applicability with the current execution
+                              environment</p></dd>
+                          <dt>returns</dt>
+                          <dd class="cmt"><p>true if the command is applicable, false if it isn't</p></dd>
+                      </dl>
+                  </div>
     </li><li name="scala.Any#isInstanceOf" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="isInstanceOf[T0]:Boolean"></a>
       <a id="isInstanceOf[T0]:Boolean"></a>
@@ -578,8 +622,8 @@
     </span>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
     </li><li name="in.tamchow.turing.UniversalTuringMachine#runForStepsOrTillHalt" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="runForStepsOrTillHalt(steps:Int):List[Array[String]]"></a>
-      <a id="runForStepsOrTillHalt(Int):List[Array[String]]"></a>
+                      <a id="runForStepsOrTillHalt(steps:Int):Vector[Array[String]]"></a>
+                      <a id="runForStepsOrTillHalt(Int):Vector[Array[String]]"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
@@ -588,12 +632,13 @@
       <span class="symbol">
         <span class="name">runForStepsOrTillHalt</span><span class="params">(<span name="steps">steps: <span
               class="extype" name="scala.Int">Int</span></span>)</span><span class="result">: <span class="extype"
-                                                                                                    name="scala.List">List</span>[<span
+                                                                                                    name="scala.Vector">Vector</span>[<span
               class="extype" name="scala.Array">Array</span>[<span class="extype"
                                                                    name="scala.Predef.String">String</span>]]</span>
       </span>
       </h4><span class="permalink">
-      <a href="../../../index.html#in.tamchow.turing.UniversalTuringMachine@runForStepsOrTillHalt(steps:Int):List[Array[String]]" title="Permalink" target="_top">
+      <a href="../../../index.html#in.tamchow.turing.UniversalTuringMachine@runForStepsOrTillHalt(steps:Int):Vector[Array[String]]"
+         title="Permalink" target="_top">
         <img src="../../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
@@ -602,7 +647,13 @@ or till the program halts (if the specified number of steps is negative)
 </p><div class="fullcomment"><div class="comment cmt"><p>Runs the program for the specified number of steps
 or till the program halts (if the specified number of steps is negative)
 </p></div><dl class="paramcmts block"><dt class="param">steps</dt><dd class="cmt"><p>the number of steps for which the program is run.
-             Supply negative values to run till halt</p></dd><dt>returns</dt><dd class="cmt"><p>the history of the tape in each step as a <span class="extype" name="List">List</span> of <span class="extype" name="Array">Array</span>s of <span class="extype" name="String">String</span>s</p></dd></dl></div>
+                      Supply negative values to run till halt</p></dd>
+                      <dt>returns</dt>
+                      <dd class="cmt"><p>the history of the tape in each step as a <span class="extype" name="Vector">Vector</span>
+                          of <span class="extype" name="Array">Array</span>s of <span class="extype" name="String">String</span>s
+                      </p></dd>
+                  </dl>
+                  </div>
     </li><li name="in.tamchow.turing.UniversalTuringMachine#runStep" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="runStep():Boolean"></a>
       <a id="runStep():Boolean"></a>

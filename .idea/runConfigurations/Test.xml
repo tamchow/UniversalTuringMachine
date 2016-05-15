@@ -1,0 +1,9 @@
+<component name="ProjectRunConfigurationManager">
+  <configuration default="false" name="Test" type="ScalaScriptConsoleRunConfiguration" factoryName="Scala Console">
+    <module name="Universal Turing Machine" />
+    <setting name="vmparams4" value="" />
+    <setting name="workingDirectory" value="$PROJECT_DIR$" />
+    <setting name="consoleArgs" value="-usejavacp" />
+    <method />
+  </configuration>
+</component>

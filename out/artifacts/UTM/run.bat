@@ -1,0 +1,1 @@
+java -jar UTM.jar %~p1 %~2 %~3 %~4

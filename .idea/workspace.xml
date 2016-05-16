@@ -18,40 +18,6 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Universal Turing Machine/in/tamchow/turing/UniversalTuringMachine$$anonfun$doStartFilter$1$1.class" afterPath="$PROJECT_DIR$/out/production/Universal Turing Machine/in/tamchow/turing/UniversalTuringMachine$$anonfun$doStartFilter$1$1.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Universal Turing Machine/in/tamchow/turing/UniversalTuringMachine$.class" afterPath="$PROJECT_DIR$/out/production/Universal Turing Machine/in/tamchow/turing/UniversalTuringMachine$.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/in/package.html" afterPath="$PROJECT_DIR$/docs/in/package.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/in/tamchow/package.html" afterPath="$PROJECT_DIR$/docs/in/tamchow/package.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/in/tamchow/turing/MoveDirection$.html" afterPath="$PROJECT_DIR$/docs/in/tamchow/turing/MoveDirection$.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/in/tamchow/turing/MoveDirection.html" afterPath="$PROJECT_DIR$/docs/in/tamchow/turing/MoveDirection.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/in/tamchow/turing/TuringCommand$.html" afterPath="$PROJECT_DIR$/docs/in/tamchow/turing/TuringCommand$.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/in/tamchow/turing/TuringCommand.html" afterPath="$PROJECT_DIR$/docs/in/tamchow/turing/TuringCommand.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/in/tamchow/turing/TuringMain$.html" afterPath="$PROJECT_DIR$/docs/in/tamchow/turing/TuringMain$.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/in/tamchow/turing/UniversalTuringMachine$.html" afterPath="$PROJECT_DIR$/docs/in/tamchow/turing/UniversalTuringMachine$.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/in/tamchow/turing/UniversalTuringMachine.html" afterPath="$PROJECT_DIR$/docs/in/tamchow/turing/UniversalTuringMachine.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/in/tamchow/turing/package.html" afterPath="$PROJECT_DIR$/docs/in/tamchow/turing/package.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/index.html" afterPath="$PROJECT_DIR$/docs/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/index.js" afterPath="$PROJECT_DIR$/docs/index.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/index/index-a.html" afterPath="$PROJECT_DIR$/docs/index/index-a.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/index/index-b.html" afterPath="$PROJECT_DIR$/docs/index/index-b.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/index/index-c.html" afterPath="$PROJECT_DIR$/docs/index/index-c.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/index/index-d.html" afterPath="$PROJECT_DIR$/docs/index/index-d.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/index/index-e.html" afterPath="$PROJECT_DIR$/docs/index/index-e.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/index/index-f.html" afterPath="$PROJECT_DIR$/docs/index/index-f.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/index/index-i.html" afterPath="$PROJECT_DIR$/docs/index/index-i.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/index/index-l.html" afterPath="$PROJECT_DIR$/docs/index/index-l.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/index/index-m.html" afterPath="$PROJECT_DIR$/docs/index/index-m.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/index/index-n.html" afterPath="$PROJECT_DIR$/docs/index/index-n.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/index/index-p.html" afterPath="$PROJECT_DIR$/docs/index/index-p.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/index/index-r.html" afterPath="$PROJECT_DIR$/docs/index/index-r.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/index/index-s.html" afterPath="$PROJECT_DIR$/docs/index/index-s.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/index/index-t.html" afterPath="$PROJECT_DIR$/docs/index/index-t.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/index/index-u.html" afterPath="$PROJECT_DIR$/docs/index/index-u.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/index/index-v.html" afterPath="$PROJECT_DIR$/docs/index/index-v.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/lib/diagrams.js" afterPath="$PROJECT_DIR$/docs/lib/diagrams.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/lib/index.js" afterPath="$PROJECT_DIR$/docs/lib/index.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/lib/jquery.layout.js" afterPath="$PROJECT_DIR$/docs/lib/jquery.layout.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/lib/scheduler.js" afterPath="$PROJECT_DIR$/docs/lib/scheduler.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/lib/template.js" afterPath="$PROJECT_DIR$/docs/lib/template.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/package.html" afterPath="$PROJECT_DIR$/docs/package.html" />
     </list>
     <ignored path="Uinversal Turing Machine.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -80,28 +46,7 @@
     <favorites_list name="Uinversal Turing Machine" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="TuringCommand.scala" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/in/tamchow/turing/TuringCommand.scala">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="261">
-              <caret line="16" column="5" selection-start-line="16" selection-start-column="5" selection-end-line="16" selection-end-column="5" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="TuringMain.scala" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/in/tamchow/turing/TuringMain.scala">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="357">
-              <caret line="21" column="26" selection-start-line="21" selection-start-column="26" selection-end-line="21" selection-end-column="26" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
   </component>
   <component name="Git.Settings">
     <option name="PUSH_AUTO_UPDATE" value="true" />
@@ -237,29 +182,7 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="UniversalTuringMachine.scala" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.ClassesTreeStructureProvider$PsiClassOwnerTreeNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="UniversalTuringMachine" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="UniversalTuringMachine" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="turing" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="TuringMain.scala" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.ClassesTreeStructureProvider$PsiClassOwnerTreeNode" />
+              <option name="myItemType" value="org.jetbrains.plugins.scala.components.ScalaDefsProjectViewProvider$ScalaFileTreeNode" />
             </PATH_ELEMENT>
           </PATH>
           <PATH>
@@ -281,7 +204,7 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="TuringCommand.scala" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.ClassesTreeStructureProvider$PsiClassOwnerTreeNode" />
+              <option name="myItemType" value="org.jetbrains.plugins.scala.components.ScalaDefsProjectViewProvider$ScalaFileTreeNode" />
             </PATH_ELEMENT>
           </PATH>
           <PATH>
@@ -303,7 +226,25 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="MoveDirection.scala" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.ClassesTreeStructureProvider$PsiClassOwnerTreeNode" />
+              <option name="myItemType" value="org.jetbrains.plugins.scala.components.ScalaDefsProjectViewProvider$ScalaFileTreeNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="UniversalTuringMachine" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="UniversalTuringMachine" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="turing" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
@@ -1175,7 +1116,7 @@
       <workItem from="1463319384577" duration="6940000" />
       <workItem from="1463370784441" duration="1746000" />
       <workItem from="1463388572443" duration="1162000" />
-      <workItem from="1463394151221" duration="225000" />
+      <workItem from="1463394151221" duration="273000" />
     </task>
     <task id="LOCAL-00001" summary="Initial Commit - Simplified Launcher">
       <created>1463236476083</created>
@@ -1268,15 +1209,22 @@
       <option name="project" value="LOCAL" />
       <updated>1463394345397</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="Code cleanup">
+      <created>1463394399422</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1463394399422</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="44054000" />
+    <option name="totallyTimeSpent" value="44102000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32569557" sideWeight="0.5060514" order="0" side_tool="true" content_ui="tabs" />
@@ -1301,7 +1249,7 @@
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3289689" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32843137" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="GhcMod" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3289689" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.26172465" sideWeight="0.46585366" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.26172465" sideWeight="0.46585366" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Puzzle" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Scrappy" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32843137" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="The R Graphics" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.32980332" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
@@ -1513,18 +1461,18 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/in/tamchow/turing/TuringCommand.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="261">
-          <caret line="16" column="5" selection-start-line="16" selection-start-column="5" selection-end-line="16" selection-end-column="5" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/in/tamchow/turing/TuringMain.scala">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="357">
           <caret line="21" column="26" selection-start-line="21" selection-start-column="26" selection-end-line="21" selection-end-column="26" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/in/tamchow/turing/TuringCommand.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="261">
+          <caret line="16" column="5" selection-start-line="16" selection-start-column="5" selection-end-line="16" selection-end-column="5" />
           <folding />
         </state>
       </provider>

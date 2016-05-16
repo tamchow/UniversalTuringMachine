@@ -93,6 +93,7 @@ class UniversalTuringMachine(commands: Vector[TuringCommand], initialState: Stri
 
 object UniversalTuringMachine {
   val (commentChar, directiveChar, initialStateChar, fillerChar) = (";", "#", "~", "@")
+  val illegalTapeSizeMessage = "Illegal Tape Size : "
 
   /**
     * Allowed characters with special meaning:
@@ -127,6 +128,7 @@ object UniversalTuringMachine {
     * @see [[TuringCommand.whitespaceRegex]]
     */
   def apply(data: Vector[String], tapeSize: Int) = {
+    require(tapeSize > 0, s"$illegalTapeSizeMessage$tapeSize")
     def doStartFilter(filterChar: String) = (data filter {
       _ startsWith filterChar
     }).head

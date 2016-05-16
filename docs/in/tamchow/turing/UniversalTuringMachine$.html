@@ -1,12 +1,12 @@
 <!DOCTYPE html >
 <html>
         <head>
-            <title>UniversalTuringMachine - Universal Turing Machine in Scala -
-                in.tamchow.turing.UniversalTuringMachine</title>
-            <meta name="description"
-                  content="UniversalTuringMachine - Universal Turing Machine in Scala - in.tamchow.turing.UniversalTuringMachine"/>
-            <meta name="keywords"
-                  content="UniversalTuringMachine Universal Turing Machine in Scala in.tamchow.turing.UniversalTuringMachine"/>
+          <title>UniversalTuringMachine - Universal Turing Machine in Scala -
+            in.tamchow.turing.UniversalTuringMachine</title>
+          <meta name="description"
+                content="UniversalTuringMachine - Universal Turing Machine in Scala - in.tamchow.turing.UniversalTuringMachine"/>
+          <meta name="keywords"
+                content="UniversalTuringMachine Universal Turing Machine in Scala in.tamchow.turing.UniversalTuringMachine"/>
           <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
           
       <link href="../../../lib/template.css" media="screen" type="text/css" rel="stylesheet" />
@@ -151,10 +151,10 @@
     </span>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
               </li>
-                  <li name="in.tamchow.turing.UniversalTuringMachine#apply" visbl="pub" data-isabs="false"
-                      fullComment="yes" group="Ungrouped">
-                      <a id="apply(data:Vector[String],tapeSize:Int):in.tamchow.turing.UniversalTuringMachine"></a>
-                      <a id="apply(Vector[String],Int):UniversalTuringMachine"></a>
+                <li name="in.tamchow.turing.UniversalTuringMachine#apply" visbl="pub" data-isabs="false"
+                    fullComment="yes" group="Ungrouped">
+                  <a id="apply(data:Vector[String],tapeSize:Int):in.tamchow.turing.UniversalTuringMachine"></a>
+                  <a id="apply(Vector[String],Int):UniversalTuringMachine"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
@@ -173,63 +173,61 @@
         <img src="../../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
-                      <p class="shortcomment cmt">Allowed characters with special meaning:</p>
-                      <div class="fullcomment">
-                          <div class="comment cmt"><p>Allowed characters with special meaning:</p>
-                              <p>1. Lines starting with '<a href="#directiveChar:String" class="extmbr"
-                                                            name="in.tamchow.turing.UniversalTuringMachine#directiveChar">directiveChar</a>'
-                                  - Directives indicating acceptable halting commands,
-                                  other than the default halt command</p>
-                              <p>2. Lines starting with '<a href="#commentChar:String" class="extmbr"
-                                                            name="in.tamchow.turing.UniversalTuringMachine#commentChar">commentChar</a>'
-                                  - Discarded as comments.
-                                  Well, it is a Turing Machine Code program after all, so the assembler style is
-                                  employed</p>
-                              <p>3. Lines having a '<a href="#commentChar:String" class="extmbr"
-                                                       name="in.tamchow.turing.UniversalTuringMachine#commentChar">commentChar</a>'
-                                  in the middle - Only the part to the left is processed,
-                                  rest is discarded as an inline comment</p>
-                              <p>4. Line starting with '<a href="#initialStateChar:String" class="extmbr"
-                                                           name="in.tamchow.turing.UniversalTuringMachine#initialStateChar">initialStateChar</a>'
-                                  - The initial command indicator</p>
-                              <p>5. Line starting with '<a href="#fillerChar:String" class="extmbr"
-                                                           name="in.tamchow.turing.UniversalTuringMachine#fillerChar">fillerChar</a>'
-                                  - The tape initializer</p>
-                              <p>This <span class="extype" name="String">String</span> is split by whitespace after
-                                  trimming indicator to get filler <span class="extype" name="String">String</span>s,
-                                  which are repeated in order to fill up the tape</p>
-                              <p>Without such a line, the tape is initialized to logical blanks, represented by <code>null</code>
-                              </p>
-                              <p>6. Empty Lines - Ignored and discarded
-                              </p></div>
-                          <dl class="paramcmts block">
-                              <dt class="param">data</dt>
-                              <dd class="cmt"><p>Raw <span class="extype" name="Vector">Vector</span> of <span
-                                      class="extype" name="String">String</span>s of a Turing Machine Code program</p>
-                              </dd>
-                              <dt class="param">tapeSize</dt>
-                              <dd class="cmt"><p>the (fixed) size of the tape. Wraparound is enabled</p></dd>
-                              <dt>returns</dt>
-                              <dd class="cmt"><p>An <a href="UniversalTuringMachine.html" class="extype"
-                                                       name="in.tamchow.turing.UniversalTuringMachine">UniversalTuringMachine</a>
-                                  object for evaluation of the argument program</p></dd>
-                          </dl>
-                          <dl class="attributes block">
-                              <dt>See also</dt>
-                              <dd><span class="cmt"><p><a href="TuringCommand$.html#whitespaceRegex:String"
-                                                          class="extmbr"
-                                                          name="in.tamchow.turing.TuringCommand#whitespaceRegex">TuringCommand.whitespaceRegex</a></p></span><span
-                                      class="cmt"><p><a href="#fillerChar:String" class="extmbr"
-                                                        name="in.tamchow.turing.UniversalTuringMachine#fillerChar">fillerChar</a></p></span><span
-                                      class="cmt"><p><a href="#commentChar:String" class="extmbr"
-                                                        name="in.tamchow.turing.UniversalTuringMachine#commentChar">commentChar</a></p></span><span
-                                      class="cmt"><p><a href="#initialStateChar:String" class="extmbr"
-                                                        name="in.tamchow.turing.UniversalTuringMachine#initialStateChar">initialStateChar</a></p></span><span
-                                      class="cmt"><p><a href="#directiveChar:String" class="extmbr"
-                                                        name="in.tamchow.turing.UniversalTuringMachine#directiveChar">directiveChar</a></p></span>
-                              </dd>
-                          </dl>
-                      </div>
+                  <p class="shortcomment cmt">Allowed characters with special meaning:</p>
+                  <div class="fullcomment">
+                    <div class="comment cmt"><p>Allowed characters with special meaning:</p>
+                      <p>1. Lines starting with '<a href="#directiveChar:String" class="extmbr"
+                                                    name="in.tamchow.turing.UniversalTuringMachine#directiveChar">directiveChar</a>'
+                        - Directives indicating acceptable halting commands,
+                        other than the default halt command</p>
+                      <p>2. Lines starting with '<a href="#commentChar:String" class="extmbr"
+                                                    name="in.tamchow.turing.UniversalTuringMachine#commentChar">commentChar</a>'
+                        - Discarded as comments.
+                        Well, it is a Turing Machine Code program after all, so the assembler style is employed</p>
+                      <p>3. Lines having a '<a href="#commentChar:String" class="extmbr"
+                                               name="in.tamchow.turing.UniversalTuringMachine#commentChar">commentChar</a>'
+                        in the middle - Only the part to the left is processed,
+                        rest is discarded as an inline comment</p>
+                      <p>4. Line starting with '<a href="#initialStateChar:String" class="extmbr"
+                                                   name="in.tamchow.turing.UniversalTuringMachine#initialStateChar">initialStateChar</a>'
+                        - The initial command indicator</p>
+                      <p>5. Line starting with '<a href="#fillerChar:String" class="extmbr"
+                                                   name="in.tamchow.turing.UniversalTuringMachine#fillerChar">fillerChar</a>'
+                        - The tape initializer</p>
+                      <p>This <span class="extype" name="String">String</span> is split by whitespace after trimming
+                        indicator to get filler <span class="extype" name="String">String</span>s,
+                        which are repeated in order to fill up the tape</p>
+                      <p>Without such a line, the tape is initialized to logical blanks, represented by
+                        <code>null</code></p>
+                      <p>6. Empty Lines - Ignored and discarded
+                      </p></div>
+                    <dl class="paramcmts block">
+                      <dt class="param">data</dt>
+                      <dd class="cmt"><p>Raw <span class="extype" name="Vector">Vector</span> of <span class="extype"
+                                                                                                       name="String">String</span>s
+                        of a Turing Machine Code program</p></dd>
+                      <dt class="param">tapeSize</dt>
+                      <dd class="cmt"><p>the (fixed) size of the tape. Wraparound is enabled</p></dd>
+                      <dt>returns</dt>
+                      <dd class="cmt"><p>An <a href="UniversalTuringMachine.html" class="extype"
+                                               name="in.tamchow.turing.UniversalTuringMachine">UniversalTuringMachine</a>
+                        object for evaluation of the argument program</p></dd>
+                    </dl>
+                    <dl class="attributes block">
+                      <dt>See also</dt>
+                      <dd><span class="cmt"><p><a href="TuringCommand$.html#whitespaceRegex:String" class="extmbr"
+                                                  name="in.tamchow.turing.TuringCommand#whitespaceRegex">TuringCommand.whitespaceRegex</a></p></span><span
+                              class="cmt"><p><a href="#fillerChar:String" class="extmbr"
+                                                name="in.tamchow.turing.UniversalTuringMachine#fillerChar">fillerChar</a></p></span><span
+                              class="cmt"><p><a href="#commentChar:String" class="extmbr"
+                                                name="in.tamchow.turing.UniversalTuringMachine#commentChar">commentChar</a></p></span><span
+                              class="cmt"><p><a href="#initialStateChar:String" class="extmbr"
+                                                name="in.tamchow.turing.UniversalTuringMachine#initialStateChar">initialStateChar</a></p></span><span
+                              class="cmt"><p><a href="#directiveChar:String" class="extmbr"
+                                                name="in.tamchow.turing.UniversalTuringMachine#directiveChar">directiveChar</a></p></span>
+                      </dd>
+                    </dl>
+                  </div>
     </li><li name="scala.Any#asInstanceOf" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="asInstanceOf[T0]:T0"></a>
       <a id="asInstanceOf[T0]:T0"></a>
@@ -270,12 +268,12 @@
     </span>)</span>
               
         </dd></dl></div>
-                  </li>
-                  <li name="in.tamchow.turing.UniversalTuringMachine#commentChar" visbl="pub" data-isabs="false"
-                      fullComment="no" group="Ungrouped">
-                      <a id="commentChar:String"></a>
-                      <a id="commentChar:String"></a>
-                      <h4 class="signature">
+                </li>
+                <li name="in.tamchow.turing.UniversalTuringMachine#commentChar" visbl="pub" data-isabs="false"
+                    fullComment="no" group="Ungrouped">
+                  <a id="commentChar:String"></a>
+                  <a id="commentChar:String"></a>
+                  <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
         <span class="kind">val</span>
@@ -284,19 +282,19 @@
         <span class="name">commentChar</span><span class="result">: <span class="extype"
                                                                           name="java.lang.String">String</span></span>
       </span>
-                      </h4><span class="permalink">
+                  </h4><span class="permalink">
       <a href="../../../index.html#in.tamchow.turing.UniversalTuringMachine$@commentChar:String" title="Permalink"
          target="_top">
         <img src="../../../lib/permalink.png" alt="Permalink"/>
       </a>
     </span>
 
-                  </li>
-                  <li name="in.tamchow.turing.UniversalTuringMachine#directiveChar" visbl="pub" data-isabs="false"
-                      fullComment="no" group="Ungrouped">
-                      <a id="directiveChar:String"></a>
-                      <a id="directiveChar:String"></a>
-                      <h4 class="signature">
+                </li>
+                <li name="in.tamchow.turing.UniversalTuringMachine#directiveChar" visbl="pub" data-isabs="false"
+                    fullComment="no" group="Ungrouped">
+                  <a id="directiveChar:String"></a>
+                  <a id="directiveChar:String"></a>
+                  <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
         <span class="kind">val</span>
@@ -304,15 +302,15 @@
       <span class="symbol">
         <span class="name">directiveChar</span><span class="result">: <span class="extype" name="java.lang.String">String</span></span>
       </span>
-                      </h4><span class="permalink">
+                  </h4><span class="permalink">
       <a href="../../../index.html#in.tamchow.turing.UniversalTuringMachine$@directiveChar:String" title="Permalink"
          target="_top">
         <img src="../../../lib/permalink.png" alt="Permalink"/>
       </a>
     </span>
 
-                  </li>
-                  <li name="scala.AnyRef#eq" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+                </li>
+                <li name="scala.AnyRef#eq" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="eq(x$1:AnyRef):Boolean"></a>
       <a id="eq(AnyRef):Boolean"></a>
       <h4 class="signature">
@@ -346,12 +344,12 @@
       </a>
     </span>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
-                  </li>
-                  <li name="in.tamchow.turing.UniversalTuringMachine#fillerChar" visbl="pub" data-isabs="false"
-                      fullComment="no" group="Ungrouped">
-                      <a id="fillerChar:String"></a>
-                      <a id="fillerChar:String"></a>
-                      <h4 class="signature">
+                </li>
+                <li name="in.tamchow.turing.UniversalTuringMachine#fillerChar" visbl="pub" data-isabs="false"
+                    fullComment="no" group="Ungrouped">
+                  <a id="fillerChar:String"></a>
+                  <a id="fillerChar:String"></a>
+                  <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
         <span class="kind">val</span>
@@ -360,15 +358,15 @@
         <span class="name">fillerChar</span><span class="result">: <span class="extype"
                                                                          name="java.lang.String">String</span></span>
       </span>
-                      </h4><span class="permalink">
+                  </h4><span class="permalink">
       <a href="../../../index.html#in.tamchow.turing.UniversalTuringMachine$@fillerChar:String" title="Permalink"
          target="_top">
         <img src="../../../lib/permalink.png" alt="Permalink"/>
       </a>
     </span>
 
-                  </li>
-                  <li name="scala.AnyRef#finalize" visbl="prt" data-isabs="false" fullComment="yes" group="Ungrouped">
+                </li>
+                <li name="scala.AnyRef#finalize" visbl="prt" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="finalize():Unit"></a>
       <a id="finalize():Unit"></a>
       <h4 class="signature">
@@ -425,12 +423,33 @@
       </a>
     </span>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
-                  </li>
-                  <li name="in.tamchow.turing.UniversalTuringMachine#initialStateChar" visbl="pub" data-isabs="false"
-                      fullComment="no" group="Ungrouped">
-                      <a id="initialStateChar:String"></a>
-                      <a id="initialStateChar:String"></a>
-                      <h4 class="signature">
+                </li>
+                <li name="in.tamchow.turing.UniversalTuringMachine#illegalTapeSizeMessage" visbl="pub"
+                    data-isabs="false" fullComment="no" group="Ungrouped">
+                  <a id="illegalTapeSizeMessage:String"></a>
+                  <a id="illegalTapeSizeMessage:String"></a>
+                  <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">illegalTapeSizeMessage</span><span class="result">: <span class="extype"
+                                                                                     name="java.lang.String">String</span></span>
+      </span>
+                  </h4><span class="permalink">
+      <a href="../../../index.html#in.tamchow.turing.UniversalTuringMachine$@illegalTapeSizeMessage:String"
+         title="Permalink" target="_top">
+        <img src="../../../lib/permalink.png" alt="Permalink"/>
+      </a>
+    </span>
+
+                </li>
+                <li name="in.tamchow.turing.UniversalTuringMachine#initialStateChar" visbl="pub" data-isabs="false"
+                    fullComment="no" group="Ungrouped">
+                  <a id="initialStateChar:String"></a>
+                  <a id="initialStateChar:String"></a>
+                  <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
         <span class="kind">val</span>
@@ -438,15 +457,15 @@
       <span class="symbol">
         <span class="name">initialStateChar</span><span class="result">: <span class="extype" name="java.lang.String">String</span></span>
       </span>
-                      </h4><span class="permalink">
+                  </h4><span class="permalink">
       <a href="../../../index.html#in.tamchow.turing.UniversalTuringMachine$@initialStateChar:String" title="Permalink"
          target="_top">
         <img src="../../../lib/permalink.png" alt="Permalink"/>
       </a>
     </span>
 
-                  </li>
-                  <li name="scala.Any#isInstanceOf" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+                </li>
+                <li name="scala.Any#isInstanceOf" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="isInstanceOf[T0]:Boolean"></a>
       <a id="isInstanceOf[T0]:Boolean"></a>
       <h4 class="signature">

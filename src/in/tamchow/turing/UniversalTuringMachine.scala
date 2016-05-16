@@ -99,17 +99,22 @@ object UniversalTuringMachine {
     *
     * 1. Lines starting with '[[directiveChar]]' - Directives indicating acceptable halting commands,
     * other than the default halt command
+    *
     * 2. Lines starting with '[[commentChar]]' - Discarded as comments.
     * Well, it is a Turing Machine Code program after all, so the assembler style is employed
+    *
     * 3. Lines having a '[[commentChar]]' in the middle - Only the part to the left is processed,
     * rest is discarded as an inline comment
+    *
     * 4. Line starting with '[[initialStateChar]]' - The initial command indicator
+    *
     * 5. Line starting with '[[fillerChar]]' - The tape initializer
     *
     * This [[String]] is split by whitespace after trimming indicator to get filler [[String]]s,
     * which are repeated in order to fill up the tape
     *
     * Without such a line, the tape is initialized to logical blanks, represented by `null`
+    *
     * 6. Empty Lines - Ignored and discarded
     *
     * @param data     Raw [[Vector]] of [[String]]s of a Turing Machine Code program

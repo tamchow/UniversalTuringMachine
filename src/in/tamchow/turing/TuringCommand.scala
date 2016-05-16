@@ -10,10 +10,11 @@ object TuringCommand {
 
   /**
     * Allowed wildcards:
-    * <br>
+    *
     * 1. '!' - indicates a null value or the halting command, internally represented as `null`
+    *
     * 2. '*' - indicates a match-all wildcard character, no separate internal representation
-    * <br>
+    *
     * Separator used is whitespace - 5 terms are required after tokenization
     *
     * @param data [[String]] indicating a defined transitional operation

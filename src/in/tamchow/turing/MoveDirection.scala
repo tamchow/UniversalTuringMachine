@@ -9,10 +9,12 @@ object MoveDirection {
 
   /**
     * Results:
-    * <br>
+    *
     * 1. Any negative [[Int]] value or case-insensitive match to [[left.name]]-> [[left]]
+    *
     * 2. Any positive [[Int]] value or case-insensitive match to [[right.name]]-> [[right]]
-    * 2. A Zero (`0`) [[Int]] value or case-insensitive match to [[none.name]]-> [[none]]
+    *
+    * 3. A Zero (`0`) [[Int]] value or case-insensitive match to [[none.name]]-> [[none]]
     *
     * @param data the [[String]] to parse into a [[MoveDirection]]
     * @return a [[MoveDirection]] object based on the parameters

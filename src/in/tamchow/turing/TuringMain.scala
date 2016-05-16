@@ -4,17 +4,22 @@ import scala.language.postfixOps
 
 /**
   * The Launcher for the Universal Turing Machine simulator
-  * <br>
+  *
   * The parameters are, in order:
-  * <br>
+  *
   * 1. The input file path
+  *
   * 2. The tape size
+  *
   * 3. The number of steps for which to run the program. Leave it negative to run it till it halts.
-  * 4. The number of milliseconds to pause before starting the next step. Leave this negative to pause for user input before every step.
-  * <br>
+  *
+  * 4. The number of milliseconds to pause before starting the next step.
+  *
+  * Leave this negative to pause for user input before every step.
+  *
   * All these parameters are required.
-  * <br>
-  * Only supports input as files.
+  *
+  * Only supports program input as files.
   */
 object TuringMain {
 

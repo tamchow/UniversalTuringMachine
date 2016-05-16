@@ -37,13 +37,11 @@ object TuringCommand {
     new TuringCommand(data._1, data._2, data._3, data._4, data._5)
 }
 
-case class TuringCommand private(_currentState: String, _nextState: String, _currentValue: String, _nextValue: String, _direction: MoveDirection) {
+case class TuringCommand private(currentState: String, nextState: String, currentValue: String, nextValue: String, direction: MoveDirection) {
 
   import TuringCommand._
 
   def valueMatchesEverything = currentValue == matchAnythingCode
-
-  def currentValue = _currentValue
 
   def stateMatchesEveryThing = currentState == matchAnythingCode
 
@@ -57,12 +55,4 @@ case class TuringCommand private(_currentState: String, _nextState: String, _cur
     case nullItem if nullItem == null => nullCode
     case notNullItem => notNullItem
   } mkString " "
-
-  def currentState = _currentState
-
-  def nextState = _nextState
-
-  def nextValue = _nextValue
-
-  def direction = _direction
 }

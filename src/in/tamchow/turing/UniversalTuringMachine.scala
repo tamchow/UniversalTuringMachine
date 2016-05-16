@@ -78,7 +78,7 @@ class UniversalTuringMachine(commands: Vector[TuringCommand], initialState: Stri
     */
   def isApplicable(command: TuringCommand) = {
     (command.currentValue == tape(bounded()) || (command valueMatchesEverything)) &&
-      ((command currentState) == this.state || (command stateMatchesEveryThing))
+      ((command currentState) == state || (command stateMatchesEveryThing))
   }
 
   /**
@@ -139,7 +139,7 @@ object UniversalTuringMachine {
     val initialState = process(initialStateChar)
     val tapeFiller = if (data exists {
       _ startsWith fillerChar
-    }) escapeNull(process(fillerChar) split whitespaceRegex toVector)
+    }) escapeNull((process(fillerChar) split whitespaceRegex) toVector)
     else null
     val terminationData = data map {
       case terminationDirective if terminationDirective startsWith directiveChar => trim(terminationDirective, directiveChar)

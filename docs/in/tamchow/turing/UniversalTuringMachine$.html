@@ -179,27 +179,28 @@
                               <p>1. Lines starting with '<a href="#directiveChar:String" class="extmbr"
                                                             name="in.tamchow.turing.UniversalTuringMachine#directiveChar">directiveChar</a>'
                                   - Directives indicating acceptable halting commands,
-                                  other than the default halt command
-                                  2. Lines starting with '<a href="#commentChar:String" class="extmbr"
-                                                             name="in.tamchow.turing.UniversalTuringMachine#commentChar">commentChar</a>'
+                                  other than the default halt command</p>
+                              <p>2. Lines starting with '<a href="#commentChar:String" class="extmbr"
+                                                            name="in.tamchow.turing.UniversalTuringMachine#commentChar">commentChar</a>'
                                   - Discarded as comments.
                                   Well, it is a Turing Machine Code program after all, so the assembler style is
-                                  employed
-                                  3. Lines having a '<a href="#commentChar:String" class="extmbr"
-                                                        name="in.tamchow.turing.UniversalTuringMachine#commentChar">commentChar</a>'
+                                  employed</p>
+                              <p>3. Lines having a '<a href="#commentChar:String" class="extmbr"
+                                                       name="in.tamchow.turing.UniversalTuringMachine#commentChar">commentChar</a>'
                                   in the middle - Only the part to the left is processed,
-                                  rest is discarded as an inline comment
-                                  4. Line starting with '<a href="#initialStateChar:String" class="extmbr"
-                                                            name="in.tamchow.turing.UniversalTuringMachine#initialStateChar">initialStateChar</a>'
-                                  - The initial command indicator
-                                  5. Line starting with '<a href="#fillerChar:String" class="extmbr"
-                                                            name="in.tamchow.turing.UniversalTuringMachine#fillerChar">fillerChar</a>'
+                                  rest is discarded as an inline comment</p>
+                              <p>4. Line starting with '<a href="#initialStateChar:String" class="extmbr"
+                                                           name="in.tamchow.turing.UniversalTuringMachine#initialStateChar">initialStateChar</a>'
+                                  - The initial command indicator</p>
+                              <p>5. Line starting with '<a href="#fillerChar:String" class="extmbr"
+                                                           name="in.tamchow.turing.UniversalTuringMachine#fillerChar">fillerChar</a>'
                                   - The tape initializer</p>
                               <p>This <span class="extype" name="String">String</span> is split by whitespace after
                                   trimming indicator to get filler <span class="extype" name="String">String</span>s,
                                   which are repeated in order to fill up the tape</p>
                               <p>Without such a line, the tape is initialized to logical blanks, represented by <code>null</code>
-                                  6. Empty Lines - Ignored and discarded
+                              </p>
+                              <p>6. Empty Lines - Ignored and discarded
                               </p></div>
                           <dl class="paramcmts block">
                               <dt class="param">data</dt>

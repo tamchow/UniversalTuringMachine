@@ -37,20 +37,15 @@ object TuringCommand {
     new TuringCommand(data._1, data._2, data._3, data._4, data._5)
 }
 
-class TuringCommand(_currentState: String, _nextState: String, _currentValue: String, _nextValue: String, _direction: MoveDirection) {
+case class TuringCommand private(_currentState: String, _nextState: String, _currentValue: String, _nextValue: String, _direction: MoveDirection) {
 
   import TuringCommand._
 
   def valueMatchesEverything = currentValue == matchAnythingCode
 
+  def currentValue = _currentValue
+
   def stateMatchesEveryThing = currentState == matchAnythingCode
-
-  override def equals(that: Any) = that match {
-    case that: TuringCommand => that.isInstanceOf[TuringCommand] && this.## == that.##
-    case _ => false
-  }
-
-  override def hashCode = toString ##
 
   /**
     * The output format is deliberately similar to the input format,
@@ -64,8 +59,6 @@ class TuringCommand(_currentState: String, _nextState: String, _currentValue: St
   } mkString " "
 
   def currentState = _currentState
-
-  def currentValue = _currentValue
 
   def nextState = _nextState
 

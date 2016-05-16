@@ -48,6 +48,6 @@ object MoveDirection {
   }
 }
 
-case class MoveDirection(value: Int, _name: String) {
+case class MoveDirection private(value: Int, _name: String) {
   def name = _name
 }

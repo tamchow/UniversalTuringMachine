@@ -23,10 +23,8 @@ class UniversalTuringMachine(commands: Vector[TuringCommand], initialState: Stri
       fillerListIdx += 1
       tapeFiller(fillerListIdx)
     }
-    def handleNullFill = if (terminalStates == null) null else getFiller
-    Array.fill(tapeSize) {
-      handleNullFill
-    }
+    def fill(item: String) = Array.fill(tapeSize)(item)
+    if (tapeFiller == null) fill(null) else fill(getFiller)
   }
 
   /**
@@ -60,10 +58,9 @@ class UniversalTuringMachine(commands: Vector[TuringCommand], initialState: Stri
     if (applicableStates.isEmpty || state == null || (terminalStates contains state)) false
     else {
       import MoveDirection._
-      val applicableState = applicableStates.head
-      tape(bounded()) = applicableState.nextValue
-      state = applicableState.nextState
-      head = applicableState.direction match {
+      tape(bounded()) = applicableStates.head.nextValue
+      state = applicableStates.head.nextState
+      head = applicableStates.head.direction match {
         case `left` => head - 1
         case `right` => head + 1
         case `none` => head

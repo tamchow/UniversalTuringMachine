@@ -39,13 +39,13 @@ class UniversalTuringMachine(commands: Vector[TuringCommand], initialState: Stri
     var currentSteps = 0
     var halt = initialState == null
     val useStepping = steps >= 0
-    var tapeHistory: Vector[Array[String]] = Vector()
+    var tapeHistory: List[Array[String]] = Nil
     while (!(halt || (useStepping && currentSteps >= steps))) {
       tapeHistory = tapeHistory :+ (tape clone())
       halt = runStep()
       currentSteps += 1
     }
-    tapeHistory
+    tapeHistory toVector
   }
 
   /**

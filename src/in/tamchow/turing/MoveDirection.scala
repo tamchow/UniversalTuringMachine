@@ -41,13 +41,16 @@ object MoveDirection {
   }
 
   def apply(name: String): MoveDirection = {
+    def verifyName(verifier: MoveDirection) =
+    //in order of preference : fully-qualified names are preferred over the first letter match
+      (name equalsIgnoreCase verifier.name) || (name(0).toString equalsIgnoreCase verifier.name(0).toString)
     name match {
-      case isLeft if name equalsIgnoreCase left.name => left
-      case isRight if name equalsIgnoreCase right.name => right
-      case isNone if name equalsIgnoreCase none.name => none
+      case isLeft if verifyName(left) => left
+      case isRight if verifyName(right) => right
+      case isNone if verifyName(none) => none
       case other => throw new IllegalArgumentException(illegalTypeMessage format other)
     }
   }
 }
 
-case class MoveDirection private(value: Int, name: String)
+sealed case class MoveDirection private(value: Int, name: String)

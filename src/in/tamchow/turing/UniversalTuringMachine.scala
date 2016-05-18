@@ -134,23 +134,19 @@ object UniversalTuringMachine {
     }).head
     def trim(string: String, trimFrom: String) = string drop (string indexOf trimFrom)
     def process(filterChar: String) = trim(doStartFilter(filterChar), filterChar)
+    def qualifier(item: String, char: String) = item startsWith char
+    def isCommand(item: String) =
+      !(item.isEmpty || qualifier(item, commentChar) || qualifier(item, directiveChar) || qualifier(item, initialStateChar))
+    def hasMidLineComment(item: String) = (item indexOf commentChar) > 0
     import TuringCommand._
-    val commandsData = data map {
-      case normal if !(normal.isEmpty ||
-        (normal startsWith commentChar) ||
-        (normal startsWith directiveChar) ||
-        (normal startsWith initialStateChar)) => TuringCommand(normal)
-      case withInlineComment if (withInlineComment indexOf commentChar) > 0 =>
-        TuringCommand(trim(withInlineComment, commentChar))
-    }
+    val commandsData = for (item <- data if isCommand(item) || hasMidLineComment(item)) yield
+      if (isCommand(item)) TuringCommand(item) else if (hasMidLineComment(item)) TuringCommand(trim(item, commentChar))
     val initialState = process(initialStateChar)
-    val tapeFiller = if (data exists {
-      _ startsWith fillerChar
-    }) escapeNull((process(fillerChar) split whitespaceRegex) toVector)
+    val tapeFiller = if (data exists (qualifier(_, fillerChar)))
+      escapeNull((process(fillerChar) split whitespaceRegex) toVector)
     else null
-    val terminationData = data map {
-      case terminationDirective if terminationDirective startsWith directiveChar => trim(terminationDirective, directiveChar)
-    }
-    new UniversalTuringMachine(commandsData, initialState, terminationData, tapeFiller, tapeSize)
+    val terminationData = for (terminationDirective <- data if qualifier(terminationDirective, directiveChar)) yield
+      trim(terminationDirective, directiveChar)
+    new UniversalTuringMachine(commandsData.asInstanceOf[Vector[TuringCommand]], initialState, terminationData, tapeFiller, tapeSize)
   }
 }

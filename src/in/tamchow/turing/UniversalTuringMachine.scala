@@ -86,23 +86,24 @@ class UniversalTuringMachine(val commands: Vector[TuringCommand], val initialSta
 
 object UniversalTuringMachine {
   val (commentChar, directiveChar, initialStateChar, fillerChar) = (";", "#", "~", "@")
+  val specialChars = Vector(commentChar, directiveChar, initialStateChar, fillerChar)
   val illegalTapeSizeMessage = "Illegal Tape Size : "
 
   /**
     * Allowed characters with special meaning:
     *
-    * 1. Lines starting with '[[directiveChar]]' - Directives indicating acceptable halting commands,
+    * 1. Lines starting with '[[directiveChar]]' ('#') - Directives indicating acceptable halting commands,
     * other than the default halt command
     *
-    * 2. Lines starting with '[[commentChar]]' - Discarded as comments.
+    * 2. Lines starting with '[[commentChar]]' (';') - Discarded as comments.
     * Well, it is a Turing Machine Code program after all, so the assembler style is employed
     *
-    * 3. Lines having a '[[commentChar]]' in the middle - Only the part to the left is processed,
+    * 3. Lines having a '[[commentChar]]' (';') in the middle - Only the part to the left is processed,
     * rest is discarded as an inline comment
     *
-    * 4. Line starting with '[[initialStateChar]]' - The initial command indicator
+    * 4. Line starting with '[[initialStateChar]]' ('~') - The initial command indicator
     *
-    * 5. Line starting with '[[fillerChar]]' - The tape initializer
+    * 5. Line starting with '[[fillerChar]]' ('@') - The tape initializer
     *
     * This [[java.lang.String]] is split by whitespace after trimming indicator to get filler [[java.lang.String]]s,
     * which are repeated in order to fill up the tape
@@ -122,24 +123,23 @@ object UniversalTuringMachine {
     */
   def apply(data: Vector[String], tapeSize: Int) = {
     require(tapeSize > 0, s"$illegalTapeSizeMessage$tapeSize")
-    def doStartFilter(filterChar: String) = (data filter {
-      _ startsWith filterChar
-    }).head
-    def trim(string: String, trimFrom: String) = string drop (string indexOf trimFrom)
-    def process(filterChar: String) = trim(doStartFilter(filterChar), filterChar)
+    def doStartFilter(filterChar: String) = data filter (qualifier(_, filterChar))
+    def trim(string: String, trimItem: String, toOrUntil: Boolean = true) = {
+      val trimIdx = string indexOf trimItem
+      if (toOrUntil) string drop trimIdx else string take trimIdx
+    }.trim
+    def process(filterChar: String) = doStartFilter(filterChar) map { case item => trim(item, filterChar) }
     def qualifier(item: String, char: String) = item startsWith char
-    def isCommand(item: String) =
-      !(item.isEmpty || qualifier(item, commentChar) || qualifier(item, directiveChar) || qualifier(item, initialStateChar))
+    def qualifierAnyOf(item: String, chars: Vector[String]) = chars exists (qualifier(item, _))
+    def isCommand(item: String) = !(item.isEmpty || qualifierAnyOf(item, specialChars))
     def hasMidLineComment(item: String) = (item indexOf commentChar) > 0
-    import TuringCommand._
-    val commandsData = for (item <- data if isCommand(item) || hasMidLineComment(item)) yield
-      if (isCommand(item)) TuringCommand(item) else if (hasMidLineComment(item)) TuringCommand(trim(item, commentChar))
-    val initialState = process(initialStateChar)
-    val tapeFiller = if (data exists (qualifier(_, fillerChar)))
-      escapeNull((process(fillerChar) split whitespaceRegex) toVector)
-    else null
-    val terminationData = for (terminationDirective <- data if qualifier(terminationDirective, directiveChar)) yield
-      trim(terminationDirective, directiveChar)
-    new UniversalTuringMachine(commandsData.asInstanceOf[Vector[TuringCommand]], initialState, terminationData, tapeFiller, tapeSize)
+    val commandsDataNoComments = (data filter (isCommand(_))) map { case item => TuringCommand(item) }
+    val commandsDataWithComments = (data filter (hasMidLineComment(_))) map {
+      case item => TuringCommand(trim(item, commentChar, toOrUntil = false))
+    }
+    val initialState = process(initialStateChar).head
+    val tapeFiller: Vector[String] = if (data exists (qualifier(_, fillerChar))) process(fillerChar) else null
+    val terminationData = (data filter (qualifier(_, directiveChar))) map { case item => trim(item, directiveChar) }
+    new UniversalTuringMachine(commandsDataNoComments ++ commandsDataWithComments, initialState, terminationData, tapeFiller, tapeSize)
   }
 }

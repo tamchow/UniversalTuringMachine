@@ -49,7 +49,7 @@ object TuringMain {
     doRun(halt = false, 0, 0, turingMachine initialState, turingMachine initTape)
   }
 
-  def formatArgs(args: Seq[String]) = args.toList map {
+  def formatArgs(args: Seq[String]) = args map {
     case null => ""
     case others => others
   } mkString " "

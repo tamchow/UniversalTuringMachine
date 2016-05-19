@@ -6,7 +6,6 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Universal Turing Machine/in/tamchow/turing/UniversalTuringMachine$$anonfun$apply$1.class" afterPath="$PROJECT_DIR$/out/production/Universal Turing Machine/in/tamchow/turing/UniversalTuringMachine$$anonfun$apply$1.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Universal Turing Machine/in/tamchow/turing/UniversalTuringMachine$$anonfun$doStartFilter$1$1.class" afterPath="$PROJECT_DIR$/out/production/Universal Turing Machine/in/tamchow/turing/UniversalTuringMachine$$anonfun$doStartFilter$1$1.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/README.md" afterPath="$PROJECT_DIR$/README.md" />
     </list>
     <ignored path="Uinversal Turing Machine.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -1134,7 +1133,7 @@
       <workItem from="1463593817999" duration="70000" />
       <workItem from="1463635070951" duration="24000" />
       <workItem from="1463641109274" duration="2000" />
-      <workItem from="1463641163695" duration="10802000" />
+      <workItem from="1463641163695" duration="10821000" />
     </task>
     <task id="LOCAL-00001" summary="Initial Commit - Simplified Launcher">
       <created>1463236476083</created>
@@ -1269,11 +1268,18 @@
       <option name="project" value="LOCAL" />
       <updated>1463652417423</updated>
     </task>
-    <option name="localTasksCounter" value="20" />
+    <task id="LOCAL-00020" summary="Functionalisation">
+      <created>1463653154874</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1463653154874</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="63992000" />
+    <option name="totallyTimeSpent" value="64011000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />

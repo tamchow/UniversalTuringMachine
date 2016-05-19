@@ -2,9 +2,15 @@
 
 A simple yet flexible Universal Turing Machine simulator in pure Scala.
 
-I try to adhere to functional programming notions as far as possible, but there is the occasional use of `var` as, well,
-Turing Machines are built on the notion of mutable state, and I'm not enough of an expert to convert the simple stuff to (at least to me)
-complicated stuff.
+This program is now entirely in a functional style - everything is a `val` and uses the immutable collection `scala.Vector` as a default.
+
+I guess this will require Scala 2.10.0 or higher to build, I use Scala 2.11.8.
+
+The releases have the Scala runtime bundled into them,
+so they can be run with a supported JDK (JDK 1.7+) only,
+no Scala runtime is required.
+
+This probably made recursion and higher-order functions my favourite new programming constructs &#x1f609;
 
 Please do report bugs you find, and any feature-requests or critical advice you may have as well.
 

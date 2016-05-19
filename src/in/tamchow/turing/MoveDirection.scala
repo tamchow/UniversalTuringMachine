@@ -1,7 +1,13 @@
 package in.tamchow.turing
 
 /**
-  * Indicates the directions in which the tape head can move
+  * Indicates the directions in which the tape head can move:
+  *
+  * 1. [[MoveDirection.left]] -> Left (head index - 1)
+  *
+  * 2. [[MoveDirection.right]] -> Right (head index + 1)
+  *
+  * 3. [[MoveDirection.none]] -> None (head index +/- 0 = head index)
   */
 object MoveDirection {
   val illegalTypeMessage = s"Unrecognized enum identifier : %s for type $getClass"
@@ -10,13 +16,13 @@ object MoveDirection {
   /**
     * Results:
     *
-    * 1. Any negative [[Int]] value or case-insensitive match to [[left.name]]-> [[left]]
+    * 1. Any negative [[scala.Int]] value or case-insensitive match to [[MoveDirection.left.name]]-> [[MoveDirection.left]]
     *
-    * 2. Any positive [[Int]] value or case-insensitive match to [[right.name]]-> [[right]]
+    * 2. Any positive [[scala.Int]] value or case-insensitive match to [[MoveDirection.right.name]]-> [[MoveDirection.right]]
     *
-    * 3. A Zero (`0`) [[Int]] value or case-insensitive match to [[none.name]]-> [[none]]
+    * 3. A Zero (`0`) [[scala.Int]] value or case-insensitive match to [[MoveDirection.none.name]]-> [[MoveDirection.none]]
     *
-    * @param data the [[String]] to parse into a [[MoveDirection]]
+    * @param data the [[java.lang.String]] to parse into a [[MoveDirection]]
     * @return a [[MoveDirection]] object based on the parameters
     */
   def parse(data: String) = {

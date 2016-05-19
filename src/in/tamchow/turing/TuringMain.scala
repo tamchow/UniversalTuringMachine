@@ -28,28 +28,28 @@ object TuringMain {
 
   def main(args: Array[String]) {
     require(args.length <= 0, noParametersSpecifiedMessage)
-    doRun(args(0), args(1).toInt, args(2).toInt, args(3).toInt)
+    doRunMain(args(0), args(1).toInt, args(2).toInt, args(3).toInt)
   }
 
-  def doRun(filePath: String, tapeSize: Int, steps: Int, pauseTime: Int) {
+  def doRunMain(filePath: String, tapeSize: Int, steps: Int, pauseTime: Int) {
     val data = io.Source fromFile filePath getLines() toVector
-    val turingMachine = UniversalTuringMachine(data, tapeSize)
-    val useStepping = steps >= 0
-    var currentSteps = 0
-    var halt = false
-    while (!(halt || (useStepping && currentSteps >= steps))) {
-      println(formatArgs(turingMachine tape))
-      halt = turingMachine runStep()
-      currentSteps += 1
-      if (pauseTime >= 0) Thread sleep pauseTime
+    val (turingMachine, useStepping) = (UniversalTuringMachine(data, tapeSize), steps >= 0)
+    def doRun(halt: Boolean, currentSteps: Int, head: Int, state: String, tape: Vector[String]) {
+      if (halt || (useStepping && currentSteps >= steps)) println(formatArgs(tape))
       else {
-        println(pausedMessage)
-        io.StdIn.readLine()
+        val (continue, nextHead, nextState, nextTape) = turingMachine runStep(head, state, tape)
+        if (pauseTime >= 0) Thread sleep pauseTime
+        else {
+          println(pausedMessage)
+          io.StdIn readLine()
+        }
+        doRun(!continue, currentSteps + 1, nextHead, nextState, nextTape)
       }
     }
+    doRun(halt = false, 0, 0, turingMachine initialState, turingMachine initTape)
   }
 
-  def formatArgs(args: Array[String]) = args.toList map {
+  def formatArgs(args: Seq[String]) = args.toList map {
     case null => ""
     case others => others
   } mkString " "

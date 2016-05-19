@@ -17,7 +17,7 @@ object TuringCommand {
     *
     * Separator used is whitespace - 5 terms are required after tokenization
     *
-    * @param data [[String]] indicating a defined transitional operation
+    * @param data [[java.lang.String]] indicating a defined transitional operation
     * @return a [[TuringCommand]] object derived from the argument
     * @see [[matchAnythingCode]]
     * @see [[nullCode]]
@@ -30,7 +30,7 @@ object TuringCommand {
   }
 
   def escapeNull(elements: Vector[String]) = elements map {
-    case `nullCode` => null
+    case TuringCommand.nullCode => null
     case others => others
   }
 
@@ -50,7 +50,7 @@ sealed case class TuringCommand private(currentState: String, nextState: String,
     * The output format is deliberately similar to the input format,
     * so the result of one can be reflexively used with the other.
     *
-    * @return a [[String]] representing this [[TuringCommand]] object
+    * @return a [[java.lang.String]] representing this [[TuringCommand]] object
     */
   override def toString = Vector(currentState, nextState, currentValue, nextValue, direction.name) map {
     case nullItem if nullItem == null => nullCode

@@ -5,47 +5,42 @@ import scala.language.postfixOps
 /**
   * Represents a universal Turing Machine
   */
-class UniversalTuringMachine(commands: Vector[TuringCommand], initialState: String, terminalStates: Vector[String], tapeFiller: Vector[String], tapeSize: Int) {
-
-  private val _tape = initTape
-
-  private var (head, state) = (0, initialState)
-
-  /**
-    * @note This is the best partially functional method of filling up a list repeatedly using the elements of another
-    *       I could come up with. Please suggest a more idiomatic way if possible
-    * @return a properly initialized tape
-    */
-  def initTape = {
-    var fillerListIdx = 0
-    def getFiller = {
-      if (fillerListIdx > tapeFiller.size) fillerListIdx = 0
-      fillerListIdx += 1
-      tapeFiller(fillerListIdx)
-    }
-    def fill(item: String) = Array.fill(tapeSize)(item)
-    if (tapeFiller == null) fill(null) else fill(getFiller)
-  }
-
+class UniversalTuringMachine(val commands: Vector[TuringCommand], val initialState: String, val terminalStates: Vector[String], val tapeFiller: Vector[String], val tapeSize: Int) {
   /**
     * Runs the program for the specified number of steps
     * or till the program halts (if the specified number of steps is negative)
     *
     * @param steps the number of steps for which the program is run.
     *              Supply negative values to run till halt
-    * @return the history of the tape in each step as a [[Vector]] of [[Array]]s of [[String]]s
+    * @return the history of the tape in each step as a [[scala.Vector]] of [[scala.Vector]]s of [[java.lang.String]]s
     */
   def runForStepsOrTillHalt(steps: Int) = {
-    var currentSteps = 0
-    var halt = initialState == null
     val useStepping = steps >= 0
-    var tapeHistory: List[Array[String]] = Nil
-    while (!(halt || (useStepping && currentSteps >= steps))) {
-      tapeHistory = tapeHistory :+ (tape clone())
-      halt = runStep()
-      currentSteps += 1
+    def doRun(halt: Boolean, currentSteps: Int, head: Int, state: String, tape: Vector[String], tapeHistory: Vector[Vector[String]]): Vector[Vector[String]] = {
+      if (halt || (useStepping && currentSteps >= steps)) tapeHistory
+      else {
+        val (continue, nextHead, nextState, nextTape) = runStep(head, state, tape)
+        doRun(!continue, currentSteps + 1, nextHead, nextState, nextTape, tapeHistory :+ tape)
+      }
     }
-    tapeHistory toVector
+    doRun(halt = false, 0, 0, initialState, initTape, Vector())
+  }
+
+  /**
+    * Fills the tape initially with the [[tapeFiller]] contents repeatedly.
+    *
+    * @return a properly initialized tape
+    */
+  def initTape: Vector[String] = {
+    if (tapeFiller == null) (Vector fill tapeSize) (null)
+    else {
+      val (times, remainder) = (tapeSize / tapeFiller.length, tapeSize % tapeFiller.length)
+      def fill(fillCount: Int, struct: Vector[String]): Vector[String] = {
+        if (fillCount == 0) struct ++ (tapeFiller take remainder)
+        else fill(fillCount - 1, struct ++ tapeFiller)
+      }
+      fill(times, Vector())
+    }
   }
 
   /**
@@ -53,42 +48,40 @@ class UniversalTuringMachine(commands: Vector[TuringCommand], initialState: Stri
     *
     * @return true if there are more steps possible, else false
     */
-  def runStep() = {
-    val applicableStates = commands filter (isApplicable(_))
-    if (applicableStates.isEmpty || state == null || (terminalStates contains state)) false
+  def runStep(head: Int, state: String, tape: Vector[String]) = {
+    val applicableStates = commands filter (isApplicable(_, head, state, tape))
+    if (applicableStates.isEmpty || state == null || (terminalStates contains state)) (false, -1, null, null)
     else {
-      import MoveDirection._
-      tape(bounded()) = applicableStates.head.nextValue
-      state = applicableStates.head.nextState
-      head = applicableStates.head.direction match {
-        case `left` => head - 1
-        case `right` => head + 1
-        case `none` => head
-        case other => throw new IllegalArgumentException(illegalTypeMessage format (other getClass).getName)
-      }
-      true
+      (true, applicableStates.head.direction match {
+        case MoveDirection.left => head - 1
+        case MoveDirection.right => head + 1
+        case MoveDirection.none => head
+        case other => throw new IllegalArgumentException(MoveDirection.illegalTypeMessage format (other getClass).getName)
+      }, applicableStates.head.nextState, tape.updated(bounded(head), applicableStates.head.nextValue))
     }
   }
 
   /**
     * Helper function for filtering available commands by applicability
     *
+    * @param state   The current state of this [[UniversalTuringMachine]]
+    * @param head    The current head pointer to the tape of this [[UniversalTuringMachine]]
     * @param command The command to check for applicability with the current execution environment
     * @return true if the command is applicable, false if it isn't
     */
-  def isApplicable(command: TuringCommand) = {
-    (command.currentValue == tape(bounded()) || (command valueMatchesEverything)) &&
+  private[this] def isApplicable(command: TuringCommand, head: Int, state: String, tape: Vector[String]) = {
+    (command.currentValue == tape(bounded(head)) || (command valueMatchesEverything)) &&
       ((command currentState) == state || (command stateMatchesEveryThing))
   }
 
   /**
     * Implements [[Array]] wraparound
     *
-    * @return [[head]], after bounds correction
+    * @param head the argument to bounds-correct
+    * @return the argument after bounds correction
     */
-  def bounded() = if (head < 0) Math.abs(tapeSize + head) % tapeSize else if (head >= tapeSize) head % tapeSize else head
-
-  def tape = _tape
+  private[this] def bounded(head: Int) =
+    if (head < 0) Math.abs(tapeSize + head) % tapeSize else if (head >= tapeSize) head % tapeSize else head
 }
 
 object UniversalTuringMachine {
@@ -111,14 +104,14 @@ object UniversalTuringMachine {
     *
     * 5. Line starting with '[[fillerChar]]' - The tape initializer
     *
-    * This [[String]] is split by whitespace after trimming indicator to get filler [[String]]s,
+    * This [[java.lang.String]] is split by whitespace after trimming indicator to get filler [[java.lang.String]]s,
     * which are repeated in order to fill up the tape
     *
     * Without such a line, the tape is initialized to logical blanks, represented by `null`
     *
     * 6. Empty Lines - Ignored and discarded
     *
-    * @param data     Raw [[Vector]] of [[String]]s of a Turing Machine Code program
+    * @param data     Raw [[scala.Vector]] of [[java.lang.String]]s of a Turing Machine Code program
     * @param tapeSize the (fixed) size of the tape. Wraparound is enabled
     * @return An [[UniversalTuringMachine]] object for evaluation of the argument program
     * @see [[directiveChar]]

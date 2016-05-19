@@ -53,14 +53,24 @@
                                                                                    name="scala.Serializable">Serializable</span></span>
       </span>
       </h4>
-      
-          <div id="comment" class="fullcommenttop"><div class="comment cmt"><p>Indicates the directions in which the tape head can move
+
+      <div id="comment" class="fullcommenttop">
+          <div class="comment cmt"><p>Indicates the directions in which the tape head can move:</p>
+              <p>1. <a href="#left:in.tamchow.turing.MoveDirection" class="extmbr"
+                       name="in.tamchow.turing.MoveDirection#left">MoveDirection.left</a> -&gt; Left (head index - 1)
+              </p>
+              <p>2. <a href="#right:in.tamchow.turing.MoveDirection" class="extmbr"
+                       name="in.tamchow.turing.MoveDirection#right">MoveDirection.right</a> -&gt; Right (head index + 1)
+              </p>
+              <p>3. <a href="#none:in.tamchow.turing.MoveDirection" class="extmbr"
+                       name="in.tamchow.turing.MoveDirection#none">MoveDirection.none</a> -&gt; None (head index +/- 0 =
+                  head index)
 </p></div><div class="toggleContainer block">
           <span class="toggle">Linear Supertypes</span>
-              <div class="superTypes hiddenContent"><span class="extype" name="scala.Serializable">Serializable</span>,
-                  <span class="extype" name="java.io.Serializable">Serializable</span>, <span class="extype"
-                                                                                              name="scala.AnyRef">AnyRef</span>,
-                  <span class="extype" name="scala.Any">Any</span></div>
+          <div class="superTypes hiddenContent"><span class="extype" name="scala.Serializable">Serializable</span>,
+              <span class="extype" name="java.io.Serializable">Serializable</span>, <span class="extype"
+                                                                                          name="scala.AnyRef">AnyRef</span>,
+              <span class="extype" name="scala.Any">Any</span></div>
         </div></div>
         
 
@@ -487,23 +497,24 @@
                       <p class="shortcomment cmt">Results:</p>
                       <div class="fullcomment">
                           <div class="comment cmt"><p>Results:</p>
-                              <p>1. Any negative <span class="extype" name="Int">Int</span> value or case-insensitive
-                                  match to <span class="extype" name="left.name">left.name</span>-&gt; <a
-                                          href="#left:in.tamchow.turing.MoveDirection" class="extmbr"
-                                          name="in.tamchow.turing.MoveDirection#left">left</a></p>
-                              <p>2. Any positive <span class="extype" name="Int">Int</span> value or case-insensitive
-                                  match to <span class="extype" name="right.name">right.name</span>-&gt; <a
-                                          href="#right:in.tamchow.turing.MoveDirection" class="extmbr"
-                                          name="in.tamchow.turing.MoveDirection#right">right</a></p>
-                              <p>3. A Zero (<code>0</code>) <span class="extype" name="Int">Int</span> value or
-                                  case-insensitive match to <span class="extype" name="none.name">none.name</span>-&gt;
+                              <p>1. Any negative <span class="extype" name="scala.Int">scala.Int</span> value or
+                                  case-insensitive match to <span class="extype" name="MoveDirection.left.name">MoveDirection.left.name</span>-&gt;
+                                  <a href="#left:in.tamchow.turing.MoveDirection" class="extmbr"
+                                     name="in.tamchow.turing.MoveDirection#left">MoveDirection.left</a></p>
+                              <p>2. Any positive <span class="extype" name="scala.Int">scala.Int</span> value or
+                                  case-insensitive match to <span class="extype" name="MoveDirection.right.name">MoveDirection.right.name</span>-&gt;
+                                  <a href="#right:in.tamchow.turing.MoveDirection" class="extmbr"
+                                     name="in.tamchow.turing.MoveDirection#right">MoveDirection.right</a></p>
+                              <p>3. A Zero (<code>0</code>) <span class="extype" name="scala.Int">scala.Int</span> value
+                                  or case-insensitive match to <span class="extype" name="MoveDirection.none.name">MoveDirection.none.name</span>-&gt;
                                   <a href="#none:in.tamchow.turing.MoveDirection" class="extmbr"
-                                     name="in.tamchow.turing.MoveDirection#none">none</a>
+                                     name="in.tamchow.turing.MoveDirection#none">MoveDirection.none</a>
                               </p></div>
                           <dl class="paramcmts block">
                               <dt class="param">data</dt>
-                              <dd class="cmt"><p>the <span class="extype" name="String">String</span> to parse into a <a
-                                      href="MoveDirection.html" class="extype" name="in.tamchow.turing.MoveDirection">MoveDirection</a>
+                              <dd class="cmt"><p>the <span class="extype"
+                                                           name="java.lang.String">java.lang.String</span> to parse into
+                                  a <a href="MoveDirection.html" class="extype" name="in.tamchow.turing.MoveDirection">MoveDirection</a>
                               </p></dd>
                               <dt>returns</dt>
                               <dd class="cmt"><p>a <a href="MoveDirection.html" class="extype"

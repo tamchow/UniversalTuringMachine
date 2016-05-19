@@ -71,7 +71,7 @@
       <a id="MoveDirection:MoveDirection"></a>
       <h4 class="signature">
       <span class="modifier_kind">
-        <span class="modifier"></span>
+        <span class="modifier">sealed </span>
         <span class="kind">case class</span>
       </span>
       <span class="symbol">
@@ -92,7 +92,7 @@
       <a id="TuringCommand:TuringCommand"></a>
       <h4 class="signature">
       <span class="modifier_kind">
-        <span class="modifier"></span>
+        <span class="modifier">sealed </span>
         <span class="kind">case class</span>
       </span>
       <span class="symbol">
@@ -133,7 +133,9 @@
 
         <div id="values" class="values members">
               <h3>Value Members</h3>
-              <ol><li name="in.tamchow.turing.MoveDirection" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+            <ol>
+                <li name="in.tamchow.turing.MoveDirection" visbl="pub" data-isabs="false" fullComment="yes"
+                    group="Ungrouped">
       <a id="MoveDirection"></a>
       <a id="MoveDirection:MoveDirection"></a>
       <h4 class="signature">
@@ -150,8 +152,20 @@
         <img src="../../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
-      <p class="shortcomment cmt">Indicates the directions in which the tape head can move
-</p>
+                    <p class="shortcomment cmt">Indicates the directions in which the tape head can move:</p>
+                    <div class="fullcomment">
+                        <div class="comment cmt"><p>Indicates the directions in which the tape head can move:</p>
+                            <p>1. <a href="MoveDirection$.html#left:in.tamchow.turing.MoveDirection" class="extmbr"
+                                     name="in.tamchow.turing.MoveDirection#left">MoveDirection.left</a> -&gt; Left (head
+                                index - 1)</p>
+                            <p>2. <a href="MoveDirection$.html#right:in.tamchow.turing.MoveDirection" class="extmbr"
+                                     name="in.tamchow.turing.MoveDirection#right">MoveDirection.right</a> -&gt; Right
+                                (head index + 1)</p>
+                            <p>3. <a href="MoveDirection$.html#none:in.tamchow.turing.MoveDirection" class="extmbr"
+                                     name="in.tamchow.turing.MoveDirection#none">MoveDirection.none</a> -&gt; None (head
+                                index +/- 0 = head index)
+                            </p></div>
+                    </div>
     </li><li name="in.tamchow.turing.TuringCommand" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
       <a id="TuringCommand"></a>
       <a id="TuringCommand:TuringCommand"></a>
@@ -187,18 +201,18 @@
         <img src="../../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
-                  <p class="shortcomment cmt">The Launcher for the Universal Turing Machine simulator</p>
-                  <div class="fullcomment">
-                      <div class="comment cmt"><p>The Launcher for the Universal Turing Machine simulator</p>
-                          <p>The parameters are, in order:</p>
-                          <p>1. The input file path</p>
-                          <p>2. The tape size</p>
-                          <p>3. The number of steps for which to run the program. Leave it negative to run it till it
-                              halts.</p>
-                          <p>4. The number of milliseconds to pause before starting the next step.</p>
-                          <p>Leave this negative to pause for user input before every step.</p>
-                          <p>All these parameters are required.</p>
-                          <p>Only supports program input as files.
+                <p class="shortcomment cmt">The Launcher for the Universal Turing Machine simulator</p>
+                <div class="fullcomment">
+                    <div class="comment cmt"><p>The Launcher for the Universal Turing Machine simulator</p>
+                        <p>The parameters are, in order:</p>
+                        <p>1. The input file path</p>
+                        <p>2. The tape size</p>
+                        <p>3. The number of steps for which to run the program. Leave it negative to run it till it
+                            halts.</p>
+                        <p>4. The number of milliseconds to pause before starting the next step.</p>
+                        <p>Leave this negative to pause for user input before every step.</p>
+                        <p>All these parameters are required.</p>
+                        <p>Only supports program input as files.
 </p></div></div>
     </li><li name="in.tamchow.turing.UniversalTuringMachine" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
       <a id="UniversalTuringMachine"></a>

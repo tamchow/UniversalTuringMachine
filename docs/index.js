@@ -2,8 +2,8 @@ Index.PACKAGES = {
     "in": [],
     "in.tamchow": [],
     "in.tamchow.turing": [{
-        "case class": "in\/tamchow\/turing\/MoveDirection.html",
         "object": "in\/tamchow\/turing\/MoveDirection$.html",
+        "case class": "in\/tamchow\/turing\/MoveDirection.html",
         "name": "in.tamchow.turing.MoveDirection"
     }, {
         "case class": "in\/tamchow\/turing\/TuringCommand.html",

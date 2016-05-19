@@ -3337,13 +3337,13 @@ $.fn.layout = function (opts) {
 		,	delay	= s.isMoving ? 1000 : 300 // MINIMUM delay - option may override
 		;
 		if (s.isClosed || s.isResizing)
-			 // skip if already closed OR in process of resizing
+			return; // skip if already closed OR in process of resizing
 		else if (o.slideTrigger_close === "click")
 			close_NOW(); // close immediately onClick
 		else if (o.preventQuickSlideClose && s.isMoving)
-			 // handle Chrome quick-close on slide-open
+			return; // handle Chrome quick-close on slide-open
 		else if (o.preventPrematureSlideClose && evt && $.layout.isMouseOverElem(evt, $Ps[pane]))
-			 // handle incorrect mouseleave trigger, like when over a SELECT-list in IE
+			return; // handle incorrect mouseleave trigger, like when over a SELECT-list in IE
 		else if (evt) // trigger = mouseleave - use a delay
 			// 1 sec delay if 'opening', else .3 sec
 			timer.set(pane+"_closeSlider", close_NOW, max(o.slideDelay_close, delay));
@@ -4376,8 +4376,9 @@ $.fn.layout = function (opts) {
 		_runCallbacks("onswap_end", pane1);
 		_runCallbacks("onswap_end", pane2);
 
+			return;
 
-			function copy (n) { // n = pane
+			function copy(n) { // n = pane
 			var
 				$P	= $Ps[n]
 			,	$C	= $Cs[n]

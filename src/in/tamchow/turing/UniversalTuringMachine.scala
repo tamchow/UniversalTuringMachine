@@ -5,7 +5,11 @@ import scala.language.postfixOps
 /**
   * Represents a universal Turing Machine
   */
-class UniversalTuringMachine(val commands: Vector[TuringCommand], val initialState: String, val terminalStates: Vector[String], val tapeFiller: Vector[String], val tapeSize: Int) {
+final class UniversalTuringMachine(val commands: Vector[TuringCommand], val initialState: String, val terminalStates: Vector[String], val tapeFiller: Vector[String], val tapeSize: Int) {
+  override val toString = this.getClass.getName + "[" + initialState + "," + commands + "," + terminalStates + "," + tapeFiller + "," + tapeSize + "]"
+  override val hashCode = toString.hashCode
+
+
   /**
     * Runs the program for the specified number of steps
     * or till the program halts (if the specified number of steps is negative)
@@ -82,6 +86,12 @@ class UniversalTuringMachine(val commands: Vector[TuringCommand], val initialSta
     */
   private[this] def bounded(head: Int) =
     if (head < 0) Math.abs(tapeSize + head) % tapeSize else if (head >= tapeSize) head % tapeSize else head
+
+  override def equals(other: Any): Boolean = other match {
+    case that: UniversalTuringMachine =>
+      hashCode == that.hashCode
+    case _ => false
+  }
 }
 
 object UniversalTuringMachine {

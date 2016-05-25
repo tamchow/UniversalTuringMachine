@@ -50,7 +50,7 @@ object TuringMain {
   }
 
   def formatArgs(args: Seq[String]) = args map {
-    case null => ""
+    case null => TuringCommand.nullCode
     case others => others
   } mkString " "
 }

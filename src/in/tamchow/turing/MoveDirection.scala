@@ -59,4 +59,4 @@ object MoveDirection {
   }
 }
 
-sealed case class MoveDirection private(value: Int, name: String)
+final case class MoveDirection private(value: Int, name: String)

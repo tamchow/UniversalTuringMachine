@@ -38,7 +38,7 @@ object TuringCommand {
     new TuringCommand(data._1, data._2, data._3, data._4, data._5)
 }
 
-sealed case class TuringCommand private(currentState: String, nextState: String, currentValue: String, nextValue: String, direction: MoveDirection) {
+final case class TuringCommand private(currentState: String, nextState: String, currentValue: String, nextValue: String, direction: MoveDirection) {
 
   import TuringCommand._
 

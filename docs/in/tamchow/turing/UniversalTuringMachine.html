@@ -50,9 +50,9 @@
         <span class="name">UniversalTuringMachine</span><span class="result"> extends <span class="extype" name="scala.AnyRef">AnyRef</span></span>
       </span>
       </h4>
-      
-          <div id="comment" class="fullcommenttop"><div class="comment cmt"><p>Represents a universal Turing Machine
-</p></div><div class="toggleContainer block">
+
+      <div id="comment" class="fullcommenttop">
+          <div class="toggleContainer block">
           <span class="toggle">Linear Supertypes</span>
           <div class="superTypes hiddenContent"><span class="extype" name="scala.AnyRef">AnyRef</span>, <span class="extype" name="scala.Any">Any</span></div>
         </div></div>
@@ -97,7 +97,7 @@
         <div id="constructors" class="members">
               <h3>Instance Constructors</h3>
               <ol><li name="in.tamchow.turing.UniversalTuringMachine#&lt;init&gt;" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="&lt;init&gt;(commands:Vector[in.tamchow.turing.TuringCommand],initialState:String,terminalStates:Vector[String],tapeFiller:Vector[String],tapeSize:Int):in.tamchow.turing.UniversalTuringMachine"></a>
+                  <a id="&lt;init&gt;(commands:Seq[in.tamchow.turing.TuringCommand],initialState:Option[String],terminalStates:Seq[String],tapeFiller:Seq[String],tapeSize:Int):in.tamchow.turing.UniversalTuringMachine"></a>
       <a id="&lt;init&gt;:UniversalTuringMachine"></a>
       <h4 class="signature">
       <span class="modifier_kind">
@@ -105,10 +105,19 @@
         <span class="kind">new</span>
       </span>
       <span class="symbol">
-        <span class="name">UniversalTuringMachine</span><span class="params">(<span name="commands">commands: <span class="extype" name="scala.Vector">Vector</span>[<a href="TuringCommand.html" class="extype" name="in.tamchow.turing.TuringCommand">TuringCommand</a>]</span>, <span name="initialState">initialState: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="terminalStates">terminalStates: <span class="extype" name="scala.Vector">Vector</span>[<span class="extype" name="scala.Predef.String">String</span>]</span>, <span name="tapeFiller">tapeFiller: <span class="extype" name="scala.Vector">Vector</span>[<span class="extype" name="scala.Predef.String">String</span>]</span>, <span name="tapeSize">tapeSize: <span class="extype" name="scala.Int">Int</span></span>)</span>
+        <span class="name">UniversalTuringMachine</span><span class="params">(<span name="commands">commands: <span
+              class="extype" name="scala.Seq">Seq</span>[<a href="TuringCommand.html" class="extype"
+                                                            name="in.tamchow.turing.TuringCommand">TuringCommand</a>]</span>, <span
+              name="initialState">initialState: <span class="extype" name="scala.Option">Option</span>[<span
+              class="extype" name="scala.Predef.String">String</span>]</span>, <span name="terminalStates">terminalStates: <span
+              class="extype" name="scala.Seq">Seq</span>[<span class="extype" name="scala.Predef.String">String</span>]</span>, <span
+              name="tapeFiller">tapeFiller: <span class="extype" name="scala.Seq">Seq</span>[<span class="extype"
+                                                                                                   name="scala.Predef.String">String</span>]</span>, <span
+              name="tapeSize">tapeSize: <span class="extype" name="scala.Int">Int</span></span>)</span>
       </span>
       </h4><span class="permalink">
-      <a href="../../../index.html#in.tamchow.turing.UniversalTuringMachine@&lt;init&gt;(commands:Vector[in.tamchow.turing.TuringCommand],initialState:String,terminalStates:Vector[String],tapeFiller:Vector[String],tapeSize:Int):in.tamchow.turing.UniversalTuringMachine" title="Permalink" target="_top">
+      <a href="../../../index.html#in.tamchow.turing.UniversalTuringMachine@&lt;init&gt;(commands:Seq[in.tamchow.turing.TuringCommand],initialState:Option[String],terminalStates:Seq[String],tapeFiller:Seq[String],tapeSize:Int):in.tamchow.turing.UniversalTuringMachine"
+         title="Permalink" target="_top">
         <img src="../../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
@@ -259,18 +268,20 @@
               
         </dd></dl></div>
     </li><li name="in.tamchow.turing.UniversalTuringMachine#commands" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="commands:Vector[in.tamchow.turing.TuringCommand]"></a>
-      <a id="commands:Vector[TuringCommand]"></a>
+                  <a id="commands:Seq[in.tamchow.turing.TuringCommand]"></a>
+                  <a id="commands:Seq[TuringCommand]"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
         <span class="kind">val</span>
       </span>
       <span class="symbol">
-        <span class="name">commands</span><span class="result">: <span class="extype" name="scala.Vector">Vector</span>[<a href="TuringCommand.html" class="extype" name="in.tamchow.turing.TuringCommand">TuringCommand</a>]</span>
+        <span class="name">commands</span><span class="result">: <span class="extype" name="scala.Seq">Seq</span>[<a
+              href="TuringCommand.html" class="extype" name="in.tamchow.turing.TuringCommand">TuringCommand</a>]</span>
       </span>
       </h4><span class="permalink">
-      <a href="../../../index.html#in.tamchow.turing.UniversalTuringMachine@commands:Vector[in.tamchow.turing.TuringCommand]" title="Permalink" target="_top">
+      <a href="../../../index.html#in.tamchow.turing.UniversalTuringMachine@commands:Seq[in.tamchow.turing.TuringCommand]"
+         title="Permalink" target="_top">
         <img src="../../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
@@ -475,36 +486,49 @@
     </span>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="in.tamchow.turing.UniversalTuringMachine">UniversalTuringMachine</a> → AnyRef → Any</dd></dl></div>
     </li><li name="in.tamchow.turing.UniversalTuringMachine#initTape" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="initTape:Vector[String]"></a>
-      <a id="initTape:Vector[String]"></a>
+                  <a id="initTape:Seq[String]"></a>
+                  <a id="initTape:Seq[String]"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">initTape</span><span class="result">: <span class="extype" name="scala.Vector">Vector</span>[<span class="extype" name="scala.Predef.String">String</span>]</span>
+        <span class="name">initTape</span><span class="result">: <span class="extype" name="scala.Seq">Seq</span>[<span
+              class="extype" name="scala.Predef.String">String</span>]</span>
       </span>
       </h4><span class="permalink">
-      <a href="../../../index.html#in.tamchow.turing.UniversalTuringMachine@initTape:Vector[String]" title="Permalink" target="_top">
+      <a href="../../../index.html#in.tamchow.turing.UniversalTuringMachine@initTape:Seq[String]" title="Permalink"
+         target="_top">
         <img src="../../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
-      <p class="shortcomment cmt">Fills the tape initially with the <a href="#tapeFiller:Vector[String]" class="extmbr" name="in.tamchow.turing.UniversalTuringMachine#tapeFiller">tapeFiller</a> contents repeatedly.</p><div class="fullcomment"><div class="comment cmt"><p>Fills the tape initially with the <a href="#tapeFiller:Vector[String]" class="extmbr" name="in.tamchow.turing.UniversalTuringMachine#tapeFiller">tapeFiller</a> contents repeatedly.
+                  <p class="shortcomment cmt">Fills the tape initially with the <a href="#tapeFiller:Seq[String]"
+                                                                                   class="extmbr"
+                                                                                   name="in.tamchow.turing.UniversalTuringMachine#tapeFiller">tapeFiller</a>
+                      contents repeatedly.</p>
+                  <div class="fullcomment">
+                      <div class="comment cmt"><p>Fills the tape initially with the <a href="#tapeFiller:Seq[String]"
+                                                                                       class="extmbr"
+                                                                                       name="in.tamchow.turing.UniversalTuringMachine#tapeFiller">tapeFiller</a>
+                          contents repeatedly.
 </p></div><dl class="paramcmts block"><dt>returns</dt><dd class="cmt"><p>a properly initialized tape</p></dd></dl></div>
     </li><li name="in.tamchow.turing.UniversalTuringMachine#initialState" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="initialState:String"></a>
-      <a id="initialState:String"></a>
+                  <a id="initialState:Option[String]"></a>
+                  <a id="initialState:Option[String]"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
         <span class="kind">val</span>
       </span>
       <span class="symbol">
-        <span class="name">initialState</span><span class="result">: <span class="extype" name="scala.Predef.String">String</span></span>
+        <span class="name">initialState</span><span class="result">: <span class="extype"
+                                                                           name="scala.Option">Option</span>[<span
+              class="extype" name="scala.Predef.String">String</span>]</span>
       </span>
       </h4><span class="permalink">
-      <a href="../../../index.html#in.tamchow.turing.UniversalTuringMachine@initialState:String" title="Permalink" target="_top">
+      <a href="../../../index.html#in.tamchow.turing.UniversalTuringMachine@initialState:Option[String]"
+         title="Permalink" target="_top">
         <img src="../../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
@@ -578,18 +602,22 @@
     </span>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
     </li><li name="in.tamchow.turing.UniversalTuringMachine#runForStepsOrTillHalt" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="runForStepsOrTillHalt(steps:Int):Vector[Vector[String]]"></a>
-      <a id="runForStepsOrTillHalt(Int):Vector[Vector[String]]"></a>
+                  <a id="runForStepsOrTillHalt(steps:Int):Seq[Seq[String]]"></a>
+                  <a id="runForStepsOrTillHalt(Int):Seq[Seq[String]]"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">runForStepsOrTillHalt</span><span class="params">(<span name="steps">steps: <span class="extype" name="scala.Int">Int</span></span>)</span><span class="result">: <span class="extype" name="scala.Vector">Vector</span>[<span class="extype" name="scala.Vector">Vector</span>[<span class="extype" name="scala.Predef.String">String</span>]]</span>
+        <span class="name">runForStepsOrTillHalt</span><span class="params">(<span name="steps">steps: <span
+              class="extype" name="scala.Int">Int</span></span>)</span><span class="result">: <span class="extype"
+                                                                                                    name="scala.Seq">Seq</span>[<span
+              class="extype" name="scala.Seq">Seq</span>[<span class="extype" name="scala.Predef.String">String</span>]]</span>
       </span>
       </h4><span class="permalink">
-      <a href="../../../index.html#in.tamchow.turing.UniversalTuringMachine@runForStepsOrTillHalt(steps:Int):Vector[Vector[String]]" title="Permalink" target="_top">
+      <a href="../../../index.html#in.tamchow.turing.UniversalTuringMachine@runForStepsOrTillHalt(steps:Int):Seq[Seq[String]]"
+         title="Permalink" target="_top">
         <img src="../../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
@@ -598,20 +626,35 @@ or till the program halts (if the specified number of steps is negative)
 </p><div class="fullcomment"><div class="comment cmt"><p>Runs the program for the specified number of steps
 or till the program halts (if the specified number of steps is negative)
 </p></div><dl class="paramcmts block"><dt class="param">steps</dt><dd class="cmt"><p>the number of steps for which the program is run.
-             Supply negative values to run till halt</p></dd><dt>returns</dt><dd class="cmt"><p>the history of the tape in each step as a <span class="extype" name="scala.Vector">scala.Vector</span> of <span class="extype" name="scala.Vector">scala.Vector</span>s of <span class="extype" name="java.lang.String">java.lang.String</span>s</p></dd></dl></div>
+                  Supply negative values to run till halt</p></dd>
+                  <dt>returns</dt>
+                  <dd class="cmt"><p>the history of the tape in each step as a <span class="extype" name="scala.Seq">scala.Seq</span>
+                      of <span class="extype" name="scala.Seq">scala.Seq</span>s of <span class="extype"
+                                                                                          name="java.lang.String">java.lang.String</span>s
+                  </p></dd>
+              </dl>
+              </div>
     </li><li name="in.tamchow.turing.UniversalTuringMachine#runStep" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="runStep(head:Int,state:String,tape:Vector[String]):(Boolean,Int,String,scala.collection.immutable.Vector[String])"></a>
-      <a id="runStep(Int,String,Vector[String]):(Boolean,Int,String,Vector[String])"></a>
+                  <a id="runStep(head:Option[Int],state:Option[String],tape:Seq[String]):in.tamchow.turing.StepData"></a>
+                  <a id="runStep(Option[Int],Option[String],Seq[String]):StepData"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">runStep</span><span class="params">(<span name="head">head: <span class="extype" name="scala.Int">Int</span></span>, <span name="state">state: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="tape">tape: <span class="extype" name="scala.Vector">Vector</span>[<span class="extype" name="scala.Predef.String">String</span>]</span>)</span><span class="result">: (<span class="extype" name="scala.Boolean">Boolean</span>, <span class="extype" name="scala.Int">Int</span>, <span class="extype" name="scala.Predef.String">String</span>, <span class="extype" name="scala.collection.immutable.Vector">Vector</span>[<span class="extype" name="scala.Predef.String">String</span>])</span>
+        <span class="name">runStep</span><span class="params">(<span name="head">head: <span class="extype"
+                                                                                             name="scala.Option">Option</span>[<span
+              class="extype" name="scala.Int">Int</span>]</span>, <span name="state">state: <span class="extype"
+                                                                                                  name="scala.Option">Option</span>[<span
+              class="extype" name="scala.Predef.String">String</span>]</span>, <span name="tape">tape: <span
+              class="extype" name="scala.Seq">Seq</span>[<span class="extype" name="scala.Predef.String">String</span>]</span>)</span><span
+              class="result">: <a href="StepData.html" class="extype"
+                                  name="in.tamchow.turing.StepData">StepData</a></span>
       </span>
       </h4><span class="permalink">
-      <a href="../../../index.html#in.tamchow.turing.UniversalTuringMachine@runStep(head:Int,state:String,tape:Vector[String]):(Boolean,Int,String,scala.collection.immutable.Vector[String])" title="Permalink" target="_top">
+      <a href="../../../index.html#in.tamchow.turing.UniversalTuringMachine@runStep(head:Option[Int],state:Option[String],tape:Seq[String]):in.tamchow.turing.StepData"
+         title="Permalink" target="_top">
         <img src="../../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
@@ -636,18 +679,21 @@ or till the program halts (if the specified number of steps is negative)
     </span>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
     </li><li name="in.tamchow.turing.UniversalTuringMachine#tapeFiller" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="tapeFiller:Vector[String]"></a>
-      <a id="tapeFiller:Vector[String]"></a>
+                  <a id="tapeFiller:Seq[String]"></a>
+                  <a id="tapeFiller:Seq[String]"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
         <span class="kind">val</span>
       </span>
       <span class="symbol">
-        <span class="name">tapeFiller</span><span class="result">: <span class="extype" name="scala.Vector">Vector</span>[<span class="extype" name="scala.Predef.String">String</span>]</span>
+        <span class="name">tapeFiller</span><span class="result">: <span class="extype"
+                                                                         name="scala.Seq">Seq</span>[<span
+              class="extype" name="scala.Predef.String">String</span>]</span>
       </span>
       </h4><span class="permalink">
-      <a href="../../../index.html#in.tamchow.turing.UniversalTuringMachine@tapeFiller:Vector[String]" title="Permalink" target="_top">
+      <a href="../../../index.html#in.tamchow.turing.UniversalTuringMachine@tapeFiller:Seq[String]" title="Permalink"
+         target="_top">
         <img src="../../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
@@ -670,18 +716,20 @@ or till the program halts (if the specified number of steps is negative)
     </span>
       
     </li><li name="in.tamchow.turing.UniversalTuringMachine#terminalStates" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="terminalStates:Vector[String]"></a>
-      <a id="terminalStates:Vector[String]"></a>
+                  <a id="terminalStates:Seq[String]"></a>
+                  <a id="terminalStates:Seq[String]"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
         <span class="kind">val</span>
       </span>
       <span class="symbol">
-        <span class="name">terminalStates</span><span class="result">: <span class="extype" name="scala.Vector">Vector</span>[<span class="extype" name="scala.Predef.String">String</span>]</span>
+        <span class="name">terminalStates</span><span class="result">: <span class="extype" name="scala.Seq">Seq</span>[<span
+              class="extype" name="scala.Predef.String">String</span>]</span>
       </span>
       </h4><span class="permalink">
-      <a href="../../../index.html#in.tamchow.turing.UniversalTuringMachine@terminalStates:Vector[String]" title="Permalink" target="_top">
+      <a href="../../../index.html#in.tamchow.turing.UniversalTuringMachine@terminalStates:Seq[String]"
+         title="Permalink" target="_top">
         <img src="../../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>

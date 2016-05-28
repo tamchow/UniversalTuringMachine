@@ -10,18 +10,18 @@ function Scheduler() {
     this.label = function(name, priority) {
         this.name = name;
         this.priority = priority;
-    }
+    };
     this.work = function(fn, self, args) {
         this.fn = fn;
         this.self = self;
         this.args = args;
-    }
+    };
     this.addLabel = function(name, priority) {
         var idx = 0;
         while (idx < scheduler.queues.length && scheduler.labels[idx].priority <= priority) { idx = idx + 1; }
         scheduler.labels.splice(idx, 0, new scheduler.label(name, priority));
         scheduler.queues.splice(idx, 0, new Array(0));
-    }
+    };
     this.clearLabel = function(name) {
         var idx = 0;
         while (idx < scheduler.queues.length && scheduler.labels[idx].name != name) { idx = idx + 1; }
@@ -29,7 +29,7 @@ function Scheduler() {
             scheduler.labels.splice(idx, 1);
             scheduler.queues.splice(idx, 1);
         }
-    }
+    };
     this.nextWork = function() {
         var fn = undefined;
         var idx = 0;
@@ -38,7 +38,7 @@ function Scheduler() {
             var fn = scheduler.queues[idx].shift();
         }
         return fn;
-    }
+    };
     this.add = function(labelName, fn, self, args) {
         var doWork = function() {
             scheduler.timeout = setTimeout(function() {
@@ -52,7 +52,7 @@ function Scheduler() {
                     scheduler.timeout = undefined;
                 }
             }, resolution);
-        }
+        };
         var idx = 0;
         while (idx < scheduler.labels.length && scheduler.labels[idx].name != labelName) { idx = idx + 1; }
         if (idx < scheduler.queues.length && scheduler.labels[idx].name == labelName) {
@@ -60,12 +60,12 @@ function Scheduler() {
             if (scheduler.timeout == undefined) doWork();
         }
         else throw("queue for add is non existant");
-    }
+    };
     this.clear = function(labelName) {
         var idx = 0;
         while (idx < scheduler.labels.length && scheduler.labels[idx].name != labelName) { idx = idx + 1; }
         if (idx < scheduler.queues.length && scheduler.labels[idx].name == labelName) {
-            scheduler.queues[idx] = new Array();
+            scheduler.queues[idx] = [];
         }
     }
-};
+}

@@ -414,7 +414,7 @@ $.layout = {
 				}
 			else
 				CSS[p] = style[p];
-		};
+		}
 		return CSS
 	}
 
@@ -581,10 +581,10 @@ $.layout = {
 				+	'<ul style="font-size: 13px; font-weight: none; list-style: none; margin: 0; padding: 0 0 2px;"></ul>'
 				+ '</div>'
 				).appendTo("body");
-			$e.css('left', $(window).width() - $e.outerWidth() - 5)
+			$e.css('left', $(window).width() - $e.outerWidth() - 5);
 			if ($.ui.draggable) $e.draggable({ handle: ':first-child' });
 			return $e;
-		};
+		}
 	}
 
 };
@@ -904,7 +904,7 @@ $.layout.backwardCompatibility = {
 					D.branch = D.branch[ k ]; // get child-branch
 			}
 			return D;
-		};
+		}
 	}
 
 /**
@@ -1323,8 +1323,8 @@ $.fn.layout = function (opts) {
 			case "east":	r.min = left + W - maxSize - rW;
 							r.max = left + W - minSize - rW;
 							break;
-		};
-	}
+		}
+		}
 
 	/**
 	* Returns data for setting the size/position of center pane. Also used to set Height for east/west panes
@@ -1718,7 +1718,7 @@ $.fn.layout = function (opts) {
 			}
 			else { // set required CSS for overflow and position
 				// ENSURE container will not 'scroll'
-				CSS = { overflow: hid, overflowX: hid, overflowY: hid }
+				CSS = {overflow: hid, overflowX: hid, overflowY: hid};
 				var
 					p = $N.css("position")
 				,	h = $N.css("height")
@@ -1917,7 +1917,7 @@ $.fn.layout = function (opts) {
 	* @param {string}	pane		The pane to process
 	*/
 ,	getPane = function (pane) {
-		var sel = options[pane].paneSelector
+			var sel = options[pane].paneSelector;
 		if (sel.substr(0,1)==="#") // ID selector
 			// NOTE: elements selected 'by ID' DO NOT have to be 'children'
 			return $N.find(sel).eq(0);
@@ -2383,7 +2383,7 @@ $.fn.layout = function (opts) {
 					// SET RESIZER LIMITS - used in drag()
 					setSizeLimits(pane); // update pane/resizer state
 					r = s.resizerPosition;
-					lastPos = ui.position[ side ]
+					lastPos = ui.position[side];
 
 					$R.addClass( resizerClass +" "+ resizerPaneClass ); // add drag classes
 					helperClassesSet = false; // reset logic var - see drag()
@@ -2467,7 +2467,7 @@ $.fn.layout = function (opts) {
 				case "west":	resizerPos = dragPos.left; break;
 				case "south":	resizerPos = sC.offsetHeight - dragPos.top  - o.spacing_open; break;
 				case "east":	resizerPos = sC.offsetWidth  - dragPos.left - o.spacing_open; break;
-			};
+			}
 			// remove container margin from resizer position to get the pane size
 			var newSize = resizerPos - sC["inset"+ c.side];
 
@@ -2529,7 +2529,7 @@ $.fn.layout = function (opts) {
 			if (s.isVisible && ( (!onlyForObjects && o.maskContents) || o.maskObjects )) {
 				getMasks(p).each(function(){
 					sizeMask.call(this);
-					this.style.zIndex = s.isSliding ? z.pane_sliding+1 : z.pane_normal+1
+					this.style.zIndex = s.isSliding ? z.pane_sliding + 1 : z.pane_normal + 1;
 					this.style.display = "block";
 				});
 			}
@@ -3017,7 +3017,7 @@ $.fn.layout = function (opts) {
 				_hidePane(pane);
 				close_2();
 				queueNext();
-			};
+			}
 		});
 
 		// SUBROUTINE
@@ -3196,7 +3196,7 @@ $.fn.layout = function (opts) {
 				_showPane(pane);// just show pane and...
 				open_2();		// continue
 				queueNext();
-			};
+			}
 		});
 
 		// SUBROUTINE
@@ -3214,9 +3214,8 @@ $.fn.layout = function (opts) {
 
 			// set classes, position handles and execute callbacks...
 			setAsOpen(pane);
-		};
-	
-	}
+		}
+		}
 
 	/**
 	* @param {string}	pane		The pane just opened, ie: north, south, east, or west
@@ -3244,9 +3243,9 @@ $.fn.layout = function (opts) {
 			.addClass( rClass+_open +" "+ rClass+_pane+_open )
 		;
 		if (s.isSliding)
-			$R.addClass( rClass+_sliding +" "+ rClass+_pane+_sliding )
+			$R.addClass(rClass + _sliding + " " + rClass + _pane + _sliding);
 		else // in case 'was sliding'
-			$R.removeClass( rClass+_sliding +" "+ rClass+_pane+_sliding )
+			$R.removeClass(rClass + _sliding + " " + rClass + _pane + _sliding);
 
 		if (o.resizerDblClickToggle)
 			$R.bind("dblclick", toggle );
@@ -3326,8 +3325,8 @@ $.fn.layout = function (opts) {
 				bindStopSlidingEvents(pane, true); // BIND trigger events to close sliding-pane
 			else if (!s.isMoving)
 				open(pane, true); // true = slide - open() will handle binding
-		};
-	}
+		}
+		}
 
 ,	slideClose = function (evt_or_pane) {
 		if (!isInitialized()) return;
@@ -3359,8 +3358,8 @@ $.fn.layout = function (opts) {
 				bindStopSlidingEvents(pane, false); // UNBIND trigger events - TODO: is this needed here?
 			else if (!s.isMoving)
 				close(pane); // close will handle unbinding
-		};
-	}
+		}
+		}
 
 	/**
 	* @param {string|Object}	evt_or_pane		The pane being opened, ie: north, south, east, or west
@@ -3683,8 +3682,7 @@ $.fn.layout = function (opts) {
 					$.extend(s, elDims($P));	// update state dimensions
 				}
 				queueNext();
-			};
-
+			}
 		});
 
 		// SUBROUTINE
@@ -3841,7 +3839,7 @@ $.fn.layout = function (opts) {
 			else { // for east and west, set only the height, which is same as center height
 				// set state.min/maxWidth/Height for makePaneFit() logic
 				if (s.isVisible && !s.noVerticalRoom)
-					$.extend(s, elDims($P), cssMinDims(pane))
+					$.extend(s, elDims($P), cssMinDims(pane));
 				if (!force && !s.noVerticalRoom && newCenter.height === s.outerHeight)
 					return true; // SKIP - pane already the correct size
 				// east/west have same top, bottom & height as center
@@ -4039,15 +4037,13 @@ $.fn.layout = function (opts) {
 				// size the Content element to fit new pane-size - will autoHide if not enough room
 				setOuterHeight($C, newH, true); // true=autoHide
 				m.height = newH; // save new height
-			};
-
+			}
 			if (state.initialized)
 				_runCallbacks("onsizecontent_end", pane);
 
 			function _below ($E) {
 				return max(s.css.paddingBottom, (parseInt($E.css("marginBottom"), 10) || 0));
-			};
-
+			}
 			function _measure () {
 				var
 					ignore	= options[pane].contentIgnoreSelector
@@ -4061,7 +4057,7 @@ $.fn.layout = function (opts) {
 				,	numFooters:		$Fs.length
 				,	hiddenFooters:	$Fs.length - $Fs_vis.length
 				,	spaceBelow:		0 // correct if no content footer ($E)
-				}
+				};
 					m.spaceAbove	= m.top; // just for state - not used in calc
 					m.bottom		= m.top + m.height;
 				if ($F.length)
@@ -4069,7 +4065,7 @@ $.fn.layout = function (opts) {
 					m.spaceBelow = ($F[0].offsetTop + $F.outerHeight()) - m.bottom + _below($F);
 				else // no footer - check marginBottom on Content element itself
 					m.spaceBelow = _below($C);
-			};
+			}
 		});
 	}
 
@@ -4081,7 +4077,7 @@ $.fn.layout = function (opts) {
 	* @param {string|Object}	evt_or_panes		The pane(s) being resized
 	*/
 ,	sizeHandles = function (evt_or_panes) {
-		var panes = evtPane.call(this, evt_or_panes)
+			var panes = evtPane.call(this, evt_or_panes);
 		panes = panes ? panes.split(",") : _c.borderPanes;
 
 		$.each(panes, function (i, pane) {
@@ -4119,7 +4115,7 @@ $.fn.layout = function (opts) {
 				//paneLen = $P.outerWidth(); // s.outerWidth || 
 				paneLen = sC.innerWidth; // handle offscreen-panes
 				s.resizerLength = paneLen;
-				left = $.layout.cssNum($P, "left")
+				left = $.layout.cssNum($P, "left");
 				$R.css({
 					width:	cssW($R, paneLen) // account for borders & padding
 				,	height:	cssH($R, spacing) // ditto
@@ -4394,9 +4390,9 @@ $.fn.layout = function (opts) {
 			,	state:		$.extend(true, {}, state[n])
 			,	options:	$.extend(true, {}, options[n])
 			}
-		};
+		}
 
-		function move (oPane, pane) {
+			function move(oPane, pane) {
 			if (!oPane) return;
 			var
 				P		= oPane.P
@@ -4462,8 +4458,8 @@ $.fn.layout = function (opts) {
 
 			// DESTROY the object
 			oPane = null;
-		};
-	}
+			}
+		}
 
 
 	/**
@@ -4531,10 +4527,9 @@ $.fn.layout = function (opts) {
 		evt.stopPropagation();
 		evt.returnValue = false; // CANCEL key
 		return false;
-	};
+	}
 
-
-/*
+	/*
  * ######################################
  *	UTILITY METHODS
  *	called externally or by initButtons
@@ -4611,7 +4606,7 @@ $.fn.layout = function (opts) {
 			if (p != pane) resetOverflow(p);
 		});
 
-	};
+	}
 	/**
 	* @param {Object=}   [el]	(optional) Can also be 'bound' to a click, mouseOver, or other event
 	*/
@@ -4646,9 +4641,9 @@ $.fn.layout = function (opts) {
 
 		// clear var
 		s.cssSaved = false;
-	};
+	}
 
-/*
+	/*
  * #####################
  * CREATE/RETURN LAYOUT
  * #####################
@@ -4658,8 +4653,7 @@ $.fn.layout = function (opts) {
 	var $N = $(this).eq(0); // FIRST matching Container element
 	if (!$N.length) {
 		return _log( options.errors.containerMissing );
-	};
-
+	}
 	// Users retrieve Instance of a layout with: $N.layout() OR $N.data("layout")
 	// return the Instance-pointer if layout has already been initialized
 	if ($N.data("layoutContainer") && $N.data("layout"))
@@ -4742,7 +4736,7 @@ $.fn.layout = function (opts) {
 	else // true OR false -- if layout-elements did NOT init (hidden or do not exist), can auto-init later
 		return Instance; // return the Instance object
 
-}
+};
 
 
 /*	OLD versions of jQuery only set $.support.boxModel after page is loaded
@@ -4991,7 +4985,7 @@ $.layout.state = {
 				if (vis)
 					inst.sizePane(pane, s, false, noAnimate); // animate resize if option passed
 			});
-		};
+		}
 	}
 
 	/**
@@ -5044,7 +5038,7 @@ $.layout.state = {
 				D[i++] = '"'+ k +'":'+ v;
 			}
 			return '{'+ D.join(',') +'}';
-		};
+		}
 	}
 
 	/**

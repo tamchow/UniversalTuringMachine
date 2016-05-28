@@ -34,19 +34,21 @@ object TuringMain {
   def doRunMain(filePath: String, tapeSize: Int, steps: Int, pauseTime: Int) {
     val data = io.Source fromFile filePath getLines() toVector
     val (turingMachine, useStepping) = (UniversalTuringMachine(data, tapeSize), steps >= 0)
-    def doRun(halt: Boolean, currentSteps: Int, head: Int, state: String, tape: Vector[String]) {
+    import UniversalTuringMachine._
+    import turingMachine._
+    def doRun(halt: Boolean, currentSteps: Int, head: Option[Int], state: Option[String], tape: Seq[String]) {
       if (halt || (useStepping && currentSteps >= steps)) println(formatArgs(tape))
       else {
-        val (continue, nextHead, nextState, nextTape) = turingMachine runStep(head, state, tape)
+        val (continue, nextHead, nextState, nextTape) = toTuple(runStep(head, state, tape))
         if (pauseTime >= 0) Thread sleep pauseTime
         else {
           println(pausedMessage)
           io.StdIn readLine()
         }
-        doRun(!continue, currentSteps + 1, nextHead, nextState, nextTape)
+        doRun(halt = !continue, currentSteps + 1, nextHead, nextState, nextTape)
       }
     }
-    doRun(halt = false, 0, 0, turingMachine initialState, turingMachine initTape)
+    doRun(halt = false, 0, initialHead, initialState, initTape)
   }
 
   def formatArgs(args: Seq[String]) = args map {

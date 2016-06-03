@@ -6,7 +6,22 @@ import scala.language.postfixOps
   * Encapsulates a single possible operation of a Turing Machine, but here I call it the "Command"
   */
 object TuringCommand {
-  val (matchAnythingCode, nullCode, commandArity, whitespaceRegex) = ("*", "!", 5, "\\s+")
+  /**
+    * Match-all Wildcard
+    */
+  val MatchAnythingCode = "*"
+  /**
+    * Null (Blank) value Wildcard
+    */
+  val NullCode = "!"
+  /**
+    * Number of arguments to [[TuringCommand]], i.e., it's arity
+    */
+  val CommandArity = 5
+  /**
+    * the regex for whtespace
+    */
+  val WhitespaceRegex = "\\s+"
 
   /**
     * Allowed wildcards:
@@ -19,32 +34,58 @@ object TuringCommand {
     *
     * @param data [[java.lang.String]] indicating a defined transitional operation
     * @return a [[TuringCommand]] object derived from the argument
-    * @see [[matchAnythingCode]]
-    * @see [[nullCode]]
-    * @see [[commandArity]]
-    * @see [[whitespaceRegex]]
+    * @see [[MatchAnythingCode]]
+    * @see [[NullCode]]
+    * @see [[CommandArity]]
+    * @see [[WhitespaceRegex]]
     */
   def apply(data: String): TuringCommand = {
-    val elements = escapeNull((data split(whitespaceRegex, commandArity)).toVector)
+    val elements = escapeNull((data split(WhitespaceRegex, CommandArity)).toVector)
     TuringCommand((elements.head, elements(1), elements(2), elements(3), MoveDirection parse elements.last))
   }
 
   def escapeNull(elements: Vector[String]) = elements map {
-    case TuringCommand.nullCode => null
+    case TuringCommand.NullCode => null
     case others => others
   }
 
+  /**
+    * Creates a [[TuringCommand]] object from the argument
+    *
+    * @param data a tuple containing the necessary arguments for constructing a [[TuringCommand]] object
+    * @return a [[TuringCommand]] object determined by the argument
+    */
   def apply(data: (String, String, String, String, MoveDirection)): TuringCommand =
     new TuringCommand(data._1, data._2, data._3, data._4, data._5)
 }
 
+/**
+  * Denotes a possible command of a [[UniversalTuringMachine]]
+  *
+  * @constructor
+  * @param currentState the current state for which this command is applicable
+  * @param nextState    the next state which this command will lead to
+  * @param currentValue the current value for which this command is applicable
+  * @param nextValue    the next value which this command will lead to
+  * @param direction    the direction the tape head will move in after this command has executed
+  */
 final case class TuringCommand private(currentState: String, nextState: String, currentValue: String, nextValue: String, direction: MoveDirection) {
 
   import TuringCommand._
 
-  def valueMatchesEverything = currentValue == matchAnythingCode
+  /**
+    * Checks whether the value is a match-all-values wildcard
+    *
+    * @return whether the value is a match-all-values wildcard
+    */
+  def valueMatchesEverything = currentValue == MatchAnythingCode
 
-  def stateMatchesEveryThing = currentState == matchAnythingCode
+  /**
+    * Checks whether the state is a match-all-states wildcard
+    *
+    * @return whether the state is a match-all-states wildcard
+    */
+  def stateMatchesEveryThing = currentState == MatchAnythingCode
 
   /**
     * The output format is deliberately similar to the input format,
@@ -53,7 +94,7 @@ final case class TuringCommand private(currentState: String, nextState: String, 
     * @return a [[java.lang.String]] representing this [[TuringCommand]] object
     */
   override def toString = Vector(currentState, nextState, currentValue, nextValue, direction.name) map {
-    case nullItem if nullItem == null => nullCode
+    case nullItem if nullItem == null => NullCode
     case notNullItem => notNullItem
   } mkString " "
 }

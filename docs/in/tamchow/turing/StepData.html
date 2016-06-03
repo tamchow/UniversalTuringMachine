@@ -45,11 +45,37 @@
         <span class="kind">case class</span>
       </span>
       <span class="symbol">
-        <span class="name">StepData</span><span class="params">(<span name="continue">continue: <span class="extype" name="scala.Boolean">Boolean</span></span>, <span name="nextHead">nextHead: <span class="extype" name="scala.Option">Option</span>[<span class="extype" name="scala.Int">Int</span>]</span>, <span name="nextState">nextState: <span class="extype" name="scala.Option">Option</span>[<span class="extype" name="scala.Predef.String">String</span>]</span>, <span name="tape">tape: <span class="extype" name="scala.Seq">Seq</span>[<span class="extype" name="scala.Predef.String">String</span>]</span>)</span><span class="result"> extends <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
+        <span class="name">StepData</span><span class="params">(<span name="continue">continue: <span class="extype"
+                                                                                                      name="scala.Boolean">Boolean</span></span>, <span
+              name="nextHead">nextHead: <span class="extype" name="scala.Option">Option</span>[<span class="extype"
+                                                                                                     name="scala.Int">Int</span>]</span>, <span
+              name="nextState">nextState: <span class="extype" name="scala.Predef.String">String</span></span>, <span
+              name="tape">tape: <span class="extype" name="scala.Seq">Seq</span>[<span class="extype"
+                                                                                       name="scala.Predef.String">String</span>]</span>)</span><span
+              class="result"> extends <span class="extype" name="scala.Product">Product</span> with <span class="extype"
+                                                                                                          name="scala.Serializable">Serializable</span></span>
       </span>
       </h4>
-      
-          <div id="comment" class="fullcommenttop"><div class="toggleContainer block">
+
+      <div id="comment" class="fullcommenttop">
+          <div class="comment cmt"><p>Contains the data for one step in the run of this <a
+                  href="UniversalTuringMachine.html" class="extype" name="in.tamchow.turing.UniversalTuringMachine">UniversalTuringMachine</a>
+          </p></div>
+          <dl class="paramcmts block">
+              <dt class="param">continue</dt>
+              <dd class="cmt"><p>an indicator whether to continue for the next step</p></dd>
+              <dt class="param">nextHead</dt>
+              <dd class="cmt"><p>the tape head index after this step</p></dd>
+              <dt class="param">nextState</dt>
+              <dd class="cmt"><p>the state of this <a href="UniversalTuringMachine.html" class="extype"
+                                                      name="in.tamchow.turing.UniversalTuringMachine">UniversalTuringMachine</a>
+                  after this step</p></dd>
+              <dt class="param">tape</dt>
+              <dd class="cmt"><p>the tape of this <a href="UniversalTuringMachine.html" class="extype"
+                                                     name="in.tamchow.turing.UniversalTuringMachine">UniversalTuringMachine</a>
+                  as soon as this step has completed</p></dd>
+          </dl>
+          <div class="toggleContainer block">
           <span class="toggle">Linear Supertypes</span>
           <div class="superTypes hiddenContent"><span class="extype" name="scala.Serializable">Serializable</span>, <span class="extype" name="java.io.Serializable">Serializable</span>, <span class="extype" name="scala.Product">Product</span>, <span class="extype" name="scala.Equals">Equals</span>, <span class="extype" name="scala.AnyRef">AnyRef</span>, <span class="extype" name="scala.Any">Any</span></div>
         </div></div>
@@ -93,8 +119,10 @@
         <div id="allMembers">
         <div id="constructors" class="members">
               <h3>Instance Constructors</h3>
-              <ol><li name="in.tamchow.turing.StepData#&lt;init&gt;" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="&lt;init&gt;(continue:Boolean,nextHead:Option[Int],nextState:Option[String],tape:Seq[String]):in.tamchow.turing.StepData"></a>
+            <ol>
+                <li name="in.tamchow.turing.StepData#&lt;init&gt;" visbl="pub" data-isabs="false" fullComment="yes"
+                    group="Ungrouped">
+                    <a id="&lt;init&gt;(continue:Boolean,nextHead:Option[Int],nextState:String,tape:Seq[String]):in.tamchow.turing.StepData"></a>
       <a id="&lt;init&gt;:StepData"></a>
       <h4 class="signature">
       <span class="modifier_kind">
@@ -102,14 +130,38 @@
         <span class="kind">new</span>
       </span>
       <span class="symbol">
-        <span class="name">StepData</span><span class="params">(<span name="continue">continue: <span class="extype" name="scala.Boolean">Boolean</span></span>, <span name="nextHead">nextHead: <span class="extype" name="scala.Option">Option</span>[<span class="extype" name="scala.Int">Int</span>]</span>, <span name="nextState">nextState: <span class="extype" name="scala.Option">Option</span>[<span class="extype" name="scala.Predef.String">String</span>]</span>, <span name="tape">tape: <span class="extype" name="scala.Seq">Seq</span>[<span class="extype" name="scala.Predef.String">String</span>]</span>)</span>
+        <span class="name">StepData</span><span class="params">(<span name="continue">continue: <span class="extype"
+                                                                                                      name="scala.Boolean">Boolean</span></span>, <span
+              name="nextHead">nextHead: <span class="extype" name="scala.Option">Option</span>[<span class="extype"
+                                                                                                     name="scala.Int">Int</span>]</span>, <span
+              name="nextState">nextState: <span class="extype" name="scala.Predef.String">String</span></span>, <span
+              name="tape">tape: <span class="extype" name="scala.Seq">Seq</span>[<span class="extype"
+                                                                                       name="scala.Predef.String">String</span>]</span>)</span>
       </span>
       </h4><span class="permalink">
-      <a href="../../../index.html#in.tamchow.turing.StepData@&lt;init&gt;(continue:Boolean,nextHead:Option[Int],nextState:Option[String],tape:Seq[String]):in.tamchow.turing.StepData" title="Permalink" target="_top">
+      <a href="../../../index.html#in.tamchow.turing.StepData@&lt;init&gt;(continue:Boolean,nextHead:Option[Int],nextState:String,tape:Seq[String]):in.tamchow.turing.StepData"
+         title="Permalink" target="_top">
         <img src="../../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
-      
+                    <p class="shortcomment cmt"></p>
+                    <div class="fullcomment">
+                        <div class="comment cmt"></div>
+                        <dl class="paramcmts block">
+                            <dt class="param">continue</dt>
+                            <dd class="cmt"><p>an indicator whether to continue for the next step</p></dd>
+                            <dt class="param">nextHead</dt>
+                            <dd class="cmt"><p>the tape head index after this step</p></dd>
+                            <dt class="param">nextState</dt>
+                            <dd class="cmt"><p>the state of this <a href="UniversalTuringMachine.html" class="extype"
+                                                                    name="in.tamchow.turing.UniversalTuringMachine">UniversalTuringMachine</a>
+                                after this step</p></dd>
+                            <dt class="param">tape</dt>
+                            <dd class="cmt"><p>the tape of this <a href="UniversalTuringMachine.html" class="extype"
+                                                                   name="in.tamchow.turing.UniversalTuringMachine">UniversalTuringMachine</a>
+                                as soon as this step has completed</p></dd>
+                        </dl>
+                    </div>
     </li></ol>
             </div>
 
@@ -271,7 +323,7 @@
         <img src="../../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
-      
+                  <p class="shortcomment cmt">an indicator whether to continue for the next step</p>
     </li><li name="scala.Predef.Ensuring#ensuring" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="ensuring(cond:A=&gt;Boolean,msg:=&gt;Any):A"></a>
       <a id="ensuring((StepData)⇒Boolean,⇒Any):StepData"></a>
@@ -487,24 +539,27 @@
         <img src="../../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
-      
+                  <p class="shortcomment cmt">the tape head index after this step</p>
     </li><li name="in.tamchow.turing.StepData#nextState" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="nextState:Option[String]"></a>
-      <a id="nextState:Option[String]"></a>
+                  <a id="nextState:String"></a>
+                  <a id="nextState:String"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
         <span class="kind">val</span>
       </span>
       <span class="symbol">
-        <span class="name">nextState</span><span class="result">: <span class="extype" name="scala.Option">Option</span>[<span class="extype" name="scala.Predef.String">String</span>]</span>
+        <span class="name">nextState</span><span class="result">: <span class="extype"
+                                                                        name="scala.Predef.String">String</span></span>
       </span>
       </h4><span class="permalink">
-      <a href="../../../index.html#in.tamchow.turing.StepData@nextState:Option[String]" title="Permalink" target="_top">
+      <a href="../../../index.html#in.tamchow.turing.StepData@nextState:String" title="Permalink" target="_top">
         <img src="../../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
-      
+                  <p class="shortcomment cmt">the state of this <a href="UniversalTuringMachine.html" class="extype"
+                                                                   name="in.tamchow.turing.UniversalTuringMachine">UniversalTuringMachine</a>
+                      after this step</p>
     </li><li name="scala.AnyRef#notify" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="notify():Unit"></a>
       <a id="notify():Unit"></a>
@@ -572,7 +627,9 @@
         <img src="../../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
-      
+                  <p class="shortcomment cmt">the tape of this <a href="UniversalTuringMachine.html" class="extype"
+                                                                  name="in.tamchow.turing.UniversalTuringMachine">UniversalTuringMachine</a>
+                      as soon as this step has completed</p>
     </li><li name="scala.AnyRef#wait" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="wait():Unit"></a>
       <a id="wait():Unit"></a>

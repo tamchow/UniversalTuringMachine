@@ -1,9 +1,11 @@
 <component name="ProjectRunConfigurationManager">
-  <configuration default="false" name="Test" type="ScalaScriptConsoleRunConfiguration" factoryName="Scala Console">
+  <configuration default="false" name="Test" type="ScalaScriptRunConfiguration" factoryName="Scala Script">
     <module name="Universal Turing Machine" />
-    <setting name="vmparams4" value="" />
+    <setting name="path" value="D:\Programming\Projects\UniversalTuringMachine\src\in\tamchow\turing\TuringMain.scala" />
+    <setting name="vmparams" value="" />
+    <setting name="consoleargs" value="" />
+    <setting name="params" value="" />
     <setting name="workingDirectory" value="$PROJECT_DIR$" />
-    <setting name="consoleArgs" value="-usejavacp" />
     <method />
   </configuration>
 </component>

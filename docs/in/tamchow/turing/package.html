@@ -82,9 +82,10 @@
         <img src="../../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
-
+                  <p class="shortcomment cmt">Represents a direction in which the tape head can move
+                  </p>
               </li>
-                  <li name="in.tamchow.turing.StepData" visbl="pub" data-isabs="false" fullComment="no"
+                  <li name="in.tamchow.turing.StepData" visbl="pub" data-isabs="false" fullComment="yes"
                       group="Ungrouped">
                       <a id="StepDataextendsProductwithSerializable"></a>
                       <a id="StepData:StepData"></a>
@@ -97,8 +98,7 @@
         <a href="StepData.html"><span class="name">StepData</span></a><span class="params">(<span name="continue">continue: <span
               class="extype" name="scala.Boolean">Boolean</span></span>, <span name="nextHead">nextHead: <span
               class="extype" name="scala.Option">Option</span>[<span class="extype" name="scala.Int">Int</span>]</span>, <span
-              name="nextState">nextState: <span class="extype" name="scala.Option">Option</span>[<span class="extype"
-                                                                                                       name="scala.Predef.String">String</span>]</span>, <span
+              name="nextState">nextState: <span class="extype" name="scala.Predef.String">String</span></span>, <span
               name="tape">tape: <span class="extype" name="scala.Seq">Seq</span>[<span class="extype"
                                                                                        name="scala.Predef.String">String</span>]</span>)</span><span
               class="result"> extends <span class="extype" name="scala.Product">Product</span> with <span class="extype"
@@ -110,8 +110,33 @@
         <img src="../../../lib/permalink.png" alt="Permalink"/>
       </a>
     </span>
-
-                  </li><li name="in.tamchow.turing.TuringCommand" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+                      <p class="shortcomment cmt">Contains the data for one step in the run of this <a
+                              href="UniversalTuringMachine.html" class="extype"
+                              name="in.tamchow.turing.UniversalTuringMachine">UniversalTuringMachine</a>
+                      </p>
+                      <div class="fullcomment">
+                          <div class="comment cmt"><p>Contains the data for one step in the run of this <a
+                                  href="UniversalTuringMachine.html" class="extype"
+                                  name="in.tamchow.turing.UniversalTuringMachine">UniversalTuringMachine</a>
+                          </p></div>
+                          <dl class="paramcmts block">
+                              <dt class="param">continue</dt>
+                              <dd class="cmt"><p>an indicator whether to continue for the next step</p></dd>
+                              <dt class="param">nextHead</dt>
+                              <dd class="cmt"><p>the tape head index after this step</p></dd>
+                              <dt class="param">nextState</dt>
+                              <dd class="cmt"><p>the state of this <a href="UniversalTuringMachine.html" class="extype"
+                                                                      name="in.tamchow.turing.UniversalTuringMachine">UniversalTuringMachine</a>
+                                  after this step</p></dd>
+                              <dt class="param">tape</dt>
+                              <dd class="cmt"><p>the tape of this <a href="UniversalTuringMachine.html" class="extype"
+                                                                     name="in.tamchow.turing.UniversalTuringMachine">UniversalTuringMachine</a>
+                                  as soon as this step has completed</p></dd>
+                          </dl>
+                      </div>
+                  </li>
+                  <li name="in.tamchow.turing.TuringCommand" visbl="pub" data-isabs="false" fullComment="no"
+                      group="Ungrouped">
       <a id="TuringCommandextendsProductwithSerializable"></a>
       <a id="TuringCommand:TuringCommand"></a>
       <h4 class="signature">
@@ -127,7 +152,10 @@
         <img src="../../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
-      
+                      <p class="shortcomment cmt">Denotes a possible command of a <a href="UniversalTuringMachine.html"
+                                                                                     class="extype"
+                                                                                     name="in.tamchow.turing.UniversalTuringMachine">UniversalTuringMachine</a>
+                      </p>
     </li><li name="in.tamchow.turing.UniversalTuringMachine" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
       <a id="UniversalTuringMachineextendsAnyRef"></a>
       <a id="UniversalTuringMachine:UniversalTuringMachine"></a>
@@ -144,8 +172,12 @@
         <img src="../../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
-
-                  </li></ol>
+                      <p class="shortcomment cmt">Represents an <a href="UniversalTuringMachine.html" class="extype"
+                                                                   name="in.tamchow.turing.UniversalTuringMachine">UniversalTuringMachine</a>
+                          object
+                      </p>
+                  </li>
+              </ol>
             </div>
 
         
@@ -168,7 +200,18 @@
         <img src="../../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
-      <p class="shortcomment cmt">Indicates the directions in which the tape head can move:</p><div class="fullcomment"><div class="comment cmt"><p>Indicates the directions in which the tape head can move:</p><p>1. <a href="MoveDirection$.html#left:in.tamchow.turing.MoveDirection" class="extmbr" name="in.tamchow.turing.MoveDirection#left">MoveDirection.left</a> -&gt; Left (head index - 1)</p><p>2. <a href="MoveDirection$.html#right:in.tamchow.turing.MoveDirection" class="extmbr" name="in.tamchow.turing.MoveDirection#right">MoveDirection.right</a> -&gt; Right (head index + 1)</p><p>3. <a href="MoveDirection$.html#none:in.tamchow.turing.MoveDirection" class="extmbr" name="in.tamchow.turing.MoveDirection#none">MoveDirection.none</a> -&gt; None (head index +/- 0 = head index)
+                  <p class="shortcomment cmt">Indicates the directions in which the tape head can move:</p>
+                  <div class="fullcomment">
+                      <div class="comment cmt"><p>Indicates the directions in which the tape head can move:</p>
+                          <p>1. <a href="MoveDirection$.html#Left:in.tamchow.turing.MoveDirection" class="extmbr"
+                                   name="in.tamchow.turing.MoveDirection#Left">MoveDirection.Left</a> -&gt; Left (head
+                              index - 1)</p>
+                          <p>2. <a href="MoveDirection$.html#Right:in.tamchow.turing.MoveDirection" class="extmbr"
+                                   name="in.tamchow.turing.MoveDirection#Right">MoveDirection.Right</a> -&gt; Right
+                              (head index + 1)</p>
+                          <p>3. <a href="MoveDirection$.html#Neither:in.tamchow.turing.MoveDirection" class="extmbr"
+                                   name="in.tamchow.turing.MoveDirection#Neither">MoveDirection.Neither</a> -&gt;
+                              Neither left nor right (head index +/- 0 = head index)
 </p></div></div>
     </li><li name="in.tamchow.turing.TuringCommand" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
       <a id="TuringCommand"></a>

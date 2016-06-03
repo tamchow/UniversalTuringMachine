@@ -50,8 +50,18 @@
         <span class="name">MoveDirection</span><span class="result"> extends <span class="extype" name="scala.Serializable">Serializable</span></span>
       </span>
       </h4>
-      
-          <div id="comment" class="fullcommenttop"><div class="comment cmt"><p>Indicates the directions in which the tape head can move:</p><p>1. <a href="#left:in.tamchow.turing.MoveDirection" class="extmbr" name="in.tamchow.turing.MoveDirection#left">MoveDirection.left</a> -&gt; Left (head index - 1)</p><p>2. <a href="#right:in.tamchow.turing.MoveDirection" class="extmbr" name="in.tamchow.turing.MoveDirection#right">MoveDirection.right</a> -&gt; Right (head index + 1)</p><p>3. <a href="#none:in.tamchow.turing.MoveDirection" class="extmbr" name="in.tamchow.turing.MoveDirection#none">MoveDirection.none</a> -&gt; None (head index +/- 0 = head index)
+
+      <div id="comment" class="fullcommenttop">
+          <div class="comment cmt"><p>Indicates the directions in which the tape head can move:</p>
+              <p>1. <a href="#Left:in.tamchow.turing.MoveDirection" class="extmbr"
+                       name="in.tamchow.turing.MoveDirection#Left">MoveDirection.Left</a> -&gt; Left (head index - 1)
+              </p>
+              <p>2. <a href="#Right:in.tamchow.turing.MoveDirection" class="extmbr"
+                       name="in.tamchow.turing.MoveDirection#Right">MoveDirection.Right</a> -&gt; Right (head index + 1)
+              </p>
+              <p>3. <a href="#Neither:in.tamchow.turing.MoveDirection" class="extmbr"
+                       name="in.tamchow.turing.MoveDirection#Neither">MoveDirection.Neither</a> -&gt; Neither left nor
+                  right (head index +/- 0 = head index)
 </p></div><div class="toggleContainer block">
           <span class="toggle">Linear Supertypes</span>
           <div class="superTypes hiddenContent"><span class="extype" name="scala.Serializable">Serializable</span>, <span class="extype" name="java.io.Serializable">Serializable</span>, <span class="extype" name="scala.AnyRef">AnyRef</span>, <span class="extype" name="scala.Any">Any</span></div>
@@ -148,7 +158,98 @@
       </a>
     </span>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
-    </li><li name="in.tamchow.turing.MoveDirection#apply" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+              </li>
+                  <li name="in.tamchow.turing.MoveDirection#IllegalTypeMessage" visbl="pub" data-isabs="false"
+                      fullComment="no" group="Ungrouped">
+                      <a id="IllegalTypeMessage:String"></a>
+                      <a id="IllegalTypeMessage:String"></a>
+                      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">IllegalTypeMessage</span><span class="result">: <span class="extype"
+                                                                                 name="scala.Predef.String">String</span></span>
+      </span>
+                      </h4><span class="permalink">
+      <a href="../../../index.html#in.tamchow.turing.MoveDirection$@IllegalTypeMessage:String" title="Permalink"
+         target="_top">
+        <img src="../../../lib/permalink.png" alt="Permalink"/>
+      </a>
+    </span>
+                      <p class="shortcomment cmt">Exception message for illegal type identifier
+                      </p>
+                  </li>
+                  <li name="in.tamchow.turing.MoveDirection#Left" visbl="pub" data-isabs="false" fullComment="no"
+                      group="Ungrouped">
+                      <a id="Left:in.tamchow.turing.MoveDirection"></a>
+                      <a id="Left:MoveDirection"></a>
+                      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">Left</span><span class="result">: <a href="MoveDirection.html" class="extype"
+                                                                name="in.tamchow.turing.MoveDirection">MoveDirection</a></span>
+      </span>
+                      </h4><span class="permalink">
+      <a href="../../../index.html#in.tamchow.turing.MoveDirection$@Left:in.tamchow.turing.MoveDirection"
+         title="Permalink" target="_top">
+        <img src="../../../lib/permalink.png" alt="Permalink"/>
+      </a>
+    </span>
+                      <p class="shortcomment cmt">Indicates tape head moving left (head index - 1)
+                      </p>
+                  </li>
+                  <li name="in.tamchow.turing.MoveDirection#Neither" visbl="pub" data-isabs="false" fullComment="no"
+                      group="Ungrouped">
+                      <a id="Neither:in.tamchow.turing.MoveDirection"></a>
+                      <a id="Neither:MoveDirection"></a>
+                      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">Neither</span><span class="result">: <a href="MoveDirection.html" class="extype"
+                                                                   name="in.tamchow.turing.MoveDirection">MoveDirection</a></span>
+      </span>
+                      </h4><span class="permalink">
+      <a href="../../../index.html#in.tamchow.turing.MoveDirection$@Neither:in.tamchow.turing.MoveDirection"
+         title="Permalink" target="_top">
+        <img src="../../../lib/permalink.png" alt="Permalink"/>
+      </a>
+    </span>
+                      <p class="shortcomment cmt">Indicates tape head moving Neither left nor right (head index +/- 0 =
+                          head index)
+                      </p>
+                  </li>
+                  <li name="in.tamchow.turing.MoveDirection#Right" visbl="pub" data-isabs="false" fullComment="no"
+                      group="Ungrouped">
+                      <a id="Right:in.tamchow.turing.MoveDirection"></a>
+                      <a id="Right:MoveDirection"></a>
+                      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">Right</span><span class="result">: <a href="MoveDirection.html" class="extype"
+                                                                 name="in.tamchow.turing.MoveDirection">MoveDirection</a></span>
+      </span>
+                      </h4><span class="permalink">
+      <a href="../../../index.html#in.tamchow.turing.MoveDirection$@Right:in.tamchow.turing.MoveDirection"
+         title="Permalink" target="_top">
+        <img src="../../../lib/permalink.png" alt="Permalink"/>
+      </a>
+    </span>
+                      <p class="shortcomment cmt">Indicates tape head moving right (head index - 1)
+                      </p>
+                  </li>
+                  <li name="in.tamchow.turing.MoveDirection#apply" visbl="pub" data-isabs="false" fullComment="yes"
+                      group="Ungrouped">
       <a id="apply(name:String):in.tamchow.turing.MoveDirection"></a>
       <a id="apply(String):MoveDirection"></a>
       <h4 class="signature">
@@ -164,8 +265,30 @@
         <img src="../../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
-      
-    </li><li name="in.tamchow.turing.MoveDirection#apply" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+                      <p class="shortcomment cmt">Creates a <a href="MoveDirection.html" class="extype"
+                                                               name="in.tamchow.turing.MoveDirection">MoveDirection</a>
+                          object from a <span class="extype" name="java.lang.String">java.lang.String</span>
+                      </p>
+                      <div class="fullcomment">
+                          <div class="comment cmt"><p>Creates a <a href="MoveDirection.html" class="extype"
+                                                                   name="in.tamchow.turing.MoveDirection">MoveDirection</a>
+                              object from a <span class="extype" name="java.lang.String">java.lang.String</span>
+                          </p></div>
+                          <dl class="paramcmts block">
+                              <dt class="param">name</dt>
+                              <dd class="cmt"><p>the argument determining the <a href="MoveDirection.html"
+                                                                                 class="extype"
+                                                                                 name="in.tamchow.turing.MoveDirection">MoveDirection</a>
+                                  which is returned</p></dd>
+                              <dt>returns</dt>
+                              <dd class="cmt"><p>a <a href="MoveDirection.html" class="extype"
+                                                      name="in.tamchow.turing.MoveDirection">MoveDirection</a> object
+                              </p></dd>
+                          </dl>
+                      </div>
+                  </li>
+                  <li name="in.tamchow.turing.MoveDirection#apply" visbl="pub" data-isabs="false" fullComment="yes"
+                      group="Ungrouped">
       <a id="apply(value:Int):in.tamchow.turing.MoveDirection"></a>
       <a id="apply(Int):MoveDirection"></a>
       <h4 class="signature">
@@ -181,7 +304,27 @@
         <img src="../../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
-      
+                      <p class="shortcomment cmt">Creates a <a href="MoveDirection.html" class="extype"
+                                                               name="in.tamchow.turing.MoveDirection">MoveDirection</a>
+                          object from an <span class="extype" name="scala.Int">scala.Int</span>
+                      </p>
+                      <div class="fullcomment">
+                          <div class="comment cmt"><p>Creates a <a href="MoveDirection.html" class="extype"
+                                                                   name="in.tamchow.turing.MoveDirection">MoveDirection</a>
+                              object from an <span class="extype" name="scala.Int">scala.Int</span>
+                          </p></div>
+                          <dl class="paramcmts block">
+                              <dt class="param">value</dt>
+                              <dd class="cmt"><p>the argument determining the <a href="MoveDirection.html"
+                                                                                 class="extype"
+                                                                                 name="in.tamchow.turing.MoveDirection">MoveDirection</a>
+                                  which is returned</p></dd>
+                              <dt>returns</dt>
+                              <dd class="cmt"><p>a <a href="MoveDirection.html" class="extype"
+                                                      name="in.tamchow.turing.MoveDirection">MoveDirection</a> object
+                              </p></dd>
+                          </dl>
+                      </div>
     </li><li name="scala.Any#asInstanceOf" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="asInstanceOf[T0]:T0"></a>
       <a id="asInstanceOf[T0]:T0"></a>
@@ -313,23 +456,6 @@
       </a>
     </span>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
-    </li><li name="in.tamchow.turing.MoveDirection#illegalTypeMessage" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="illegalTypeMessage:String"></a>
-      <a id="illegalTypeMessage:String"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">val</span>
-      </span>
-      <span class="symbol">
-        <span class="name">illegalTypeMessage</span><span class="result">: <span class="extype" name="scala.Predef.String">String</span></span>
-      </span>
-      </h4><span class="permalink">
-      <a href="../../../index.html#in.tamchow.turing.MoveDirection$@illegalTypeMessage:String" title="Permalink" target="_top">
-        <img src="../../../lib/permalink.png" alt="Permalink" />
-      </a>
-    </span>
-      
     </li><li name="scala.Any#isInstanceOf" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="isInstanceOf[T0]:Boolean"></a>
       <a id="isInstanceOf[T0]:Boolean"></a>
@@ -347,23 +473,6 @@
       </a>
     </span>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Any</dd></dl></div>
-    </li><li name="in.tamchow.turing.MoveDirection#left" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="left:in.tamchow.turing.MoveDirection"></a>
-      <a id="left:MoveDirection"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">val</span>
-      </span>
-      <span class="symbol">
-        <span class="name">left</span><span class="result">: <a href="MoveDirection.html" class="extype" name="in.tamchow.turing.MoveDirection">MoveDirection</a></span>
-      </span>
-      </h4><span class="permalink">
-      <a href="../../../index.html#in.tamchow.turing.MoveDirection$@left:in.tamchow.turing.MoveDirection" title="Permalink" target="_top">
-        <img src="../../../lib/permalink.png" alt="Permalink" />
-      </a>
-    </span>
-      
     </li><li name="scala.AnyRef#ne" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="ne(x$1:AnyRef):Boolean"></a>
       <a id="ne(AnyRef):Boolean"></a>
@@ -381,23 +490,6 @@
       </a>
     </span>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
-    </li><li name="in.tamchow.turing.MoveDirection#none" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="none:in.tamchow.turing.MoveDirection"></a>
-      <a id="none:MoveDirection"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">val</span>
-      </span>
-      <span class="symbol">
-        <span class="name">none</span><span class="result">: <a href="MoveDirection.html" class="extype" name="in.tamchow.turing.MoveDirection">MoveDirection</a></span>
-      </span>
-      </h4><span class="permalink">
-      <a href="../../../index.html#in.tamchow.turing.MoveDirection$@none:in.tamchow.turing.MoveDirection" title="Permalink" target="_top">
-        <img src="../../../lib/permalink.png" alt="Permalink" />
-      </a>
-    </span>
-      
     </li><li name="scala.AnyRef#notify" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="notify():Unit"></a>
       <a id="notify():Unit"></a>
@@ -448,25 +540,22 @@
         <img src="../../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
-      <p class="shortcomment cmt">Results:</p><div class="fullcomment"><div class="comment cmt"><p>Results:</p><p>1. Any negative <span class="extype" name="scala.Int">scala.Int</span> value or case-insensitive match to <span class="extype" name="MoveDirection.left.name">MoveDirection.left.name</span>-&gt; <a href="#left:in.tamchow.turing.MoveDirection" class="extmbr" name="in.tamchow.turing.MoveDirection#left">MoveDirection.left</a></p><p>2. Any positive <span class="extype" name="scala.Int">scala.Int</span> value or case-insensitive match to <span class="extype" name="MoveDirection.right.name">MoveDirection.right.name</span>-&gt; <a href="#right:in.tamchow.turing.MoveDirection" class="extmbr" name="in.tamchow.turing.MoveDirection#right">MoveDirection.right</a></p><p>3. A Zero (<code>0</code>) <span class="extype" name="scala.Int">scala.Int</span> value or case-insensitive match to <span class="extype" name="MoveDirection.none.name">MoveDirection.none.name</span>-&gt; <a href="#none:in.tamchow.turing.MoveDirection" class="extmbr" name="in.tamchow.turing.MoveDirection#none">MoveDirection.none</a>
+                      <p class="shortcomment cmt">Results:</p>
+                      <div class="fullcomment">
+                          <div class="comment cmt"><p>Results:</p>
+                              <p>1. Any negative <span class="extype" name="scala.Int">scala.Int</span> value or
+                                  case-insensitive match to <span class="extype" name="MoveDirection.Left.name">MoveDirection.Left.name</span>-&gt;
+                                  <a href="#Left:in.tamchow.turing.MoveDirection" class="extmbr"
+                                     name="in.tamchow.turing.MoveDirection#Left">MoveDirection.Left</a></p>
+                              <p>2. Any positive <span class="extype" name="scala.Int">scala.Int</span> value or
+                                  case-insensitive match to <span class="extype" name="MoveDirection.Right.name">MoveDirection.Right.name</span>-&gt;
+                                  <a href="#Right:in.tamchow.turing.MoveDirection" class="extmbr"
+                                     name="in.tamchow.turing.MoveDirection#Right">MoveDirection.Right</a></p>
+                              <p>3. A Zero (<code>0</code>) <span class="extype" name="scala.Int">scala.Int</span> value
+                                  or case-insensitive match to <span class="extype" name="MoveDirection.Neither.name">MoveDirection.Neither.name</span>-&gt;
+                                  <a href="#Neither:in.tamchow.turing.MoveDirection" class="extmbr"
+                                     name="in.tamchow.turing.MoveDirection#Neither">MoveDirection.Neither</a>
 </p></div><dl class="paramcmts block"><dt class="param">data</dt><dd class="cmt"><p>the <span class="extype" name="java.lang.String">java.lang.String</span> to parse into a <a href="MoveDirection.html" class="extype" name="in.tamchow.turing.MoveDirection">MoveDirection</a></p></dd><dt>returns</dt><dd class="cmt"><p>a <a href="MoveDirection.html" class="extype" name="in.tamchow.turing.MoveDirection">MoveDirection</a> object based on the parameters</p></dd></dl></div>
-    </li><li name="in.tamchow.turing.MoveDirection#right" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="right:in.tamchow.turing.MoveDirection"></a>
-      <a id="right:MoveDirection"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">val</span>
-      </span>
-      <span class="symbol">
-        <span class="name">right</span><span class="result">: <a href="MoveDirection.html" class="extype" name="in.tamchow.turing.MoveDirection">MoveDirection</a></span>
-      </span>
-      </h4><span class="permalink">
-      <a href="../../../index.html#in.tamchow.turing.MoveDirection$@right:in.tamchow.turing.MoveDirection" title="Permalink" target="_top">
-        <img src="../../../lib/permalink.png" alt="Permalink" />
-      </a>
-    </span>
-      
     </li><li name="scala.AnyRef#synchronized" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="synchronized[T0](x$1:=&gt;T0):T0"></a>
       <a id="synchronized[T0](⇒T0):T0"></a>

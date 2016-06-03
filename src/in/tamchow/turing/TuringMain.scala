@@ -36,10 +36,10 @@ object TuringMain {
     val (turingMachine, useStepping) = (UniversalTuringMachine(data, tapeSize), steps >= 0)
     import UniversalTuringMachine._
     import turingMachine._
-    def doRun(halt: Boolean, currentSteps: Int, head: Option[Int], state: Option[String], tape: Seq[String]) {
+    def doRun(halt: Boolean, currentSteps: Int, head: Option[Int], state: String, tape: Seq[String]) {
       if (halt || (useStepping && currentSteps >= steps)) println(formatArgs(tape))
       else {
-        val (continue, nextHead, nextState, nextTape) = toTuple(runStep(head, state, tape))
+        val StepData(continue, nextHead, nextState, nextTape) = runStep(head, state, tape)
         if (pauseTime >= 0) Thread sleep pauseTime
         else {
           println(pausedMessage)
@@ -48,11 +48,11 @@ object TuringMain {
         doRun(halt = !continue, currentSteps + 1, nextHead, nextState, nextTape)
       }
     }
-    doRun(halt = false, 0, initialHead, initialState, initTape)
+    doRun(halt = false, 0, Some(InitialHead), initialState, initTape)
   }
 
   def formatArgs(args: Seq[String]) = args map {
-    case null => TuringCommand.nullCode
+    case null => TuringCommand.NullCode
     case others => others
   } mkString " "
 }

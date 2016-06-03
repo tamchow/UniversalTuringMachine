@@ -4458,7 +4458,7 @@ $.fn.layout = function (opts) {
 
 			// DESTROY the object
 			oPane = null;
-			}
+		}
 		}
 
 
@@ -4528,7 +4528,6 @@ $.fn.layout = function (opts) {
 		evt.returnValue = false; // CANCEL key
 		return false;
 	}
-
 	/*
  * ######################################
  *	UTILITY METHODS
@@ -4642,7 +4641,6 @@ $.fn.layout = function (opts) {
 		// clear var
 		s.cssSaved = false;
 	}
-
 	/*
  * #####################
  * CREATE/RETURN LAYOUT

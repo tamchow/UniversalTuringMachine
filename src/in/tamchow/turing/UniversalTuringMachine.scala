@@ -93,7 +93,15 @@ object UniversalTuringMachine {
   * @param tapeSize       The length of the tape of this [[UniversalTuringMachine]]
   */
 final class UniversalTuringMachine(val commands: Seq[TuringCommand], val initialState: String, val terminalStates: Seq[String], val tapeFiller: Option[Seq[String]], val tapeSize: Int) {
+  /**
+    * A [[java.lang.String]] representation of this [[UniversalTuringMachine]] object
+    */
   override val toString = this.getClass.getName + "[" + initialState + "," + commands + "," + terminalStates + "," + tapeFiller + "," + tapeSize + "]"
+  /**
+    * A hash code for this [[UniversalTuringMachine]] object, derived from {toString()}
+    *
+    * @see [[toString]]
+    */
   override val hashCode = toString.hashCode
 
   import UniversalTuringMachine._
@@ -173,9 +181,14 @@ final class UniversalTuringMachine(val commands: Seq[TuringCommand], val initial
     if (head < 0) Math.abs(tapeSize + head) % tapeSize else if (head >= tapeSize) head % tapeSize else head
 
   /**
-    * @inheritdoc
+    * Equality comparison of this [[UniversalTuringMachine]] object with the argument
+    *
+    * Uses a {toString()} and {hashCode()} trick
+    *
     * @param other the object to compare this [[UniversalTuringMachine]] object for equality to
     * @return whether this [[UniversalTuringMachine]] equals {other}
+    * @see [[hashCode]]
+    * @see [[toString]]
     */
   override def equals(other: Any): Boolean = other match {
     case that: UniversalTuringMachine =>

@@ -2,65 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e679f7b0-be56-4434-bcbb-514e695efdbe" name="Default" comment="Corrections, improvements and more extensive documentation">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/compiler.xml" afterPath="$PROJECT_DIR$/.idea/compiler.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/deltaUtilsSettings.xml" afterPath="$PROJECT_DIR$/.idea/deltaUtilsSettings.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/encodings.xml" afterPath="$PROJECT_DIR$/.idea/encodings.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/modules.xml" afterPath="$PROJECT_DIR$/.idea/modules.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/scala_compiler.xml" afterPath="$PROJECT_DIR$/.idea/scala_compiler.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/scala_settings.xml" afterPath="$PROJECT_DIR$/.idea/scala_settings.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/vcs.xml" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Universal Turing Machine.iml" afterPath="$PROJECT_DIR$/Universal Turing Machine.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/in/package.html" afterPath="$PROJECT_DIR$/docs/in/package.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/in/tamchow/package.html" afterPath="$PROJECT_DIR$/docs/in/tamchow/package.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/in/tamchow/turing/MoveDirection$.html" afterPath="$PROJECT_DIR$/docs/in/tamchow/turing/MoveDirection$.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/in/tamchow/turing/MoveDirection.html" afterPath="$PROJECT_DIR$/docs/in/tamchow/turing/MoveDirection.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/in/tamchow/turing/StepData.html" afterPath="$PROJECT_DIR$/docs/in/tamchow/turing/StepData.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/in/tamchow/turing/TuringCommand$.html" afterPath="$PROJECT_DIR$/docs/in/tamchow/turing/TuringCommand$.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/in/tamchow/turing/TuringCommand.html" afterPath="$PROJECT_DIR$/docs/in/tamchow/turing/TuringCommand.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/in/tamchow/turing/TuringMain$.html" afterPath="$PROJECT_DIR$/docs/in/tamchow/turing/TuringMain$.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/in/tamchow/turing/TuringState$.html" afterPath="$PROJECT_DIR$/docs/in/tamchow/turing/TuringState$.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/in/tamchow/turing/TuringState.html" afterPath="$PROJECT_DIR$/docs/in/tamchow/turing/TuringState.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/in/tamchow/turing/UniversalTuringMachine$.html" afterPath="$PROJECT_DIR$/docs/in/tamchow/turing/UniversalTuringMachine$.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/in/tamchow/turing/UniversalTuringMachine.html" afterPath="$PROJECT_DIR$/docs/in/tamchow/turing/UniversalTuringMachine.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/in/tamchow/turing/package.html" afterPath="$PROJECT_DIR$/docs/in/tamchow/turing/package.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/index.html" afterPath="$PROJECT_DIR$/docs/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/index/index-_.html" afterPath="$PROJECT_DIR$/docs/index/index-_.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/index/index-a.html" afterPath="$PROJECT_DIR$/docs/index/index-a.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/index/index-b.html" afterPath="$PROJECT_DIR$/docs/index/index-b.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/index/index-c.html" afterPath="$PROJECT_DIR$/docs/index/index-c.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/index/index-d.html" afterPath="$PROJECT_DIR$/docs/index/index-d.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/index/index-e.html" afterPath="$PROJECT_DIR$/docs/index/index-e.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/index/index-f.html" afterPath="$PROJECT_DIR$/docs/index/index-f.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/index/index-h.html" afterPath="$PROJECT_DIR$/docs/index/index-h.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/index/index-i.html" afterPath="$PROJECT_DIR$/docs/index/index-i.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/index/index-l.html" afterPath="$PROJECT_DIR$/docs/index/index-l.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/index/index-m.html" afterPath="$PROJECT_DIR$/docs/index/index-m.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/index/index-n.html" afterPath="$PROJECT_DIR$/docs/index/index-n.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/index/index-p.html" afterPath="$PROJECT_DIR$/docs/index/index-p.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/index/index-r.html" afterPath="$PROJECT_DIR$/docs/index/index-r.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/index/index-s.html" afterPath="$PROJECT_DIR$/docs/index/index-s.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/index/index-t.html" afterPath="$PROJECT_DIR$/docs/index/index-t.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/index/index-u.html" afterPath="$PROJECT_DIR$/docs/index/index-u.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/index/index-v.html" afterPath="$PROJECT_DIR$/docs/index/index-v.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/index/index-w.html" afterPath="$PROJECT_DIR$/docs/index/index-w.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/lib/diagrams.css" afterPath="$PROJECT_DIR$/docs/lib/diagrams.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/lib/diagrams.js" afterPath="$PROJECT_DIR$/docs/lib/diagrams.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/lib/index.css" afterPath="$PROJECT_DIR$/docs/lib/index.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/lib/index.js" afterPath="$PROJECT_DIR$/docs/lib/index.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/lib/jquery-ui.js" afterPath="$PROJECT_DIR$/docs/lib/jquery-ui.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/lib/jquery.js" afterPath="$PROJECT_DIR$/docs/lib/jquery.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/lib/jquery.layout.js" afterPath="$PROJECT_DIR$/docs/lib/jquery.layout.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/lib/modernizr.custom.js" afterPath="$PROJECT_DIR$/docs/lib/modernizr.custom.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/lib/ref-index.css" afterPath="$PROJECT_DIR$/docs/lib/ref-index.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/lib/scheduler.js" afterPath="$PROJECT_DIR$/docs/lib/scheduler.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/lib/template.css" afterPath="$PROJECT_DIR$/docs/lib/template.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/lib/template.js" afterPath="$PROJECT_DIR$/docs/lib/template.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/lib/tools.tooltip.js" afterPath="$PROJECT_DIR$/docs/lib/tools.tooltip.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/package.html" afterPath="$PROJECT_DIR$/docs/package.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/in/tamchow/turing/UniversalTuringMachine.scala" afterPath="$PROJECT_DIR$/src/in/tamchow/turing/UniversalTuringMachine.scala" />
     </list>
     <ignored path="Uinversal Turing Machine.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -1119,7 +1061,7 @@
       <workItem from="1464452050687" duration="5347000" />
       <workItem from="1464459302809" duration="50000" />
       <workItem from="1464965408874" duration="6250000" />
-      <workItem from="1464978585312" duration="590000" />
+      <workItem from="1464978585312" duration="894000" />
     </task>
     <task id="LOCAL-00001" summary="Initial Commit - Simplified Launcher">
       <created>1463236476083</created>
@@ -1289,11 +1231,18 @@
       <option name="project" value="LOCAL" />
       <updated>1464976597060</updated>
     </task>
-    <option name="localTasksCounter" value="25" />
+    <task id="LOCAL-00025" summary="Corrections, improvements and more extensive documentation">
+      <created>1464979259595</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1464979259595</updated>
+    </task>
+    <option name="localTasksCounter" value="26" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="77799000" />
+    <option name="totallyTimeSpent" value="78103000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />

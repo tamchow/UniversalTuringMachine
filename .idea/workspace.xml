@@ -2,49 +2,50 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e679f7b0-be56-4434-bcbb-514e695efdbe" name="Default" comment="Corrections, improvements and more extensive documentation">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/UTM_review_doc.md" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Universal Turing Machine/in/tamchow/turing/TuringMain$$anonfun$formatArgs$1.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Universal Turing Machine/in/tamchow/turing/TuringMain$$anonfun$main$1.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Universal Turing Machine/in/tamchow/turing/UniversalTuringMachine$$anonfun$doStartFilter$1$1.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Universal Turing Machine/in/tamchow/turing/UniversalTuringMachine$$anonfun$process$1$1.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Universal Turing Machine/in/tamchow/turing/UniversalTuringMachine$$anonfun$qualifierAnyOf$1$1.class" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/UTM/UTM.jar" afterPath="$PROJECT_DIR$/out/artifacts/UTM/UTM.jar" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Universal Turing Machine/in/tamchow/turing/StepData$.class" afterPath="$PROJECT_DIR$/out/production/Universal Turing Machine/in/tamchow/turing/StepData$.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Universal Turing Machine/in/tamchow/turing/StepData.class" afterPath="$PROJECT_DIR$/out/production/Universal Turing Machine/in/tamchow/turing/StepData.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Universal Turing Machine/in/tamchow/turing/TuringCommand$$anonfun$escapeNull$1.class" afterPath="$PROJECT_DIR$/out/production/Universal Turing Machine/in/tamchow/turing/TuringCommand$$anonfun$escapeNull$1.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Universal Turing Machine/in/tamchow/turing/TuringCommand$$anonfun$toString$1.class" afterPath="$PROJECT_DIR$/out/production/Universal Turing Machine/in/tamchow/turing/TuringCommand$$anonfun$toString$1.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Universal Turing Machine/in/tamchow/turing/TuringCommand$.class" afterPath="$PROJECT_DIR$/out/production/Universal Turing Machine/in/tamchow/turing/TuringCommand$.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Universal Turing Machine/in/tamchow/turing/TuringCommand.class" afterPath="$PROJECT_DIR$/out/production/Universal Turing Machine/in/tamchow/turing/TuringCommand.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Universal Turing Machine/in/tamchow/turing/TuringMain$.class" afterPath="$PROJECT_DIR$/out/production/Universal Turing Machine/in/tamchow/turing/TuringMain$.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Universal Turing Machine/in/tamchow/turing/TuringMain.class" afterPath="$PROJECT_DIR$/out/production/Universal Turing Machine/in/tamchow/turing/TuringMain.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Universal Turing Machine/in/tamchow/turing/UniversalTuringMachine$$anonfun$1.class" afterPath="$PROJECT_DIR$/out/production/Universal Turing Machine/in/tamchow/turing/UniversalTuringMachine$$anonfun$1.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Universal Turing Machine/in/tamchow/turing/UniversalTuringMachine$$anonfun$10.class" afterPath="$PROJECT_DIR$/out/production/Universal Turing Machine/in/tamchow/turing/UniversalTuringMachine$$anonfun$10.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Universal Turing Machine/in/tamchow/turing/UniversalTuringMachine$$anonfun$2.class" afterPath="$PROJECT_DIR$/out/production/Universal Turing Machine/in/tamchow/turing/UniversalTuringMachine$$anonfun$2.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Universal Turing Machine/in/tamchow/turing/UniversalTuringMachine$$anonfun$3.class" afterPath="$PROJECT_DIR$/out/production/Universal Turing Machine/in/tamchow/turing/UniversalTuringMachine$$anonfun$3.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Universal Turing Machine/in/tamchow/turing/UniversalTuringMachine$$anonfun$4.class" afterPath="$PROJECT_DIR$/out/production/Universal Turing Machine/in/tamchow/turing/UniversalTuringMachine$$anonfun$4.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Universal Turing Machine/in/tamchow/turing/UniversalTuringMachine$$anonfun$5.class" afterPath="$PROJECT_DIR$/out/production/Universal Turing Machine/in/tamchow/turing/UniversalTuringMachine$$anonfun$5.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Universal Turing Machine/in/tamchow/turing/UniversalTuringMachine$$anonfun$6.class" afterPath="$PROJECT_DIR$/out/production/Universal Turing Machine/in/tamchow/turing/UniversalTuringMachine$$anonfun$6.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Universal Turing Machine/in/tamchow/turing/UniversalTuringMachine$$anonfun$7.class" afterPath="$PROJECT_DIR$/out/production/Universal Turing Machine/in/tamchow/turing/UniversalTuringMachine$$anonfun$7.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Universal Turing Machine/in/tamchow/turing/UniversalTuringMachine$$anonfun$8.class" afterPath="$PROJECT_DIR$/out/production/Universal Turing Machine/in/tamchow/turing/UniversalTuringMachine$$anonfun$8.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Universal Turing Machine/in/tamchow/turing/UniversalTuringMachine$$anonfun$9.class" afterPath="$PROJECT_DIR$/out/production/Universal Turing Machine/in/tamchow/turing/UniversalTuringMachine$$anonfun$9.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Universal Turing Machine/in/tamchow/turing/UniversalTuringMachine$$anonfun$apply$1.class" afterPath="$PROJECT_DIR$/out/production/Universal Turing Machine/in/tamchow/turing/UniversalTuringMachine$$anonfun$apply$1.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Universal Turing Machine/in/tamchow/turing/UniversalTuringMachine$$anonfun$in$tamchow$turing$UniversalTuringMachine$$isApplicable$1.class" afterPath="$PROJECT_DIR$/out/production/Universal Turing Machine/in/tamchow/turing/UniversalTuringMachine$$anonfun$in$tamchow$turing$UniversalTuringMachine$$isApplicable$1.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Universal Turing Machine/in/tamchow/turing/UniversalTuringMachine$$anonfun$initTape$1.class" afterPath="$PROJECT_DIR$/out/production/Universal Turing Machine/in/tamchow/turing/UniversalTuringMachine$$anonfun$initTape$1.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Universal Turing Machine/in/tamchow/turing/UniversalTuringMachine$.class" afterPath="$PROJECT_DIR$/out/production/Universal Turing Machine/in/tamchow/turing/UniversalTuringMachine$.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Universal Turing Machine/in/tamchow/turing/UniversalTuringMachine.class" afterPath="$PROJECT_DIR$/out/production/Universal Turing Machine/in/tamchow/turing/UniversalTuringMachine.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/compiler.xml" afterPath="$PROJECT_DIR$/.idea/compiler.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/deltaUtilsSettings.xml" afterPath="$PROJECT_DIR$/.idea/deltaUtilsSettings.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/encodings.xml" afterPath="$PROJECT_DIR$/.idea/encodings.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/modules.xml" afterPath="$PROJECT_DIR$/.idea/modules.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/scala_compiler.xml" afterPath="$PROJECT_DIR$/.idea/scala_compiler.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/scala_settings.xml" afterPath="$PROJECT_DIR$/.idea/scala_settings.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/vcs.xml" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/README.md" afterPath="$PROJECT_DIR$/README.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Universal Turing Machine.iml" afterPath="$PROJECT_DIR$/Universal Turing Machine.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/README.md" afterPath="$PROJECT_DIR$/docs/README.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/in/package.html" afterPath="$PROJECT_DIR$/docs/in/package.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/in/tamchow/package.html" afterPath="$PROJECT_DIR$/docs/in/tamchow/package.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/in/tamchow/turing/MoveDirection$.html" afterPath="$PROJECT_DIR$/docs/in/tamchow/turing/MoveDirection$.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/in/tamchow/turing/MoveDirection.html" afterPath="$PROJECT_DIR$/docs/in/tamchow/turing/MoveDirection.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/in/tamchow/turing/StepData.html" afterPath="$PROJECT_DIR$/docs/in/tamchow/turing/StepData.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/in/tamchow/turing/TuringCommand$.html" afterPath="$PROJECT_DIR$/docs/in/tamchow/turing/TuringCommand$.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/in/tamchow/turing/TuringCommand.html" afterPath="$PROJECT_DIR$/docs/in/tamchow/turing/TuringCommand.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/in/tamchow/turing/TuringMain$.html" afterPath="$PROJECT_DIR$/docs/in/tamchow/turing/TuringMain$.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/in/tamchow/turing/TuringState$.html" afterPath="$PROJECT_DIR$/docs/in/tamchow/turing/TuringState$.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/in/tamchow/turing/TuringState.html" afterPath="$PROJECT_DIR$/docs/in/tamchow/turing/TuringState.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/in/tamchow/turing/UniversalTuringMachine$.html" afterPath="$PROJECT_DIR$/docs/in/tamchow/turing/UniversalTuringMachine$.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/in/tamchow/turing/UniversalTuringMachine.html" afterPath="$PROJECT_DIR$/docs/in/tamchow/turing/UniversalTuringMachine.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/in/tamchow/turing/package.html" afterPath="$PROJECT_DIR$/docs/in/tamchow/turing/package.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/index.html" afterPath="$PROJECT_DIR$/docs/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/index/index-_.html" afterPath="$PROJECT_DIR$/docs/index/index-_.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/index/index-a.html" afterPath="$PROJECT_DIR$/docs/index/index-a.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/index.js" afterPath="$PROJECT_DIR$/docs/index.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/index/index-b.html" afterPath="$PROJECT_DIR$/docs/index/index-b.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/index/index-c.html" afterPath="$PROJECT_DIR$/docs/index/index-c.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/index/index-d.html" afterPath="$PROJECT_DIR$/docs/index/index-d.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/index/index-e.html" afterPath="$PROJECT_DIR$/docs/index/index-e.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/index/index-f.html" afterPath="$PROJECT_DIR$/docs/index/index-f.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/index/index-h.html" afterPath="$PROJECT_DIR$/docs/index/index-h.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/index/index-i.html" afterPath="$PROJECT_DIR$/docs/index/index-i.html" />
@@ -55,27 +56,12 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/index/index-r.html" afterPath="$PROJECT_DIR$/docs/index/index-r.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/index/index-s.html" afterPath="$PROJECT_DIR$/docs/index/index-s.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/index/index-t.html" afterPath="$PROJECT_DIR$/docs/index/index-t.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/index/index-u.html" afterPath="$PROJECT_DIR$/docs/index/index-u.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/index/index-v.html" afterPath="$PROJECT_DIR$/docs/index/index-v.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/index/index-w.html" afterPath="$PROJECT_DIR$/docs/index/index-w.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/lib/diagrams.css" afterPath="$PROJECT_DIR$/docs/lib/diagrams.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/lib/diagrams.js" afterPath="$PROJECT_DIR$/docs/lib/diagrams.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/lib/index.css" afterPath="$PROJECT_DIR$/docs/lib/index.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/lib/index.js" afterPath="$PROJECT_DIR$/docs/lib/index.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/lib/jquery-ui.js" afterPath="$PROJECT_DIR$/docs/lib/jquery-ui.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/lib/jquery.js" afterPath="$PROJECT_DIR$/docs/lib/jquery.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/lib/jquery.layout.js" afterPath="$PROJECT_DIR$/docs/lib/jquery.layout.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/lib/modernizr.custom.js" afterPath="$PROJECT_DIR$/docs/lib/modernizr.custom.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/lib/ref-index.css" afterPath="$PROJECT_DIR$/docs/lib/ref-index.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/lib/scheduler.js" afterPath="$PROJECT_DIR$/docs/lib/scheduler.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/lib/template.css" afterPath="$PROJECT_DIR$/docs/lib/template.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/lib/template.js" afterPath="$PROJECT_DIR$/docs/lib/template.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/lib/tools.tooltip.js" afterPath="$PROJECT_DIR$/docs/lib/tools.tooltip.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/package.html" afterPath="$PROJECT_DIR$/docs/package.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/in/tamchow/turing/MoveDirection.scala" afterPath="$PROJECT_DIR$/src/in/tamchow/turing/MoveDirection.scala" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/in/tamchow/turing/TuringCommand.scala" afterPath="$PROJECT_DIR$/src/in/tamchow/turing/TuringCommand.scala" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/in/tamchow/turing/TuringMain.scala" afterPath="$PROJECT_DIR$/src/in/tamchow/turing/TuringMain.scala" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/in/tamchow/turing/UniversalTuringMachine.scala" afterPath="$PROJECT_DIR$/src/in/tamchow/turing/UniversalTuringMachine.scala" />
     </list>
     <ignored path="Uinversal Turing Machine.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -108,8 +94,8 @@
       <file leaf-file-name="TuringCommand.scala" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/in/tamchow/turing/TuringCommand.scala">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="550">
-              <caret line="97" column="37" selection-start-line="97" selection-start-column="37" selection-end-line="97" selection-end-column="37" />
+            <state relative-caret-position="510">
+              <caret line="30" column="35" selection-start-line="30" selection-start-column="35" selection-end-line="30" selection-end-column="35" />
               <folding />
             </state>
           </provider>
@@ -217,6 +203,10 @@
     </navigator>
     <panes>
       <pane id="Scope" />
+      <pane id="PackagesPane">
+        <subPane />
+      </pane>
+      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -253,12 +243,30 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="UniversalTuringMachine" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="UniversalTuringMachine" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="turing" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="TuringCommand.scala" />
+              <option name="myItemType" value="org.jetbrains.plugins.scala.components.ScalaDefsProjectViewProvider$ScalaFileTreeNode" />
+            </PATH_ELEMENT>
+          </PATH>
         </subPane>
       </pane>
-      <pane id="PackagesPane">
-        <subPane />
-      </pane>
-      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -1153,7 +1161,8 @@
       <workItem from="1465017291710" duration="17000" />
       <workItem from="1465017433582" duration="617000" />
       <workItem from="1465018861843" duration="3755000" />
-      <workItem from="1465022893292" duration="1001000" />
+      <workItem from="1465022893292" duration="1482000" />
+      <workItem from="1465024414563" duration="225000" />
     </task>
     <task id="LOCAL-00001" summary="Initial Commit - Simplified Launcher">
       <created>1463236476083</created>
@@ -1330,11 +1339,18 @@
       <option name="project" value="LOCAL" />
       <updated>1464979259595</updated>
     </task>
-    <option name="localTasksCounter" value="26" />
+    <task id="LOCAL-00026" summary="Corrections, improvements and more extensive documentation">
+      <created>1465023901242</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1465023901242</updated>
+    </task>
+    <option name="localTasksCounter" value="27" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="83493000" />
+    <option name="totallyTimeSpent" value="84199000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
@@ -1357,12 +1373,13 @@
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="SvgViewer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3289689" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32843137" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32843137" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="GhcMod" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.3289689" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25869894" sideWeight="0.46585366" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2624811" sideWeight="0.46585366" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Puzzle" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Scrappy" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.32843137" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="The R Graphics" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.32980332" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
@@ -1370,7 +1387,6 @@
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3289689" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Armory" active="true" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32980332" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3289689" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3289689" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32569557" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32569557" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -1463,7 +1479,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1471,7 +1486,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="3944">
           <caret line="232" column="31" selection-start-line="232" selection-start-column="31" selection-end-line="232" selection-end-column="31" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1487,7 +1501,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="3230">
           <caret line="190" column="21" selection-start-line="190" selection-start-column="21" selection-end-line="190" selection-end-column="21" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1774,7 +1787,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="527">
           <caret line="31" column="5" selection-start-line="31" selection-start-column="5" selection-end-line="31" selection-end-column="5" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1786,7 +1798,6 @@
         <state split_layout="FIRST">
           <first_editor relative-caret-position="363">
             <caret line="52" column="80" selection-start-line="52" selection-start-column="80" selection-end-line="52" selection-end-column="80" />
-            <folding />
           </first_editor>
           <second_editor />
         </state>
@@ -1800,7 +1811,6 @@
         <state split_layout="FIRST">
           <first_editor relative-caret-position="289">
             <caret line="17" column="0" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
-            <folding />
           </first_editor>
           <second_editor />
         </state>
@@ -1814,7 +1824,6 @@
         <state split_layout="FIRST">
           <first_editor relative-caret-position="68">
             <caret line="4" column="0" selection-start-line="4" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
-            <folding />
           </first_editor>
           <second_editor />
         </state>
@@ -1824,7 +1833,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="482">
           <caret line="72" column="69" selection-start-line="72" selection-start-column="69" selection-end-line="72" selection-end-column="69" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1832,14 +1840,13 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="115">
           <caret line="193" column="25" selection-start-line="193" selection-start-column="25" selection-end-line="193" selection-end-column="25" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/in/tamchow/turing/TuringCommand.scala">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="550">
-          <caret line="97" column="37" selection-start-line="97" selection-start-column="37" selection-end-line="97" selection-end-column="37" />
+        <state relative-caret-position="510">
+          <caret line="30" column="35" selection-start-line="30" selection-start-column="35" selection-end-line="30" selection-end-column="35" />
           <folding />
         </state>
       </provider>

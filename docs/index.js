@@ -9,6 +9,9 @@ Index.PACKAGES = {
         "case class": "in\/tamchow\/turing\/StepData.html",
         "name": "in.tamchow.turing.StepData"
     }, {
+        "object": "in\/tamchow\/turing\/StringUtils$.html",
+        "name": "in.tamchow.turing.StringUtils"
+    }, {
         "case class": "in\/tamchow\/turing\/TuringCommand.html",
         "object": "in\/tamchow\/turing\/TuringCommand$.html",
         "name": "in.tamchow.turing.TuringCommand"

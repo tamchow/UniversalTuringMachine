@@ -149,6 +149,27 @@
     </span>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
               </li>
+                  <li name="in.tamchow.turing.TuringCommand#BlankCode" visbl="pub" data-isabs="false" fullComment="no"
+                      group="Ungrouped">
+                      <a id="BlankCode:String"></a>
+                      <a id="BlankCode:String"></a>
+                      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">BlankCode</span><span class="result">: <span class="extype"
+                                                                        name="java.lang.String">String</span></span>
+      </span>
+                      </h4><span class="permalink">
+      <a href="../../../index.html#in.tamchow.turing.TuringCommand$@BlankCode:String" title="Permalink" target="_top">
+        <img src="../../../lib/permalink.png" alt="Permalink"/>
+      </a>
+    </span>
+                      <p class="shortcomment cmt">Null (Blank) value Wildcard
+                      </p>
+                  </li>
                   <li name="in.tamchow.turing.TuringCommand#CommandArity" visbl="pub" data-isabs="false"
                       fullComment="no" group="Ungrouped">
                       <a id="CommandArity:Int"></a>
@@ -191,27 +212,6 @@
       </a>
     </span>
                       <p class="shortcomment cmt">Match-all Wildcard
-                      </p>
-                  </li>
-                  <li name="in.tamchow.turing.TuringCommand#NullCode" visbl="pub" data-isabs="false" fullComment="no"
-                      group="Ungrouped">
-                      <a id="NullCode:String"></a>
-                      <a id="NullCode:String"></a>
-                      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">val</span>
-      </span>
-      <span class="symbol">
-        <span class="name">NullCode</span><span class="result">: <span class="extype"
-                                                                       name="java.lang.String">String</span></span>
-      </span>
-                      </h4><span class="permalink">
-      <a href="../../../index.html#in.tamchow.turing.TuringCommand$@NullCode:String" title="Permalink" target="_top">
-        <img src="../../../lib/permalink.png" alt="Permalink"/>
-      </a>
-    </span>
-                      <p class="shortcomment cmt">Null (Blank) value Wildcard
                       </p>
                   </li>
                   <li name="in.tamchow.turing.TuringCommand#WhitespaceRegex" visbl="pub" data-isabs="false"
@@ -292,8 +292,7 @@
                   </p></div>
                       <dl class="paramcmts block">
                           <dt class="param">data</dt>
-                          <dd class="cmt"><p><span class="extype" name="java.lang.String">java.lang.String</span>
-                              indicating a defined transitional operation</p></dd>
+                          <dd class="cmt"><p><code>String</code> indicating a defined transitional operation</p></dd>
                           <dt>returns</dt>
                           <dd class="cmt"><p>a <a href="TuringCommand.html" class="extype"
                                                   name="in.tamchow.turing.TuringCommand">TuringCommand</a> object
@@ -305,8 +304,8 @@
                                                       name="in.tamchow.turing.TuringCommand#WhitespaceRegex">WhitespaceRegex</a></p></span><span
                                   class="cmt"><p><a href="#CommandArity:Int" class="extmbr"
                                                     name="in.tamchow.turing.TuringCommand#CommandArity">CommandArity</a></p></span><span
-                                  class="cmt"><p><a href="#NullCode:String" class="extmbr"
-                                                    name="in.tamchow.turing.TuringCommand#NullCode">NullCode</a></p></span><span
+                                  class="cmt"><p><a href="#BlankCode:String" class="extmbr"
+                                                    name="in.tamchow.turing.TuringCommand#BlankCode">BlankCode</a></p></span><span
                                   class="cmt"><p><a href="#MatchAnythingCode:String" class="extmbr"
                                                     name="in.tamchow.turing.TuringCommand#MatchAnythingCode">MatchAnythingCode</a></p></span>
                           </dd>
@@ -387,18 +386,22 @@
     </span>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
     </li><li name="in.tamchow.turing.TuringCommand#escapeNull" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="escapeNull(elements:Vector[String]):scala.collection.immutable.Vector[String]"></a>
-      <a id="escapeNull(Vector[String]):Vector[String]"></a>
+                      <a id="escapeNull(elements:Seq[String]):Seq[String]"></a>
+                      <a id="escapeNull(Seq[String]):Seq[String]"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">escapeNull</span><span class="params">(<span name="elements">elements: <span class="extype" name="scala.Vector">Vector</span>[<span class="extype" name="scala.Predef.String">String</span>]</span>)</span><span class="result">: <span class="extype" name="scala.collection.immutable.Vector">Vector</span>[<span class="extype" name="scala.Predef.String">String</span>]</span>
+        <span class="name">escapeNull</span><span class="params">(<span name="elements">elements: <span class="extype"
+                                                                                                        name="scala.Seq">Seq</span>[<span
+              class="extype" name="scala.Predef.String">String</span>]</span>)</span><span class="result">: <span
+              class="extype" name="scala.collection.Seq">Seq</span>[<span class="extype" name="scala.Predef.String">String</span>]</span>
       </span>
       </h4><span class="permalink">
-      <a href="../../../index.html#in.tamchow.turing.TuringCommand$@escapeNull(elements:Vector[String]):scala.collection.immutable.Vector[String]" title="Permalink" target="_top">
+      <a href="../../../index.html#in.tamchow.turing.TuringCommand$@escapeNull(elements:Seq[String]):Seq[String]"
+         title="Permalink" target="_top">
         <img src="../../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>

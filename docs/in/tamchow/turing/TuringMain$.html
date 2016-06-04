@@ -48,8 +48,18 @@
         <span class="name">TuringMain</span>
       </span>
       </h4>
-      
-          <div id="comment" class="fullcommenttop"><div class="comment cmt"><p>The Launcher for the Universal Turing Machine simulator</p><p>The parameters are, in order:</p><p>1. The input file path</p><p>2. The tape size</p><p>3. The number of steps for which to run the program. Leave it negative to run it till it halts.</p><p>4. The number of milliseconds to pause before starting the next step.</p><p>Leave this negative to pause for user input before every step.</p><p>All these parameters are required.</p><p>Only supports program input as files.
+
+      <div id="comment" class="fullcommenttop">
+          <div class="comment cmt"><p>The Launcher for the Universal Turing Machine simulator</p>
+              <p>The parameters are, in order:</p>
+              <p>1. The input file path</p>
+              <p>2. The tape size</p>
+              <p>3. The number of steps for which to run the program.
+                  Leave it negative to run it till it halts.</p>
+              <p>4. The number of milliseconds to pause before starting the next step.
+                  Leave this negative to pause for user input before every step.</p>
+              <p>All these parameters are required.</p>
+              <p>Only supports program input as files.
 </p></div><div class="toggleContainer block">
           <span class="toggle">Linear Supertypes</span>
           <div class="superTypes hiddenContent"><span class="extype" name="scala.AnyRef">AnyRef</span>, <span class="extype" name="scala.Any">Any</span></div>
@@ -186,7 +196,9 @@
     </span>)</span>
               
         </dd></dl></div>
-    </li><li name="in.tamchow.turing.TuringMain#doRunMain" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+              </li>
+                  <li name="in.tamchow.turing.TuringMain#doRunMain" visbl="pub" data-isabs="false" fullComment="yes"
+                      group="Ungrouped">
       <a id="doRunMain(filePath:String,tapeSize:Int,steps:Int,pauseTime:Int):Unit"></a>
       <a id="doRunMain(String,Int,Int,Int):Unit"></a>
       <h4 class="signature">
@@ -202,7 +214,31 @@
         <img src="../../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
-      
+                      <p class="shortcomment cmt">The main runner for the interactive execution of a <a
+                              href="UniversalTuringMachine.html" class="extype"
+                              name="in.tamchow.turing.UniversalTuringMachine">UniversalTuringMachine</a>
+                      </p>
+                      <div class="fullcomment">
+                          <div class="comment cmt"><p>The main runner for the interactive execution of a <a
+                                  href="UniversalTuringMachine.html" class="extype"
+                                  name="in.tamchow.turing.UniversalTuringMachine">UniversalTuringMachine</a>
+                          </p></div>
+                          <dl class="paramcmts block">
+                              <dt class="param">filePath</dt>
+                              <dd class="cmt"><p>the source file path</p></dd>
+                              <dt class="param">tapeSize</dt>
+                              <dd class="cmt"><p>the length of the <a href="UniversalTuringMachine.html" class="extype"
+                                                                      name="in.tamchow.turing.UniversalTuringMachine">UniversalTuringMachine</a>s
+                                  tape</p></dd>
+                              <dt class="param">steps</dt>
+                              <dd class="cmt"><p>the number of steps for which to run the <a
+                                      href="UniversalTuringMachine.html" class="extype"
+                                      name="in.tamchow.turing.UniversalTuringMachine">UniversalTuringMachine</a></p>
+                              </dd>
+                              <dt class="param">pauseTime</dt>
+                              <dd class="cmt"><p>the time to pause (in milliseconds) between steps</p></dd>
+                          </dl>
+                      </div>
     </li><li name="scala.AnyRef#eq" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="eq(x$1:AnyRef):Boolean"></a>
       <a id="eq(AnyRef):Boolean"></a>
@@ -260,23 +296,39 @@
     </span>)</span>
               
         </dd></dl></div>
-    </li><li name="in.tamchow.turing.TuringMain#formatArgs" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="formatArgs(args:Seq[String]):String"></a>
-      <a id="formatArgs(Seq[String]):String"></a>
+                  </li>
+                  <li name="in.tamchow.turing.TuringMain#formatSeq" visbl="pub" data-isabs="false" fullComment="yes"
+                      group="Ungrouped">
+                      <a id="formatSeq(args:Seq[Any]):String"></a>
+                      <a id="formatSeq(Seq[Any]):String"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">formatArgs</span><span class="params">(<span name="args">args: <span class="extype" name="scala.Seq">Seq</span>[<span class="extype" name="scala.Predef.String">String</span>]</span>)</span><span class="result">: <span class="extype" name="scala.Predef.String">String</span></span>
+        <span class="name">formatSeq</span><span class="params">(<span name="args">args: <span class="extype"
+                                                                                               name="scala.Seq">Seq</span>[<span
+              class="extype" name="scala.Any">Any</span>]</span>)</span><span class="result">: <span class="extype"
+                                                                                                     name="scala.Predef.String">String</span></span>
       </span>
       </h4><span class="permalink">
-      <a href="../../../index.html#in.tamchow.turing.TuringMain$@formatArgs(args:Seq[String]):String" title="Permalink" target="_top">
+      <a href="../../../index.html#in.tamchow.turing.TuringMain$@formatSeq(args:Seq[Any]):String" title="Permalink"
+         target="_top">
         <img src="../../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
-      
+                      <p class="shortcomment cmt"></p>
+                      <div class="fullcomment">
+                          <div class="comment cmt"></div>
+                          <dl class="paramcmts block">
+                              <dt class="param">args</dt>
+                              <dd class="cmt"><p>the <code>Seq</code> to format</p></dd>
+                              <dt>returns</dt>
+                              <dd class="cmt"><p>a formatted <code>String</code> representation of <code>args</code></p>
+                              </dd>
+                          </dl>
+                      </div>
     </li><li name="scala.AnyRef#getClass" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="getClass():Class[_]"></a>
       <a id="getClass():Class[_]"></a>
@@ -328,7 +380,9 @@
       </a>
     </span>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Any</dd></dl></div>
-    </li><li name="in.tamchow.turing.TuringMain#main" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+                  </li>
+                  <li name="in.tamchow.turing.TuringMain#main" visbl="pub" data-isabs="false" fullComment="yes"
+                      group="Ungrouped">
       <a id="main(args:Array[String]):Unit"></a>
       <a id="main(Array[String]):Unit"></a>
       <h4 class="signature">
@@ -344,7 +398,16 @@
         <img src="../../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
-      
+                      <p class="shortcomment cmt">The entry point of the application
+                      </p>
+                      <div class="fullcomment">
+                          <div class="comment cmt"><p>The entry point of the application
+                          </p></div>
+                          <dl class="paramcmts block">
+                              <dt class="param">args</dt>
+                              <dd class="cmt"><p>the command-line arguments</p></dd>
+                          </dl>
+                      </div>
     </li><li name="scala.AnyRef#ne" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="ne(x$1:AnyRef):Boolean"></a>
       <a id="ne(AnyRef):Boolean"></a>

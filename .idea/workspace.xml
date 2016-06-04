@@ -2,66 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e679f7b0-be56-4434-bcbb-514e695efdbe" name="Default" comment="Corrections, improvements and more extensive documentation">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Universal Turing Machine/in/tamchow/turing/TuringMain$$anonfun$formatArgs$1.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Universal Turing Machine/in/tamchow/turing/TuringMain$$anonfun$main$1.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Universal Turing Machine/in/tamchow/turing/UniversalTuringMachine$$anonfun$doStartFilter$1$1.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Universal Turing Machine/in/tamchow/turing/UniversalTuringMachine$$anonfun$process$1$1.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Universal Turing Machine/in/tamchow/turing/UniversalTuringMachine$$anonfun$qualifierAnyOf$1$1.class" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/UTM/UTM.jar" afterPath="$PROJECT_DIR$/out/artifacts/UTM/UTM.jar" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Universal Turing Machine/in/tamchow/turing/StepData$.class" afterPath="$PROJECT_DIR$/out/production/Universal Turing Machine/in/tamchow/turing/StepData$.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Universal Turing Machine/in/tamchow/turing/StepData.class" afterPath="$PROJECT_DIR$/out/production/Universal Turing Machine/in/tamchow/turing/StepData.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Universal Turing Machine/in/tamchow/turing/TuringCommand$$anonfun$escapeNull$1.class" afterPath="$PROJECT_DIR$/out/production/Universal Turing Machine/in/tamchow/turing/TuringCommand$$anonfun$escapeNull$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Universal Turing Machine/in/tamchow/turing/TuringCommand$$anonfun$toString$1.class" afterPath="$PROJECT_DIR$/out/production/Universal Turing Machine/in/tamchow/turing/TuringCommand$$anonfun$toString$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Universal Turing Machine/in/tamchow/turing/TuringCommand$.class" afterPath="$PROJECT_DIR$/out/production/Universal Turing Machine/in/tamchow/turing/TuringCommand$.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Universal Turing Machine/in/tamchow/turing/TuringCommand.class" afterPath="$PROJECT_DIR$/out/production/Universal Turing Machine/in/tamchow/turing/TuringCommand.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Universal Turing Machine/in/tamchow/turing/TuringMain$.class" afterPath="$PROJECT_DIR$/out/production/Universal Turing Machine/in/tamchow/turing/TuringMain$.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Universal Turing Machine/in/tamchow/turing/TuringMain.class" afterPath="$PROJECT_DIR$/out/production/Universal Turing Machine/in/tamchow/turing/TuringMain.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Universal Turing Machine/in/tamchow/turing/UniversalTuringMachine$$anonfun$1.class" afterPath="$PROJECT_DIR$/out/production/Universal Turing Machine/in/tamchow/turing/UniversalTuringMachine$$anonfun$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Universal Turing Machine/in/tamchow/turing/UniversalTuringMachine$$anonfun$10.class" afterPath="$PROJECT_DIR$/out/production/Universal Turing Machine/in/tamchow/turing/UniversalTuringMachine$$anonfun$10.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Universal Turing Machine/in/tamchow/turing/UniversalTuringMachine$$anonfun$2.class" afterPath="$PROJECT_DIR$/out/production/Universal Turing Machine/in/tamchow/turing/UniversalTuringMachine$$anonfun$2.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Universal Turing Machine/in/tamchow/turing/UniversalTuringMachine$$anonfun$3.class" afterPath="$PROJECT_DIR$/out/production/Universal Turing Machine/in/tamchow/turing/UniversalTuringMachine$$anonfun$3.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Universal Turing Machine/in/tamchow/turing/UniversalTuringMachine$$anonfun$4.class" afterPath="$PROJECT_DIR$/out/production/Universal Turing Machine/in/tamchow/turing/UniversalTuringMachine$$anonfun$4.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Universal Turing Machine/in/tamchow/turing/UniversalTuringMachine$$anonfun$5.class" afterPath="$PROJECT_DIR$/out/production/Universal Turing Machine/in/tamchow/turing/UniversalTuringMachine$$anonfun$5.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Universal Turing Machine/in/tamchow/turing/UniversalTuringMachine$$anonfun$6.class" afterPath="$PROJECT_DIR$/out/production/Universal Turing Machine/in/tamchow/turing/UniversalTuringMachine$$anonfun$6.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Universal Turing Machine/in/tamchow/turing/UniversalTuringMachine$$anonfun$7.class" afterPath="$PROJECT_DIR$/out/production/Universal Turing Machine/in/tamchow/turing/UniversalTuringMachine$$anonfun$7.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Universal Turing Machine/in/tamchow/turing/UniversalTuringMachine$$anonfun$8.class" afterPath="$PROJECT_DIR$/out/production/Universal Turing Machine/in/tamchow/turing/UniversalTuringMachine$$anonfun$8.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Universal Turing Machine/in/tamchow/turing/UniversalTuringMachine$$anonfun$9.class" afterPath="$PROJECT_DIR$/out/production/Universal Turing Machine/in/tamchow/turing/UniversalTuringMachine$$anonfun$9.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Universal Turing Machine/in/tamchow/turing/UniversalTuringMachine$$anonfun$apply$1.class" afterPath="$PROJECT_DIR$/out/production/Universal Turing Machine/in/tamchow/turing/UniversalTuringMachine$$anonfun$apply$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Universal Turing Machine/in/tamchow/turing/UniversalTuringMachine$$anonfun$in$tamchow$turing$UniversalTuringMachine$$isApplicable$1.class" afterPath="$PROJECT_DIR$/out/production/Universal Turing Machine/in/tamchow/turing/UniversalTuringMachine$$anonfun$in$tamchow$turing$UniversalTuringMachine$$isApplicable$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Universal Turing Machine/in/tamchow/turing/UniversalTuringMachine$$anonfun$initTape$1.class" afterPath="$PROJECT_DIR$/out/production/Universal Turing Machine/in/tamchow/turing/UniversalTuringMachine$$anonfun$initTape$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Universal Turing Machine/in/tamchow/turing/UniversalTuringMachine$.class" afterPath="$PROJECT_DIR$/out/production/Universal Turing Machine/in/tamchow/turing/UniversalTuringMachine$.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Universal Turing Machine/in/tamchow/turing/UniversalTuringMachine.class" afterPath="$PROJECT_DIR$/out/production/Universal Turing Machine/in/tamchow/turing/UniversalTuringMachine.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/in/tamchow/turing/MoveDirection$.html" afterPath="$PROJECT_DIR$/docs/in/tamchow/turing/MoveDirection$.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/in/tamchow/turing/MoveDirection.html" afterPath="$PROJECT_DIR$/docs/in/tamchow/turing/MoveDirection.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/in/tamchow/turing/StepData.html" afterPath="$PROJECT_DIR$/docs/in/tamchow/turing/StepData.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/in/tamchow/turing/TuringCommand$.html" afterPath="$PROJECT_DIR$/docs/in/tamchow/turing/TuringCommand$.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/in/tamchow/turing/TuringCommand.html" afterPath="$PROJECT_DIR$/docs/in/tamchow/turing/TuringCommand.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/in/tamchow/turing/TuringMain$.html" afterPath="$PROJECT_DIR$/docs/in/tamchow/turing/TuringMain$.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/in/tamchow/turing/UniversalTuringMachine$.html" afterPath="$PROJECT_DIR$/docs/in/tamchow/turing/UniversalTuringMachine$.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/in/tamchow/turing/UniversalTuringMachine.html" afterPath="$PROJECT_DIR$/docs/in/tamchow/turing/UniversalTuringMachine.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/in/tamchow/turing/package.html" afterPath="$PROJECT_DIR$/docs/in/tamchow/turing/package.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/index.html" afterPath="$PROJECT_DIR$/docs/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/index.js" afterPath="$PROJECT_DIR$/docs/index.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/index/index-b.html" afterPath="$PROJECT_DIR$/docs/index/index-b.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/index/index-c.html" afterPath="$PROJECT_DIR$/docs/index/index-c.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/index/index-d.html" afterPath="$PROJECT_DIR$/docs/index/index-d.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/index/index-f.html" afterPath="$PROJECT_DIR$/docs/index/index-f.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/index/index-h.html" afterPath="$PROJECT_DIR$/docs/index/index-h.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/index/index-i.html" afterPath="$PROJECT_DIR$/docs/index/index-i.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/index/index-l.html" afterPath="$PROJECT_DIR$/docs/index/index-l.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/index/index-m.html" afterPath="$PROJECT_DIR$/docs/index/index-m.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/index/index-n.html" afterPath="$PROJECT_DIR$/docs/index/index-n.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/index/index-p.html" afterPath="$PROJECT_DIR$/docs/index/index-p.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/index/index-r.html" afterPath="$PROJECT_DIR$/docs/index/index-r.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/index/index-s.html" afterPath="$PROJECT_DIR$/docs/index/index-s.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/index/index-t.html" afterPath="$PROJECT_DIR$/docs/index/index-t.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/index/index-w.html" afterPath="$PROJECT_DIR$/docs/index/index-w.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/lib/diagrams.js" afterPath="$PROJECT_DIR$/docs/lib/diagrams.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/lib/index.js" afterPath="$PROJECT_DIR$/docs/lib/index.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/lib/jquery.layout.js" afterPath="$PROJECT_DIR$/docs/lib/jquery.layout.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/lib/scheduler.js" afterPath="$PROJECT_DIR$/docs/lib/scheduler.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/lib/template.js" afterPath="$PROJECT_DIR$/docs/lib/template.js" />
     </list>
     <ignored path="Uinversal Turing Machine.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -1162,7 +1103,7 @@
       <workItem from="1465017433582" duration="617000" />
       <workItem from="1465018861843" duration="3755000" />
       <workItem from="1465022893292" duration="1482000" />
-      <workItem from="1465024414563" duration="225000" />
+      <workItem from="1465024414563" duration="271000" />
     </task>
     <task id="LOCAL-00001" summary="Initial Commit - Simplified Launcher">
       <created>1463236476083</created>
@@ -1346,11 +1287,18 @@
       <option name="project" value="LOCAL" />
       <updated>1465023901242</updated>
     </task>
-    <option name="localTasksCounter" value="27" />
+    <task id="LOCAL-00027" summary="Corrections, improvements and more extensive documentation">
+      <created>1465024667029</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1465024667029</updated>
+    </task>
+    <option name="localTasksCounter" value="28" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="84199000" />
+    <option name="totallyTimeSpent" value="84245000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />

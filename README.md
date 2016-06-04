@@ -2,7 +2,7 @@
 
 A simple yet flexible Universal Turing Machine simulator in pure Scala.
 
-This program is now entirely in a functional style - everything is a `val` and uses the immutable collection `scala.Vector` as a default.
+This program is entirely in a functional style - everything is a `val` and uses the immutable collections.
 
 I guess this will require Scala 2.10.0 or higher to build, I use Scala 2.11.8.
 

@@ -30,13 +30,13 @@ object MoveDirection {
   /**
     * Results:
     *
-    * 1. Any negative [[scala.Int]] value or case-insensitive match to [[MoveDirection.Left.name]]-> [[MoveDirection.Left]]
+    * 1. Any negative `Int` value or case-insensitive match to [[MoveDirection.Left.name]]-> [[MoveDirection.Left]]
     *
-    * 2. Any positive [[scala.Int]] value or case-insensitive match to [[MoveDirection.Right.name]]-> [[MoveDirection.Right]]
+    * 2. Any positive `Int` value or case-insensitive match to [[MoveDirection.Right.name]]-> [[MoveDirection.Right]]
     *
-    * 3. A Zero (`0`) [[scala.Int]] value or case-insensitive match to [[MoveDirection.Neither.name]]-> [[MoveDirection.Neither]]
+    * 3. A Zero (`0`) `Int` value or case-insensitive match to [[MoveDirection.Neither.name]]-> [[MoveDirection.Neither]]
     *
-    * @param data the [[java.lang.String]] to parse into a [[MoveDirection]]
+    * @param data the `String` to parse into a [[MoveDirection]]
     * @return a [[MoveDirection]] object based on the parameters
     */
   def parse(data: String) = {
@@ -53,7 +53,7 @@ object MoveDirection {
   }
 
   /**
-    * Creates a  [[MoveDirection]] object from an [[scala.Int]]
+    * Creates a  [[MoveDirection]] object from an `Int`
     *
     * @param value the argument determining the [[MoveDirection]] which is returned
     * @return a [[MoveDirection]] object
@@ -67,7 +67,7 @@ object MoveDirection {
   }
 
   /**
-    * Creates a  [[MoveDirection]] object from a [[java.lang.String]]
+    * Creates a  [[MoveDirection]] object from a `String`
     *
     * @param name the argument determining the [[MoveDirection]] which is returned
     * @return a [[MoveDirection]] object

@@ -13,7 +13,7 @@ object TuringCommand {
   /**
     * Null (Blank) value Wildcard
     */
-  val NullCode = "!"
+  val BlankCode = "!"
   /**
     * Number of arguments to [[TuringCommand]], i.e., it's arity
     */
@@ -32,20 +32,20 @@ object TuringCommand {
     *
     * Separator used is whitespace - 5 terms are required after tokenization
     *
-    * @param data [[java.lang.String]] indicating a defined transitional operation
+    * @param data `String` indicating a defined transitional operation
     * @return a [[TuringCommand]] object derived from the argument
     * @see [[MatchAnythingCode]]
-    * @see [[NullCode]]
+    * @see [[BlankCode]]
     * @see [[CommandArity]]
     * @see [[WhitespaceRegex]]
     */
   def apply(data: String): TuringCommand = {
-    val elements = escapeNull((data split(WhitespaceRegex, CommandArity)).toVector)
+    val elements = escapeNull((data split(WhitespaceRegex, CommandArity)).toSeq)
     TuringCommand((elements.head, elements(1), elements(2), elements(3), MoveDirection parse elements.last))
   }
 
-  def escapeNull(elements: Vector[String]) = elements map {
-    case TuringCommand.NullCode => null
+  def escapeNull(elements: Seq[String]) = elements map {
+    case TuringCommand.BlankCode => null
     case others => others
   }
 
@@ -91,10 +91,10 @@ final case class TuringCommand private(currentState: String, nextState: String, 
     * The output format is deliberately similar to the input format,
     * so the result of one can be reflexively used with the other.
     *
-    * @return a [[java.lang.String]] representing this [[TuringCommand]] object
+    * @return a `String` representing this [[TuringCommand]] object
     */
-  override def toString = Vector(currentState, nextState, currentValue, nextValue, direction.name) map {
-    case nullItem if nullItem == null => NullCode
-    case notNullItem => notNullItem
+  override def toString = Seq(currentState, nextState, currentValue, nextValue, direction.name) map {
+    case blankItem if blankItem == UniversalTuringMachine.BlankValue => BlankCode
+    case notBlankItem => notBlankItem
   } mkString " "
 }
